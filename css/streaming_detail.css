@@ -609,7 +609,7 @@ body.fullscreen .streaming_content {
 
 /*介紹區塊*/
 .streaming_videoInfo {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .streaming_videoInfo .streaming_title {
   font-size: 26px;
@@ -636,9 +636,17 @@ body.fullscreen .streaming_content {
 }
 .streaming_videoInfo .streaming_name {
   color: #575f66;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .streaming_videoInfo .streaming_name .streaming_btn {
+  background: #9ea1a5;
   margin-top: 8px;
+  color: #fff;
+}
+.streaming_videoInfo .streaming_name .streaming_btn:hover {
+  background: #fabe0f;
 }
 .streaming_videoInfo .streaming_description {
   color: #575f66;
@@ -657,4 +665,240 @@ body.fullscreen .streaming_content {
   .streaming_information {
     padding: 0 10px;
   }
+}
+
+/*直播準備*/
+.upcomingBox {
+  position: absolute;
+  inset: 0px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  z-index: 9;
+}
+.upcomingBox .streaming_stateBox {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.upcomingBox .streaming_channel {
+  color: #fff;
+}
+.upcomingBox .stateTitle {
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.streaming_channel_list {
+  padding: 30px;
+  border-radius: 16px;
+  background: #fffaec;
+}
+.streaming_channel_list li {
+  display: flex;
+  align-items: flex-start;
+  color: #7b7b7b;
+  padding: 0 0 30px 0;
+  position: relative;
+  isolation: isolate;
+}
+.streaming_channel_list li::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  left: 30px;
+  display: block;
+  background: #fa7d0f;
+}
+.streaming_channel_list li .streaming_info {
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 30px;
+  flex-grow: 1;
+}
+.streaming_channel_list li:last-child {
+  padding: 0;
+}
+.streaming_channel_list li:last-child::before {
+  display: none;
+}
+.streaming_channel_list .streaming_avatar {
+  max-width: 60px;
+  background: #fff;
+  border-radius: 100%;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  margin: 0 15px 0 0;
+  border: #e3e3e3 1px solid;
+  z-index: 9;
+}
+.streaming_channel_list .streaming_avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.streaming_channel_list .streaming_title {
+  font-weight: bold;
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .streaming_channel_list .streaming_title {
+    font-size: 18px;
+  }
+}
+.streaming_channel_list .streaming_name {
+  font-size: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+@media screen and (max-width: 767px) {
+  .streaming_channel_list .streaming_name {
+    font-size: 15px;
+  }
+}
+.streaming_channel_list .streaming_name + .streaming_btn {
+  margin-top: 10px;
+}
+.streaming_channel_list .streaming_btn {
+  max-width: 200px;
+  background: #9ea1a5;
+  margin-top: 8px;
+  color: #fff;
+}
+.streaming_channel_list .streaming_btn:hover {
+  background: #fabe0f;
+}
+.streaming_channel_list .streaming_next {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #df2800;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .streaming_channel_list .streaming_next span {
+    display: none;
+  }
+}
+.streaming_channel_list .streaming_next::before {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  border-style: solid;
+  border-width: 8px 0 8px 8px;
+  margin: 0 5px 0 0;
+  border-color: transparent transparent transparent #fff;
+}
+@media screen and (max-width: 767px) {
+  .streaming_channel_list .streaming_next::before {
+    margin: 0;
+  }
+}
+.streaming_channel_list .streaming_next + .streaming_info {
+  padding-right: 150px;
+}
+@media screen and (max-width: 767px) {
+  .streaming_channel_list .streaming_next + .streaming_info {
+    padding-right: 50px;
+  }
+}
+
+/*直播主區塊*/
+.aspect-16x9 + .component_tit {
+  margin-top: 20px;
+}
+
+.streaming_streamerBox {
+  background: #e3e3e3;
+  border-radius: 16px;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+}
+.streaming_streamerBox li {
+  display: flex;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 1100px) {
+  .streaming_streamerBox li {
+    flex-direction: column;
+  }
+}
+.streaming_streamerBox li li {
+  counter-increment: num;
+  position: relative;
+  padding-left: 15px;
+}
+.streaming_streamerBox li li::before {
+  content: counter(num) ".";
+  position: absolute;
+  right: calc(100% - 10px);
+}
+.streaming_streamerBox li li + li {
+  margin-top: 10px;
+}
+.streaming_streamerBox .streaming_inputList {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+.streaming_streamerBox .streaming_inputList:first-child {
+  width: calc(100% - 300px);
+}
+@media screen and (max-width: 1100px) {
+  .streaming_streamerBox .streaming_inputList:first-child {
+    width: 100%;
+  }
+}
+.streaming_streamerBox .streaming_inputList:first-child input[type=text] {
+  flex-grow: 1;
+}
+.streaming_streamerBox .streaming_inputList .input_field {
+  flex-grow: 1;
+}
+.streaming_streamerBox .streaming_inputList.notice, .streaming_streamerBox .streaming_inputList.top {
+  width: auto;
+  align-items: flex-start;
+}
+.streaming_streamerBox .streaming_inputList.notice {
+  flex-grow: 1;
+  border-top: #fff 1px solid;
+  padding-top: 20px;
+}
+.streaming_streamerBox .label,
+.streaming_streamerBox label {
+  flex-shrink: 0;
+  width: 80px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+.streaming_streamerBox .advanced_action_area {
+  padding: 0;
+}
+.streaming_streamerBox button {
+  border: none;
+  margin-right: 0 !important;
+}
+.streaming_streamerBox button + button {
+  margin-left: 8px;
+}
+.streaming_streamerBox button:disabled {
+  background: #f3f3f3 !important;
+  cursor: not-allowed;
 }/*# sourceMappingURL=streaming_detail.css.map */

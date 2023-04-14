@@ -200,18 +200,128 @@
                       <div class="streaming_state">Premiere</div>
                       <div class="streaming_view">2023/3/6 17:00 UTC+8</div>
                     </div>
-
-                    <div class="streaming_stateBox upcoming">
-                      <div class="streaming_state">Upcoming</div>
-                      <div class="streaming_view">2023/3/6 17:00 UTC+8</div>
-                    </div>
                   </div>
                 </div>
+
+                <!-- 直播準備 start -->
+                <div class="upcomingBox">
+                  <div class="streaming_stateBox upcoming">
+                    <div class="streaming_state">Upcoming</div>
+                    <div class="streaming_view">2023/3/6 17:00 UTC+8</div>
+                  </div>
+                  <div class="streaming_channel">
+                    <div class="streaming_avatar"><img src="images/logo.png" alt="" /></div>
+                    <div class="streaming_name">HYWEB TECHNOLOGY CO., LTD.<br />凌網科技</div>
+                  </div>
+                  <div class="stateTitle">Live will start soon.</div>
+                  <small>Live reminder by</small>
+                  <div class="streaming_emailInput"><input type="text" placeholder="Your email here" /><button type="button">OK</button></div>
+                  <div class="streaming_community">
+                    <ul>
+                      <li class="linkBtn">
+                        <a href="#"><img src="images/icon/icon_link.svg" alt="" /></a>
+                      </li>
+                      <li class="fbBtn">
+                        <a href="#"><img src="images/icon/icon_facebook.svg" alt="" /></a>
+                      </li>
+                      <li class="twitterBtn">
+                        <a href="#"><img src="images/icon/icon_twitter.svg" alt="" /></a>
+                      </li>
+                      <li class="linkedinBtn">
+                        <a href="#"><img src="images/icon/icon_linkedin.svg" alt="" /></a>
+                      </li>
+                      <li class="calendarBtn">
+                        <a href="#"><img src="images/icon/icon_calendar.svg" alt="" /></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- 直播準備 end -->
               </div>
+
+              <div class="component_tit">Live Streaming Setting (直播主畫面)</div>
+              <div class="streaming_streamerBox">
+                <form action="">
+                  <ul>
+                    <li>
+                      <div class="streaming_inputList">
+                        <label for="RTMP">RTMP</label>
+                        <div class="input_field">
+                          <input type="text" placeholder="rtmp://live.taiwantrade.com/live/202303130001-16541333" id="RTMP" />
+                        </div>
+                      </div>
+                      <div class="streaming_inputList">
+                        <label for="ID">Room ID</label>
+                        <div class="input_field">
+                          <input type="text" placeholder="hyweb" id="ID" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="streaming_inputList">
+                        <label for="IVS">IVS Key</label>
+                        <div class="input_field">
+                          <input type="text" placeholder="" id="IVS" />
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="streaming_inputList">
+                        <label for="lang">開播語系</label>
+                        <div class="input_field">
+                          <input type="text" placeholder="" id="lang" />
+                        </div>
+                      </div>
+                      <div class="streaming_inputList">
+                        <div class="label">啟用字幕</div>
+                        <label class="radio_wrapper">
+                          <input type="radio" name="sub" />
+                          <span class="checkmark"></span>
+                          <span class="radio_txt">Yes</span>
+                        </label>
+                        <label class="radio_wrapper">
+                          <input type="radio" name="sub" />
+                          <span class="checkmark"></span>
+                          <span class="radio_txt">No</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="streaming_inputList top">
+                        <div class="label">直播時間</div>
+                        <div class="info">
+                          2023/3/6 16:00 UTC+8
+                          <div class="advanced_action_area">
+                            <div class="button_area">
+                              <button type="button" class="btn_primary">連接伺服器</button>
+                              <button type="button" class="btn_primary" disabled>直播測試</button>
+                              <button type="button" class="btn_primary" disabled>開始直播</button>
+                              <button type="button" class="btn_primary" disabled>開始錄影</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="streaming_inputList notice">
+                        <div class="label">注意事項</div>
+                        <div class="info">
+                          <ul>
+                            <li>請先點選「連接伺服器」確認網路連接速度。開始直播前，請務必先進行「直播測試」，方可「開始直播」。</li>
+                            <li>「開始直播」將於直播時間前30分鐘方可點選，點選後前台仍需等候時間到才會有畫面顯示。</li>
+                            <li>若直播設定為「預錄模式」方可使用「開始錄影功能」。請務必於直播前一天完成錄影作業，以便系統進行轉檔與上傳。</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+
               <div class="streaming_videoInfo">
                 <div class="streaming_channel">
                   <div class="streaming_avatar"><img src="images/logo.png" alt="" /></div>
-                  <div class="streaming_name">HYWEB TECHNOLOGY CO., LTD. 凌網科技<button class="streaming_btn">Visit Company Site</button></div>
+                  <div class="streaming_name">HYWEB TECHNOLOGY CO., LTD. 凌網科技<a href="#" class="streaming_btn">Visit Company Site</a></div>
                 </div>
                 <h1 class="streaming_title">Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty</h1>
                 <div class="streaming_description">
@@ -231,7 +341,7 @@
 
               <div class="tabContentGroup">
                 <!-- tab Products start -->
-                <div class="tabContent" style="display: none">
+                <div class="tabContent">
                   <div id="product-container">
                     <ul id="product-list">
                       <li>
@@ -342,7 +452,7 @@
                 <!-- tab Products end -->
 
                 <!-- tab Live Chat start -->
-                <div class="tabContent">
+                <div class="tabContent" style="display: none">
                   <div class="streaming_box">
                     <div id="chatroom-container">
                       <div id="connection-list">
@@ -433,7 +543,32 @@
             </div>
           </section>
 
-          <section class="streaming_information">智慧推薦保留區塊</section>
+          <section class="streaming_information">
+            <div class="component_tit">Live Streaming (Activity) rundown</div>
+            <div class="streaming_channel_list">
+              <ul>
+                <li>
+                  <div class="streaming_avatar"><img src="images/logo.png" alt="" /></div>
+                  <div class="streaming_next"><span>Coming Next</span></div>
+                  <div class="streaming_info">
+                    <time>2023/3/6 16:00 UTC+8</time>
+                    <div class="streaming_title">Opening: Introduce activity’s demonstration.</div>
+                    <div class="streaming_name">Taiwantrade.com</div>
+                    <a href="#" class="streaming_btn">Visit Company Site</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="streaming_avatar"><img src="images/logo.png" alt="" /></div>
+                  <div class="streaming_info">
+                    <time>2023/3/6 16:00 UTC+8</time>
+                    <div class="streaming_title">Opening: Introduce activity’s demonstration.</div>
+                    <div class="streaming_name">Taiwantrade.com</div>
+                    <a href="#" class="streaming_btn">Visit Company Site</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
 
           <section class="streaming_streamingList">
             <div class="component_tit">Hot Replay / Watched Live</div>
@@ -483,7 +618,7 @@
                   <!-- offline 顯示 start -->
                   <!-- <div class="streaming_hoverContent">
           <div class="streaming_pic"><img src="images/qrcode.png" alt="" /></div>
-          <div class="streaming_emailInput"><input type="text" /><button type="button">OK</button></div>
+          <div class="streaming_emailInput"><input type="text" placeholder="Your email here" /><button type="button">OK</button></div>
           <div>
             <button class="streaming_addBtn" type="button">Add to Calender</button>
             <div class="streaming_community">
@@ -547,7 +682,7 @@
                   <!-- offline 顯示 start -->
                   <!-- <div class="streaming_hoverContent">
           <div class="streaming_pic"><img src="images/qrcode.png" alt="" /></div>
-          <div class="streaming_emailInput"><input type="text" /><button type="button">OK</button></div>
+          <div class="streaming_emailInput"><input type="text" placeholder="Your email here" /><button type="button">OK</button></div>
           <div>
             <button class="streaming_addBtn" type="button">Add to Calender</button>
             <div class="streaming_community">
@@ -609,7 +744,7 @@
                   <!-- offline 顯示 start -->
                   <!-- <div class="streaming_hoverContent">
           <div class="streaming_pic"><img src="images/qrcode.png" alt="" /></div>
-          <div class="streaming_emailInput"><input type="text" /><button type="button">OK</button></div>
+          <div class="streaming_emailInput"><input type="text" placeholder="Your email here" /><button type="button">OK</button></div>
           <div>
             <button class="streaming_addBtn" type="button">Add to Calender</button>
             <div class="streaming_community">
@@ -671,7 +806,7 @@
                   <!-- offline 顯示 start -->
                   <!-- <div class="streaming_hoverContent">
           <div class="streaming_pic"><img src="images/qrcode.png" alt="" /></div>
-          <div class="streaming_emailInput"><input type="text" /><button type="button">OK</button></div>
+          <div class="streaming_emailInput"><input type="text" placeholder="Your email here" /><button type="button">OK</button></div>
           <div>
             <button class="streaming_addBtn" type="button">Add to Calender</button>
             <div class="streaming_community">

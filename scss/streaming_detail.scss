@@ -629,7 +629,7 @@ body.fullscreen {
 
 /*介紹區塊*/
 .streaming_videoInfo {
-  margin-top: 10px;
+  margin-top: 20px;
   .streaming_title {
     font-size: 26px;
     color: $textColor2;
@@ -651,8 +651,16 @@ body.fullscreen {
   }
   .streaming_name {
     color: $textColor2;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
     .streaming_btn {
+      background: $lineColor2;
       margin-top: 8px;
+      color: #fff;
+      &:hover {
+        background: $primaryColor;
+      }
     }
   }
   .streaming_description {
@@ -669,5 +677,230 @@ body.fullscreen {
 .streaming_information {
   @media screen and (max-width: 1000px) {
     padding: 0 10px;
+  }
+}
+
+/*直播準備*/
+.upcomingBox {
+  position: absolute;
+  inset: 0px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0 0 0 / 50%);
+  color: #fff;
+  z-index: 9;
+  .streaming_stateBox {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+  .streaming_channel {
+    color: #fff;
+  }
+  .stateTitle {
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+}
+
+.streaming_channel_list {
+  padding: 30px;
+  border-radius: 16px;
+  background: $primaryColor4;
+  li {
+    display: flex;
+    align-items: flex-start;
+    color: #7b7b7b;
+    padding: 0 0 30px 0;
+    position: relative;
+    isolation: isolate;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      top: 0;
+      bottom: 0;
+      left: 30px;
+      display: block;
+      background: $ogColor;
+    }
+
+    .streaming_info {
+      border-bottom: 1px solid $bgColor;
+      padding-bottom: 30px;
+      flex-grow: 1;
+    }
+    &:last-child {
+      padding: 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  .streaming_avatar {
+    max-width: 60px;
+    background: #fff;
+    border-radius: 100%;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    margin: 0 15px 0 0;
+    border: $bgColor 1px solid;
+    z-index: 9;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .streaming_title {
+    font-weight: bold;
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 10px;
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+  .streaming_name {
+    font-size: 16px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    @media screen and (max-width: 767px) {
+      font-size: 15px;
+    }
+    & + .streaming_btn {
+      margin-top: 10px;
+    }
+  }
+  .streaming_btn {
+    max-width: 200px;
+    background: $lineColor2;
+    margin-top: 8px;
+    color: #fff;
+    &:hover {
+      background: $primaryColor;
+    }
+  }
+  .streaming_next {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: $redColor2;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    @media screen and (max-width: 767px) {
+      span {
+        display: none;
+      }
+    }
+    &::before {
+      content: '';
+      width: 0;
+      height: 0;
+      display: block;
+      border-style: solid;
+      border-width: 8px 0 8px 8px;
+      margin: 0 5px 0 0;
+      border-color: transparent transparent transparent #fff;
+      @media screen and (max-width: 767px) {
+        margin: 0;
+      }
+    }
+
+    & + .streaming_info {
+      padding-right: 150px;
+      @media screen and (max-width: 767px) {
+        padding-right: 50px;
+      }
+    }
+  }
+}
+
+/*直播主區塊*/
+.aspect-16x9 + .component_tit {
+  margin-top: 20px;
+}
+.streaming_streamerBox {
+  background: $bgColor;
+  border-radius: 16px;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+  li {
+    display: flex;
+    justify-content: flex-start;
+    @media screen and (max-width: 1100px) {
+      flex-direction: column;
+    }
+    li {
+      counter-increment: num;
+      position: relative;
+      padding-left: 15px;
+      &::before {
+        content: counter(num) '.';
+        position: absolute;
+        right: calc(100% - 10px);
+      }
+      & + li {
+        margin-top: 10px;
+      }
+    }
+  }
+  .streaming_inputList {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    &:first-child {
+      width: calc(100% - 300px);
+      @media screen and (max-width: 1100px) {
+        width: 100%;
+      }
+      input[type='text'] {
+        flex-grow: 1;
+      }
+    }
+    .input_field {
+      flex-grow: 1;
+    }
+    &.notice,
+    &.top {
+      width: auto;
+      align-items: flex-start;
+    }
+    &.notice {
+      flex-grow: 1;
+      border-top: #fff 1px solid;
+      padding-top: 20px;
+    }
+  }
+  .label,
+  label {
+    flex-shrink: 0;
+    width: 80px;
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+  .advanced_action_area {
+    padding: 0;
+  }
+  button {
+    border: none;
+    margin-right: 0 !important;
+    & + button {
+      margin-left: 8px;
+    }
+    &:disabled {
+      background: $lineColor !important;
+      cursor: not-allowed;
+    }
   }
 }

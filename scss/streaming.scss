@@ -161,7 +161,7 @@ section + section {
     width: calc(100% - $btnWidth);
     box-sizing: border-box;
     &::placeholder {
-      color: #ccc;
+      color: #959595;
     }
   }
   button {

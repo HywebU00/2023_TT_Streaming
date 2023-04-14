@@ -175,10 +175,10 @@ section + section {
   box-sizing: border-box;
 }
 .streaming_emailInput input::-moz-placeholder {
-  color: #ccc;
+  color: #959595;
 }
 .streaming_emailInput input::placeholder {
-  color: #ccc;
+  color: #959595;
 }
 .streaming_emailInput button {
   width: 38px;
