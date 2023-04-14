@@ -1,0 +1,143 @@
+
+
+#chatroom-container{
+    width: 28%;
+    position: absolute;
+    height: 0;
+    border-radius: var(--border-radius);
+    right: 0px;
+    left: 2%;
+    top: 47%;
+    z-index: 99;
+}
+#chat-content{
+    margin: 10px auto 10px;
+    height: 170px;
+    padding: 10px 15px;
+    overflow-y: scroll;
+
+}
+#connection-list{
+    margin: 5px auto 5px;
+    height: 70px;
+    padding:0;
+    overflow: hidden;
+}
+#connection-list li,#chat-list li{
+    list-style: none;
+    margin:5px auto 5px 0px;
+    background-color: rgb(123, 123, 123,0.5);
+    border-radius: 5px;
+    padding:5px;
+    width:fit-content
+}
+#connection-list li span,#chat-list li span{
+    font-weight: 600;
+    font-size: 10px;
+    color: rgba(255, 255, 255);
+    word-break: break-all;
+    word-wrap:break-word;
+}
+
+#connection-list .orchid {
+    background-color: orchid;
+}
+#connection-list .coral {
+    background-color: coral;
+}
+#connection-list .orangered {
+    background-color:orangered
+}
+#connection-list .cornflowerblue {
+    background-color:cornflowerblue
+}
+#connection-list .skyblue {
+    background-color:skyblue
+}
+#connection-list .limegreen {
+    background-color:limegreen
+}
+
+
+#chat-content ul li:hover{
+    box-shadow: 0px 1px 0px 0px rgb(255, 255, 255),0px 0px px 0px rgb(180, 182, 182);
+}
+#chat-content::-webkit-scrollbar{
+    background-color: rgb(235, 235, 235);
+    width: 8px;
+    border-radius: 4px;
+}
+#chat-content::-webkit-scrollbar-track{
+    background-color: rgb(235, 235, 235);
+    width: 6px;
+    border-radius: 3px;
+}
+#chat-content::-webkit-scrollbar-thumb {
+    background-color: rgb(197, 197, 197);
+    width: 4px;
+    border-radius: 2px;
+  }
+#chat-content .self-chat{
+    background-color:rgb(69, 136, 165);
+}
+
+
+/* #name-input{
+    width: 60%;
+    height: 24px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 3px 0px azure, 0px 0px 6px 0px gold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: grey;
+    font-size: 12px;
+    margin: 5px;
+}
+
+#your-nickname{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(184, 0, 0);
+    font-size: 14px;
+    font-weight: 700;
+    margin:20px 5px 0px 5px;
+} */
+
+#send-chat>span{
+    margin: 10px 10px auto 20px;
+}
+#send-chat span input{
+    width: 75%;
+    height: 24px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255,0.6);
+    box-shadow: 0px 0px 3px 0px rgb(230, 230, 230), 0px 0px 6px 0px rgb(230, 230, 230);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(234, 234, 234);
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+#send-chat button{
+    width: 13%;
+    height: 24px;
+    background-color: rgba(196, 196, 196, 0.5);
+    box-shadow: 0px 0px 3px 0px rgb(107, 107, 107), 0px 0px 6px 0px rgb(230, 230, 230);
+    font-size: 12px;
+    color: rgb(234, 234, 234);
+    font-weight:700;
+}
+
+#change-userName{
+    position: fixed;
+    right:40px;
+    top:10px;
+    background-color: rgb(54, 54, 54);
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    color:white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 10px;
+}

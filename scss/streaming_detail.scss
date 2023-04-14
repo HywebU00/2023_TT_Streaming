@@ -1,0 +1,673 @@
+@import '_variable';
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+.placeholder {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 4;
+  //
+  opacity: 0;
+}
+
+.placeholder-content {
+  position: relative;
+}
+
+.placeholder-spinner {
+  -webkit-animation: rotate 1s linear infinite;
+  animation: rotate 1s linear infinite;
+  border-radius: 50%;
+  height: 38px;
+  position: relative;
+  width: 38px;
+
+  &:after {
+    background: #000;
+    border-radius: 50%;
+    bottom: 5px;
+    content: '';
+    left: 5px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+}
+
+.placeholder-gradient {
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  border-radius: 50%;
+  bottom: -1px;
+  left: -1px;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+}
+
+.placeholder-message {
+  color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .component_layout {
+    padding: 0;
+  }
+}
+.stream-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 9;
+  z-index: 9;
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    height: 99vh;
+  }
+}
+.streaming_videoBox {
+  margin: 0 30px 0 0;
+  position: relative;
+  isolation: isolate;
+  z-index: 9;
+  @media screen and (max-width: 1000px) {
+    margin: 0 0 10px;
+    width: 100%;
+  }
+  .aspect-16x9 {
+    position: relative;
+  }
+}
+
+.player {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border-top: $bgColor 1px solid;
+  @media screen and (max-width: 1000px) {
+    border-radius: 0;
+    border: none;
+  }
+  .video-el {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: gray;
+  }
+  .player-ui {
+    .player-ui-controls {
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      left: 10px;
+    }
+
+    .streaming_btn {
+      background: rgb(255 255 255 / 30%);
+      &.active,
+      &:hover {
+        background: $primaryColor;
+      }
+    }
+    .top {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .streaming_videoPic {
+      line-height: 0;
+      order: 9;
+      margin: 0 0 0 10px;
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
+      img {
+        width: auto;
+        max-height: 40px;
+      }
+    }
+    .streaming_share {
+      position: relative;
+      z-index: 99;
+      & > button {
+        margin: 0 auto 5px;
+      }
+      ul {
+        background: rgb(255 255 255 /30%);
+        border-radius: 4px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+        li {
+          button {
+            border-radius: 0;
+            background: none;
+          }
+        }
+      }
+    }
+  }
+  .streaming_content {
+    padding: 10px;
+    display: block;
+    inset: unset;
+    top: 0;
+
+    @media screen and (max-width: 1000px) {
+      .streaming_stateBox {
+        padding: 0;
+      }
+    }
+  }
+  .streaming_chatBtn {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+}
+
+.tabSet {
+  font-size: 16px;
+  min-width: 350px;
+  flex-basis: 30%;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  color: $textColor9;
+  z-index: 0;
+  @media screen and (max-width: 1000px) {
+    padding: 0 10px;
+    flex-grow: 1;
+  }
+  .tabItems {
+    display: flex;
+    &:last-child {
+      display: none;
+      @media screen and (max-width: 1000px) {
+        display: block;
+      }
+    }
+    button {
+      margin: 0;
+      border-radius: 4px 4px 0 0;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 10px 10px 0 0;
+      font-size: 16px;
+      background: $lineColor;
+      &.active,
+      &:hover {
+        background: $primaryColor;
+      }
+      & + button {
+        margin-left: 5px;
+      }
+    }
+  }
+  .tabContentGroup {
+    flex-grow: 1;
+    border: $bgColor 1px solid;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    isolation: isolate;
+    min-height: 300px;
+    overflow: hidden;
+  }
+  .tabContent {
+    position: absolute;
+    inset: 0px;
+    background: #fff;
+    overflow-y: auto;
+    scrollbar-color: $primaryColor rgba(0, 0, 0, 0.2);
+    scrollbar-width: thin;
+    background: #fff;
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 100px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: $primaryColor;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      border-radius: 0;
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+/* products */
+.tabSet {
+  #product-container {
+    padding: 0 0 10px 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .productsMore {
+      padding: 10px 10px 0;
+      background: #fff;
+      .streaming_btn {
+        border-radius: 4px;
+        padding: 10px 20px;
+        height: auto;
+        font-size: 16px;
+        margin: 0 auto;
+      }
+    }
+  }
+  #product-list {
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-color: $primaryColor rgba(0, 0, 0, 0.2);
+    scrollbar-width: thin;
+    background: #fff;
+    flex-grow: 1;
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 100px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: $primaryColor;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      border-radius: 0;
+      background: rgba(0, 0, 0, 0.1);
+    }
+    li {
+      display: flex;
+      align-items: center;
+      padding: 10px 10px 10px 0;
+      & + li {
+        border-top: $bgColor 1px solid;
+      }
+    }
+    img {
+      width: 85px;
+      aspect-ratio: 1;
+      object-fit: contain;
+      margin-right: 10px;
+      border: $bgColor 1px solid;
+      border-radius: 8px;
+    }
+    .name {
+      font-size: 16px;
+      margin-bottom: 3px;
+    }
+    .price {
+      font-size: 16px;
+      margin-bottom: 3px;
+      color: $redColor;
+      font-weight: bold;
+      span {
+        color: $textColor4;
+        font-size: 12px;
+        font-weight: normal;
+      }
+    }
+    .btnBox {
+      display: flex;
+      margin: 0 0 0 auto;
+      button {
+        margin: 0 5px 0 0;
+        white-space: nowrap;
+        border-radius: 20px;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 14px;
+        background: none;
+        border: 1px solid $primaryColor;
+        &:hover {
+          color: #fff;
+          background: $primaryColor;
+        }
+      }
+    }
+  }
+}
+/* products */
+
+/* chat */
+.streaming_box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  isolation: isolate;
+}
+#chatroom-container {
+  overflow: hidden;
+  flex-shrink: 0;
+  #connection-name {
+    display: flex;
+    flex-direction: column-reverse;
+    li {
+      padding: 8px 15px;
+      span {
+        word-wrap: break-word;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        word-break: break-all;
+      }
+      &:not(:last-child) {
+        display: none;
+      }
+    }
+
+    .orchid {
+      background-color: orchid;
+    }
+
+    .coral {
+      background-color: coral;
+    }
+
+    .orangered {
+      background-color: #ff4500;
+    }
+
+    .cornflowerblue {
+      background-color: #6495ed;
+    }
+
+    .skyblue {
+      background-color: skyblue;
+    }
+
+    .limegreen {
+      background-color: #32cd32;
+    }
+  }
+}
+#chat-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  scrollbar-color: $primaryColor rgba(0, 0, 0, 0.2);
+  scrollbar-width: thin;
+  margin-bottom: 5px;
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: $primaryColor;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  #chat-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    li {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -1px;
+      .info {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      time {
+        display: block;
+        font-size: 12px;
+        transform: scale(0.9);
+        color: $lineColor2;
+      }
+      .info {
+        margin-bottom: 2px;
+        span {
+          color: $textColor4;
+          font-size: 14px;
+          margin: 0 10px 0 0;
+        }
+      }
+      .textContent {
+        width: 100%;
+        line-height: 1.2;
+      }
+      &.streamer {
+        color: $primaryColor2;
+        span {
+          font-weight: bold;
+          color: $primaryColor2;
+        }
+        .textContent {
+          color: $textColor9;
+          background: $primaryColor3;
+          padding: 6px 8px;
+          border-radius: 4px;
+        }
+      }
+      &.self-chat {
+        .textContent {
+          color: $textColor9;
+          background-color: $lineColor;
+          padding: 4px 8px;
+          border-radius: 4px;
+        }
+      }
+      & + li {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+#send-chat {
+  flex-shrink: 0;
+  right: 10px;
+  left: 1px;
+  display: flex;
+  > span {
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  span input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 1px solid $bgColor;
+    border-width: 1px 1px 0 0;
+    padding: 5px 15px;
+  }
+
+  button {
+    background: $primaryColor;
+    border: none;
+    color: #000;
+    border-radius: 4px 4px 0 0;
+    padding: 0 10px;
+    margin: 0 0 0 5px;
+    &:last-child {
+      border-radius: 4px 0 0 0;
+    }
+    &:hover {
+      background: $primaryColor2;
+    }
+  }
+}
+
+/* 全螢幕 */
+body.fullscreen {
+  overflow: hidden;
+  .streaming_boxFull {
+    display: flex;
+  }
+  .player {
+    position: fixed;
+    inset: 0;
+    border-radius: 0;
+    border: none;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+  }
+  .player-ui {
+    .streaming_btn {
+      background: rgb(255 255 255 / 50%);
+      &.active,
+      &:hover {
+        background: $primaryColor;
+      }
+    }
+    .streaming_share ul {
+      background: rgb(255 255 255 / 50%);
+    }
+  }
+  .streaming_chatBtn {
+    position: relative;
+    order: -1;
+    margin-right: 15px;
+  }
+  .streaming_content {
+    padding: 0;
+    left: 10px;
+    top: 10px;
+  }
+}
+
+.streaming_boxFull {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 150px;
+  bottom: 80px;
+  left: 10px;
+  z-index: 99;
+  max-width: 350px;
+  width: 100%;
+  @media screen and (max-width: 1000px) {
+    top: auto;
+    max-height: 50vh;
+    max-width: 300px;
+  }
+
+  .streaming_channel {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    position: fixed;
+    display: flex;
+    top: 50px;
+    left: 10px;
+    max-width: 350px;
+    background: rgb(255 255 255 / 30%);
+    @media screen and (max-width: 1000px) {
+      max-width: 300px;
+    }
+  }
+  #send-chat span input {
+    border: 1px solid #e3e3e3;
+  }
+  #chat-content {
+    #chat-list {
+      padding: 10px 10px 10px 0;
+      li {
+        padding: 10px;
+        background: rgb(255 255 255 / 30%);
+        border-radius: 4px;
+        .textContent {
+          padding: 0;
+          background: none;
+        }
+        &.self-chat {
+          color: $textColor9;
+          background-color: rgb(0 0 0 / 10%);
+        }
+        &.streamer {
+          background: rgb(250 190 15 / 30%);
+        }
+      }
+    }
+  }
+}
+
+/*介紹區塊*/
+.streaming_videoInfo {
+  margin-top: 10px;
+  .streaming_title {
+    font-size: 26px;
+    color: $textColor2;
+    font-weight: bold;
+    margin-bottom: 15px;
+    overflow: unset;
+    display: block;
+    -webkit-line-clamp: unset;
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+  .streaming_channel {
+    margin: 0 0 15px 0;
+    display: flex;
+    @media screen and (max-width: 1000px) {
+      margin: 0;
+    }
+  }
+  .streaming_name {
+    color: $textColor2;
+    .streaming_btn {
+      margin-top: 8px;
+    }
+  }
+  .streaming_description {
+    color: $textColor2;
+    font-size: 18px;
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+}
+/* chat */
+.streaming_streamingList,
+.streaming_videoInfo,
+.streaming_information {
+  @media screen and (max-width: 1000px) {
+    padding: 0 10px;
+  }
+}

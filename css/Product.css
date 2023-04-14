@@ -1,0 +1,89 @@
+#product-container{
+    width: 33%;
+    position: absolute;
+    height: 0;
+    border-radius: var(--border-radius);
+    right: 0px;
+    left:66%;
+    top:20px;
+    height: 560px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 1px rgb(219, 219, 219);
+}
+
+#product-container ul{
+    margin: 10px auto;
+    width: 96%;
+    height: 96%;
+    background-color: rgb(245, 245, 245,0.3);
+    overflow-y: scroll;
+    text-align: left;
+    border: none;
+    scrollbar-color: rgb(79, 79, 79) rgb(214, 214, 214);
+    scrollbar-width: thin;
+
+}
+#product-container ul::-webkit-scrollbar{
+    background-color: rgb(235, 235, 235);
+    width: 10px;
+    border-radius: 4px;
+}
+#product-container ul::-webkit-scrollbar-track{
+    background-color: rgb(235, 235, 235);
+    width: 8px;
+    border-radius: 4px;
+}
+#product-container ul::-webkit-scrollbar-thumb {
+    background-color: rgb(197, 197, 197);
+    width: 6px;
+    border-radius: 4px;
+    transition:all 0.5s ease;
+  }
+
+#product-list li{
+    margin:10px auto 10px auto;
+    display: inline-flex;
+    width:100%;
+    position: relative;
+}
+
+
+#product-list li img{
+    height:60px;
+    width:60px;
+    position: relative;
+    top:0px;
+    
+}
+#product-list li span{
+    font-size: 14px;
+    height:auto;
+    top:0px;
+    margin-left:5px;
+    width: calc(100% - 125px);
+    position: relative;
+}
+#product-list li span i{
+    font-size: 12px;
+    color:red;
+    bottom:0px;
+    right:0px;
+    width:30px;
+    height:20px;
+    position: absolute;
+}
+
+#product-list li button{
+    position: absolute;
+    font-size: 12px;
+    color:rgb(255, 255, 255);
+    font-weight: 600;
+    height:40px;
+    width:35px;
+    background-color: salmon;
+    bottom:0px;
+    right:5px;
+    margin-left:5px;
+    border-radius: 3px;
+}
+

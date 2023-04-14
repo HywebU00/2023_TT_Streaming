@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+.streaming_listBox {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.streaming_listBox.col-2 .streaming_item {
+  width: calc((100% - 20px) / 2);
+}
+.streaming_listBox.col-3 .streaming_item {
+  width: calc((100% - 40px) / 3);
+}
+.streaming_listBox.col-4 .streaming_item {
+  width: calc((100% - 60px) / 4);
+}
+.streaming_listBox .streaming_hoverContent {
+  flex-direction: row;
+}
+.streaming_listBox .streaming_hoverContent .streaming_qrcode {
+  margin: 0 10px 0 0;
+}
+@media screen and (max-width: 1200px) {
+  .streaming_listBox.col-4 .streaming_item {
+    width: calc((100% - 40px) / 3);
+  }
+}
+.streaming_listBox.col-3 .streaming_hoverContent,
+.streaming_listBox.col-3 .streaming_box, .streaming_listBox.col-4 .streaming_hoverContent,
+.streaming_listBox.col-4 .streaming_box {
+  flex-direction: column;
+}
+.streaming_listBox.col-3 .streaming_qrcode, .streaming_listBox.col-4 .streaming_qrcode {
+  margin: 0 0px 0 0;
+}
+@media screen and (max-width: 800px) {
+  .streaming_listBox.col-3 .streaming_item, .streaming_listBox.col-4 .streaming_item {
+    width: calc((100% - 20px) / 2);
+  }
+}
+
+.streaming_item {
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .streaming_item {
+    width: 100% !important;
+  }
+}
+.streaming_item .streaming_box {
+  border: #e3e3e3 1px solid;
+  border-radius: 16px;
+  overflow: hidden;
+}
+@media screen and (min-width: 1200px) {
+  .streaming_item .streaming_box {
+    display: flex;
+  }
+}
+.streaming_item .streaming_pic {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  aspect-ratio: 16/9;
+  flex-basis: 50%;
+}
+.streaming_item .streaming_content {
+  flex-basis: 50%;
+  position: unset;
+  padding: 15px 20px 20px;
+  transform: scaleX(1) !important;
+  opacity: 1 !important;
+}
+@media screen and (min-width: 1000px) {
+  .streaming_item .streaming_content {
+    justify-content: center;
+  }
+}
+.streaming_item .streaming_hoverContent {
+  transition-delay: 0s !important;
+}
+.streaming_item .streaming_stateBox {
+  top: 10px;
+  left: 10px;
+  padding: 0;
+  position: absolute;
+}
+.streaming_item .streaming_title {
+  order: 3;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 0;
+  margin-top: 10px;
+}
+@media screen and (max-width: 767.9px) {
+  .streaming_item .streaming_channel {
+    display: flex;
+  }
+}
+.streaming_item .streaming_channel .streaming_avatar {
+  margin: 0 10px 0 0;
+}/*# sourceMappingURL=streaming_list.css.map */
