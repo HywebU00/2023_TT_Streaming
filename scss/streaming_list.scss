@@ -1,7 +1,7 @@
 @import '_variable';
 
 .streaming_listBox {
-  $gap: 20px;
+  $gap: 24px;
   gap: $gap;
   display: flex;
   flex-wrap: wrap;
@@ -32,6 +32,9 @@
 
   &.col-3,
   &.col-4 {
+    .streaming_content {
+      padding: 15px 0px 20px;
+    }
     .streaming_hoverContent,
     .streaming_box {
       flex-direction: column;
@@ -59,8 +62,8 @@
     width: 100% !important;
   }
   .streaming_box {
-    border: $bgColor 1px solid;
-    border-radius: 16px;
+    // border: $bgColor 1px solid;
+    // border-radius: 16px;
     overflow: hidden;
     @media screen and (min-width: 1200px) {
       display: flex;
@@ -70,13 +73,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left center;
+    border-radius: 16px;
+    overflow: hidden;
     aspect-ratio: 16/9;
     flex-basis: 50%;
   }
   .streaming_content {
     flex-basis: 50%;
     position: unset;
-    padding: 15px 20px 20px;
+    padding: 15px 0px 20px 20px;
     transform: scaleX(1) !important;
     opacity: 1 !important;
     @media screen and (min-width: 1000px) {
