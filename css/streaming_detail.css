@@ -139,7 +139,7 @@
   margin: 0 0 0 10px;
 }
 @media screen and (max-width: 1000px) {
-  .player .player-ui .streaming_videoPic {
+  .player .player-ui .streaming_videoPic:nth-child(1) {
     display: none;
   }
 }
@@ -150,6 +150,11 @@
 .player .player-ui .streaming_share {
   position: relative;
   z-index: 99;
+}
+@media screen and (max-width: 1000px) {
+  .player .player-ui .streaming_share {
+    display: none;
+  }
 }
 .player .player-ui .streaming_share > button {
   margin: 0 auto 5px;
@@ -213,12 +218,16 @@
 }
 .tabSet .tabItems button {
   margin: 0;
-  border-radius: 4px 4px 0 0;
   border: none;
   padding: 10px 15px;
   border-radius: 10px 10px 0 0;
   font-size: 16px;
   background: #f3f3f3;
+}
+@media screen and (max-width: 1000px) {
+  .tabSet .tabItems button {
+    padding: 8px 10px;
+  }
 }
 .tabSet .tabItems button.active, .tabSet .tabItems button:hover {
   background: #fabe0f;
@@ -530,6 +539,13 @@ body.fullscreen .player {
   justify-content: center;
   background: #000;
 }
+body.fullscreen .streaming_videoBox,
+body.fullscreen .aspect-16x9 {
+  margin: 0;
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+}
 body.fullscreen .player-ui .streaming_btn {
   background: rgba(255, 255, 255, 0.5);
 }
@@ -825,11 +841,41 @@ body.fullscreen .streaming_content {
   margin-top: 20px;
 }
 
-.streaming_streamerBox {
+.inTab li {
+  flex-direction: column;
+}
+.inTab li .streaming_inputList {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.inTab li .streaming_inputList:first-child {
+  width: auto;
+}
+.inTab li .streaming_inputList .input_field {
+  width: 100%;
+}
+.inTab li .streaming_inputList.notice {
+  border-color: #e3e3e3;
+}
+.inTab li .button_area {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.inTab li .button_area button {
+  margin: 0;
+  width: calc(50% - 10px);
+}
+
+.streaming_streamerBox:not(.inTab) {
   background: #e3e3e3;
   border-radius: 16px;
   padding: 20px 15px;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 1000px) {
+  .streaming_streamerBox:not(.inTab) {
+    display: none;
+  }
 }
 .streaming_streamerBox li {
   display: flex;

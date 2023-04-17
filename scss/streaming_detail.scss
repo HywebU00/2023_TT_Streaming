@@ -148,7 +148,9 @@
       order: 9;
       margin: 0 0 0 10px;
       @media screen and (max-width: 1000px) {
-        display: none;
+        &:nth-child(1) {
+          display: none;
+        }
       }
       img {
         width: auto;
@@ -158,6 +160,9 @@
     .streaming_share {
       position: relative;
       z-index: 99;
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
       & > button {
         margin: 0 auto 5px;
       }
@@ -220,12 +225,14 @@
     }
     button {
       margin: 0;
-      border-radius: 4px 4px 0 0;
       border: none;
       padding: 10px 15px;
       border-radius: 10px 10px 0 0;
       font-size: 16px;
       background: $lineColor;
+      @media screen and (max-width: 1000px) {
+        padding: 8px 10px;
+      }
       &.active,
       &:hover {
         background: $primaryColor;
@@ -547,6 +554,13 @@ body.fullscreen {
     justify-content: center;
     background: #000;
   }
+  .streaming_videoBox,
+  .aspect-16x9 {
+    margin: 0;
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+  }
   .player-ui {
     .streaming_btn {
       background: rgb(255 255 255 / 50%);
@@ -830,11 +844,43 @@ body.fullscreen {
 .aspect-16x9 + .component_tit {
   margin-top: 20px;
 }
+
+.inTab {
+  li {
+    flex-direction: column;
+    .streaming_inputList {
+      flex-direction: column;
+      align-items: flex-start;
+      &:first-child {
+        width: auto;
+      }
+      .input_field {
+        width: 100%;
+      }
+      &.notice {
+        border-color: $bgColor;
+      }
+    }
+    .button_area {
+      flex-wrap: wrap;
+      gap: 10px;
+      button {
+        margin: 0;
+        width: calc(50% - 10px);
+      }
+    }
+  }
+}
 .streaming_streamerBox {
-  background: $bgColor;
-  border-radius: 16px;
-  padding: 20px 15px;
-  margin-bottom: 30px;
+  &:not(.inTab) {
+    background: $bgColor;
+    border-radius: 16px;
+    padding: 20px 15px;
+    margin-bottom: 30px;
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
   li {
     display: flex;
     justify-content: flex-start;
