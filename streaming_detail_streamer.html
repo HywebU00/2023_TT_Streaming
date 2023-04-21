@@ -238,97 +238,6 @@
                 </div>
                 <!-- 直播準備 end -->
               </div>
-
-              <div class="component_tit">Live Streaming Setting (直播主畫面)</div>
-              <div class="streaming_streamerBox">
-                <form action="">
-                  <ul>
-                    <li>
-                      <div class="streaming_inputList">
-                        <label for="RTMP">RTMP</label>
-                        <div class="input_field">
-                          <input type="text" placeholder="rtmp://live.taiwantrade.com/live/202303130001-16541333" id="RTMP" />
-                        </div>
-                      </div>
-                      <div class="streaming_inputList">
-                        <label for="ID">Room ID</label>
-                        <div class="input_field">
-                          <input type="text" placeholder="hyweb" id="ID" />
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="streaming_inputList">
-                        <label for="IVS">IVS Key</label>
-                        <div class="input_field">
-                          <input type="text" placeholder="" id="IVS" />
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="streaming_inputList">
-                        <label for="lang">開播語系</label>
-                        <div class="input_field">
-                          <input type="text" placeholder="" id="lang" />
-                        </div>
-                      </div>
-                      <div class="streaming_inputList">
-                        <div class="label">啟用字幕</div>
-                        <label class="radio_wrapper">
-                          <input type="radio" name="sub" />
-                          <span class="checkmark"></span>
-                          <span class="radio_txt">Yes</span>
-                        </label>
-                        <label class="radio_wrapper">
-                          <input type="radio" name="sub" />
-                          <span class="checkmark"></span>
-                          <span class="radio_txt">No</span>
-                        </label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="streaming_inputList top">
-                        <div class="label">直播時間</div>
-                        <div class="info">
-                          2023/3/6 16:00 UTC+8
-                          <div class="advanced_action_area">
-                            <div class="button_area">
-                              <button type="button" class="btn_primary">連接伺服器</button>
-                              <button type="button" class="btn_primary" disabled>直播測試</button>
-                              <button type="button" class="btn_primary" disabled>開始直播</button>
-                              <button type="button" class="btn_primary" disabled>開始錄影</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="streaming_inputList notice">
-                        <div class="label">注意事項</div>
-                        <div class="info">
-                          <ul>
-                            <li>請先點選「連接伺服器」確認網路連接速度。開始直播前，請務必先進行「直播測試」，方可「開始直播」。</li>
-                            <li>「開始直播」將於直播時間前30分鐘方可點選，點選後前台仍需等候時間到才會有畫面顯示。</li>
-                            <li>若直播設定為「預錄模式」方可使用「開始錄影功能」。請務必於直播前一天完成錄影作業，以便系統進行轉檔與上傳。</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </form>
-              </div>
-
-              <div class="streaming_videoInfo">
-                <div class="streaming_channel">
-                  <div class="streaming_avatar"><img src="images/logo.png" alt="" /></div>
-                  <div class="streaming_name">HYWEB TECHNOLOGY CO., LTD. 凌網科技<a href="#" class="streaming_btn">Visit Company Site</a></div>
-                </div>
-                <h1 class="streaming_title">Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty</h1>
-                <div class="streaming_description">
-                  Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Products. Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Products. Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Products. Beauty Online: Sephora: Makeup, Skincare,
-                  Fragrance, Hair & Beauty Products.
-                </div>
-              </div>
             </div>
 
             <div class="tabSet">
@@ -620,12 +529,115 @@
 
                 <!-- tab Live Info start -->
                 <div class="tabContent" style="display: none">
-                  <div class="infoBox"></div>
+                  <div class="infoBox">
+                    <div class="streaming_videoInfo">
+                      <div class="streaming_channel">
+                        <div class="streaming_avatar"><img src="images/logo.png" alt="" /></div>
+                        <div class="streaming_name">HYWEB TECHNOLOGY CO., LTD. 凌網科技<a href="#" class="streaming_btn">Visit Company Site</a></div>
+                      </div>
+                      <h1 class="streaming_title">Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty</h1>
+                      <div class="streaming_description">
+                        Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Products. Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Products. Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Products. Beauty Online: Sephora: Makeup, Skincare,
+                        Fragrance, Hair & Beauty Products.
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <!-- tab Live Info end -->
               </div>
             </div>
           </section>
+
+          <div class="component_tit">Live Streaming Setting (直播主畫面)</div>
+          <div class="streaming_streamerBox">
+            <form action="">
+              <ul>
+                <li>
+                  <div class="streaming_inputList">
+                    <label for="RTMP">RTMP</label>
+                    <div class="input_field">
+                      <input type="text" placeholder="rtmp://live.taiwantrade.com/live/202303130001-16541333" id="RTMP" />
+                    </div>
+                  </div>
+                  <div class="streaming_inputList">
+                    <label for="ID">Room ID</label>
+                    <div class="input_field">
+                      <input type="text" placeholder="hyweb" id="ID" />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="streaming_inputList">
+                    <label for="IVS">IVS Key</label>
+                    <div class="input_field">
+                      <input type="text" placeholder="" id="IVS" />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="streaming_inputList">
+                    <label for="lang">開播語系</label>
+                    <div class="input_field">
+                      <input type="text" placeholder="" id="lang" />
+                    </div>
+                  </div>
+                  <div class="streaming_inputList">
+                    <div class="label">啟用字幕</div>
+                    <label class="radio_wrapper">
+                      <input type="radio" name="sub" />
+                      <span class="checkmark"></span>
+                      <span class="radio_txt">Yes</span>
+                    </label>
+                    <label class="radio_wrapper">
+                      <input type="radio" name="sub" />
+                      <span class="checkmark"></span>
+                      <span class="radio_txt">No</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="streaming_inputList top">
+                    <div class="label">直播時間</div>
+                    <div class="info">
+                      2023/3/6 16:00 UTC+8
+                      <div class="advanced_action_area">
+                        <div class="button_area">
+                          <button type="button" class="btn_primary">連接伺服器</button>
+                          <button type="button" class="btn_primary" disabled>直播測試</button>
+                          <button type="button" class="btn_primary" disabled>開始直播</button>
+                          <button type="button" class="btn_primary" disabled>開始錄影</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="streaming_inputList notice">
+                    <div class="label">注意事項</div>
+                    <div class="info">
+                      <ul>
+                        <li>請先點選「連接伺服器」確認網路連接速度。開始直播前，請務必先進行「直播測試」，方可「開始直播」。</li>
+                        <li>「開始直播」將於直播時間前30分鐘方可點選，點選後前台仍需等候時間到才會有畫面顯示。</li>
+                        <li>若直播設定為「預錄模式」方可使用「開始錄影功能」。請務必於直播前一天完成錄影作業，以便系統進行轉檔與上傳。</li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </form>
+          </div>
+
+          <div class="streaming_videoInfo">
+            <div class="streaming_channel">
+              <div class="streaming_avatar"><img src="images/logo.png" alt="" /></div>
+              <div class="streaming_name">HYWEB TECHNOLOGY CO., LTD. 凌網科技<a href="#" class="streaming_btn">Visit Company Site</a></div>
+            </div>
+            <h1 class="streaming_title">Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty</h1>
+            <div class="streaming_description">
+              Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Products. Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Products. Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Products. Beauty Online: Sephora: Makeup, Skincare, Fragrance,
+              Hair & Beauty Products.
+            </div>
+          </div>
 
           <section class="streaming_information">
             <div class="component_tit">Live Streaming (Activity) rundown</div>

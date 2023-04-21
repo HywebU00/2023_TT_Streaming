@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/streaming_list.css" />
     <link rel="stylesheet" href="css/streaming_detail.css" />
   </head>
-  <body class="fullscreen">
+  <body class="">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
       <div class="App">
@@ -243,15 +243,15 @@
             <div class="tabSet">
               <div class="tabItems">
                 <!-- 該頁籤點選時增加 active -->
-                <button type="button" class="active">streamer</button>
-                <button type="button">Products</button>
+                <button type="button">streamer</button>
+                <button type="button" class="active">Products</button>
                 <button type="button">Live Chat</button>
                 <button type="button">Live Info</button>
               </div>
 
               <div class="tabContentGroup">
                 <!-- tab streamer start -->
-                <div class="tabContent">
+                <div class="tabContent" style="display: none">
                   <div class="streaming_streamerBox inTab">
                     <form action="">
                       <ul>
@@ -333,7 +333,7 @@
                 <!-- tab streamer end -->
 
                 <!-- tab Products start -->
-                <div class="tabContent" style="display: none">
+                <div class="tabContent">
                   <div id="product-container">
                     <ul id="product-list">
                       <li>
