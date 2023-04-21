@@ -344,6 +344,11 @@
   color: #f65248;
   font-weight: bold;
 }
+.tabSet #product-list .price span {
+  color: #8a96a6;
+  font-size: 12px;
+  font-weight: normal;
+}
 .tabSet #product-list .btnBox {
   display: flex;
   margin: 0 0 0 auto;
