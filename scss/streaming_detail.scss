@@ -368,10 +368,18 @@
         border-radius: 4px;
         font-size: 14px;
         background: none;
-        border: 1px solid $primaryColor;
+        border: 1px solid #000;
         &:hover {
-          color: #fff;
+          background: $lineColor;
+          border: 1px solid $lineColor;
+        }
+        &:nth-child(2) {
+          border: 1px solid $primaryColor;
           background: $primaryColor;
+          &:hover {
+            background: $primaryColor2;
+            border: 1px solid $primaryColor2;
+          }
         }
       }
     }

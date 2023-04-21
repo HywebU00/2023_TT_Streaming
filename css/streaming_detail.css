@@ -361,11 +361,19 @@
   border-radius: 4px;
   font-size: 14px;
   background: none;
-  border: 1px solid #fabe0f;
+  border: 1px solid #000;
 }
 .tabSet #product-list .btnBox button:hover {
-  color: #fff;
+  background: #f3f3f3;
+  border: 1px solid #f3f3f3;
+}
+.tabSet #product-list .btnBox button:nth-child(2) {
+  border: 1px solid #fabe0f;
   background: #fabe0f;
+}
+.tabSet #product-list .btnBox button:nth-child(2):hover {
+  background: #eb9d00;
+  border: 1px solid #eb9d00;
 }
 
 /* products */
