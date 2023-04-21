@@ -225,6 +225,7 @@
   border-radius: 10px 10px 0 0;
   font-size: 16px;
   background: #f3f3f3;
+  flex-grow: 1;
 }
 @media screen and (max-width: 1000px) {
   .tabSet .tabItems button {
@@ -342,11 +343,6 @@
   margin-bottom: 3px;
   color: #f65248;
   font-weight: bold;
-}
-.tabSet #product-list .price span {
-  color: #8a96a6;
-  font-size: 12px;
-  font-weight: normal;
 }
 .tabSet #product-list .btnBox {
   display: flex;

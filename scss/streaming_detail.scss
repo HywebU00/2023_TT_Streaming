@@ -233,6 +233,7 @@
       border-radius: 10px 10px 0 0;
       font-size: 16px;
       background: $lineColor;
+      flex-grow: 1;
       @media screen and (max-width: 1000px) {
         padding: 8px 10px;
       }
@@ -350,11 +351,11 @@
       margin-bottom: 3px;
       color: $redColor;
       font-weight: bold;
-      span {
-        color: $textColor4;
-        font-size: 12px;
-        font-weight: normal;
-      }
+      // span {
+      //   color: $textColor4;
+      //   font-size: 12px;
+      //   font-weight: normal;
+      // }
     }
     .btnBox {
       display: flex;
