@@ -2592,12 +2592,12 @@ rwd設定
 }
 
 .anchor_bar .swiper-button-next {
-  background-image: url('../images/icon/carousel_arrow_rt.png');
+  background-image: url('../img/streaming/icon/carousel_arrow_rt.png');
   background-size: 12px;
 }
 
 .anchor_bar .swiper-button-prev {
-  background-image: url('../images/icon/carousel_arrow_lt.png');
+  background-image: url('../img/streaming/icon/carousel_arrow_lt.png');
   background-size: 12px;
 }
 
@@ -3329,4 +3329,33 @@ rwd設定
   .alert_img {
     max-height: 50px;
   }
+}
+
+.at4-visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+.at-resp-share-element .at-share-btn {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin: 0 2px 5px;
+  padding: 0;
+  overflow: hidden;
+  line-height: 0;
+  text-decoration: none;
+  text-transform: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: 0;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+  background-color: transparent;
+}
+.at-style-responsive .at-share-btn {
+  padding: 5px;
 }
