@@ -64,6 +64,10 @@
     border-radius: 16px;
     box-shadow: 0 5px 12px 0px rgba(0, 0, 0, 0.1);
   }
+  &.typeD {
+    padding: 0;
+    margin: 0 50px;
+  }
 }
 
 // list
@@ -206,6 +210,7 @@
     width: 56px;
     height: 56px;
     margin-top: 0;
+    top: 50%;
     transform: translateY(-50%);
     box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
     background-size: 12px;
@@ -214,6 +219,8 @@
   .swiper-button-prev,
   .swiper-button-next {
     &.sm {
+      top: calc(50% - 16px);
+      display: block;
       background-size: 6px;
     }
   }
@@ -221,14 +228,14 @@
     background-image: url('../img/streaming/carousel_arrow_lt.png');
     left: -28px;
     &.sm {
-      left: -50px;
+      left: 10px;
     }
   }
   .swiper-button-next {
     background-image: url('../img/streaming/carousel_arrow_rt.png');
     right: -28px;
     &.sm {
-      right: -50px;
+      right: 10px;
     }
   }
   .swiper-pagination {

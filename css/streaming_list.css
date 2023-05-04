@@ -72,6 +72,10 @@
   border-radius: 16px;
   box-shadow: 0 5px 12px 0px rgba(0, 0, 0, 0.1);
 }
+.streaming_carousel_card.typeD {
+  padding: 0;
+  margin: 0 50px;
+}
 
 .streaming_listBoxOuter {
   padding: 24px;
@@ -226,6 +230,7 @@
   width: 56px;
   height: 56px;
   margin-top: 0;
+  top: 50%;
   transform: translateY(-50%);
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
   background-size: 12px;
@@ -235,6 +240,8 @@
 .streaming_bar .swiper-button-next.sm,
 .streaming_carousel_card .swiper-button-prev.sm,
 .streaming_carousel_card .swiper-button-next.sm {
+  top: calc(50% - 16px);
+  display: block;
   background-size: 6px;
 }
 .streaming_bar .swiper-button-prev,
@@ -244,7 +251,7 @@
 }
 .streaming_bar .swiper-button-prev.sm,
 .streaming_carousel_card .swiper-button-prev.sm {
-  left: -50px;
+  left: 10px;
 }
 .streaming_bar .swiper-button-next,
 .streaming_carousel_card .swiper-button-next {
@@ -253,7 +260,7 @@
 }
 .streaming_bar .swiper-button-next.sm,
 .streaming_carousel_card .swiper-button-next.sm {
-  right: -50px;
+  right: 10px;
 }
 .streaming_bar .swiper-pagination,
 .streaming_carousel_card .swiper-pagination {
