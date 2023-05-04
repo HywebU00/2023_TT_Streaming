@@ -17,9 +17,9 @@
     padding-left: 16px;
     padding-right: 16px;
   }
-  @media screen and (max-width: 14720px) {
-    padding-right: 34px;
-    padding-left: 34px;
+  @media screen and (max-width: 1472px) {
+    padding-right: 70px;
+    padding-left: 70px;
   }
   &.fixed {
     max-width: none;
@@ -54,6 +54,14 @@
     .swiper-button-prev,
     .swiper-button-next {
       display: block;
+    }
+    @media screen and (max-width: 768px) {
+      .swiper-button-prev {
+        left: -60px;
+      }
+      .swiper-button-next {
+        right: -60px;
+      }
     }
     .swiper-button-disabled {
       display: none;
