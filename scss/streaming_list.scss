@@ -68,6 +68,12 @@
     }
   }
 }
+.streaming_listContent {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
 
 .streaming_carousel_card {
   padding: 24px 10px;

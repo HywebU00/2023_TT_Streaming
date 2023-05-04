@@ -74,6 +74,13 @@
   display: none;
 }
 
+.streaming_listContent {
+  display: none;
+}
+.streaming_listContent.active {
+  display: block;
+}
+
 .streaming_carousel_card {
   padding: 24px 10px;
 }
