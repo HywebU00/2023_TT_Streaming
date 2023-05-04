@@ -19,6 +19,12 @@
     padding-right: 16px;
   }
 }
+@media screen and (max-width: 14720px) {
+  .streaming_bar {
+    padding-right: 34px;
+    padding-left: 34px;
+  }
+}
 .streaming_bar.fixed {
   max-width: none;
   position: fixed;

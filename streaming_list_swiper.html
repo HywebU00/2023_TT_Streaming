@@ -2300,7 +2300,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script>
-  var swiper = new Swiper('.streaming_carousel_card.typeC .swiper-container', {
+  var swiperC = new Swiper('.streaming_carousel_card.typeC .swiper-container', {
     slidesPerView: 4,
     spaceBetween: 30,
     pagination: {
@@ -2330,7 +2330,7 @@
     },
   });
 
-  var swiper = new Swiper('.streaming_carousel_card.typeD .swiper-container', {
+  var swiperD = new Swiper('.streaming_carousel_card.typeD .swiper-container', {
     slidesPerView: 5,
     spaceBetween: 20,
     pagination: {
@@ -2358,7 +2358,7 @@
     },
   });
 
-  var swiper = new Swiper('.streaming_bar .swiper-container', {
+  var swiperBar = new Swiper('.streaming_bar .swiper-container', {
     slidesPerView: 'auto',
     spaceBetween: 20,
     navigation: {
@@ -2371,20 +2371,18 @@
   let streamingBox = document.querySelectorAll('.streaming_listContent');
   let bar = document.querySelectorAll('.streaming_bar .swiper-slide');
   let streamingBar = document.querySelector('.streaming_bar');
-  let streamingBarHeight = 0;
   let streamingTop = [];
-  let streamingBarTop = streamingBar.offsetTop;
+  let streamingBarTop;
 
   let checkStreamingTop = () => {
-    streamingBarHeight = streamingBar.offsetHeight;
-    streamingTop = [];
-    streamingBox.forEach((item, index) => {
-      streamingTop.push(item.offsetTop);
-    });
+    streamingBar.classList.remove('fixed');
+    streamingBarTop = streamingBar.offsetTop;
   };
 
   window.addEventListener('load', checkStreamingTop);
   window.addEventListener('resize', checkStreamingTop);
+
+  let checkScroll = () => {};
 
   bar.forEach((item, index) => {
     item.addEventListener('click', function () {
@@ -2395,10 +2393,18 @@
 
       this.classList.add('active');
 
-      window.scrollTo({
-        top: streamingTop[index] - streamingBarHeight,
-        behavior: 'smooth',
-      });
+      if (streamingBar.classList.contains('fixed')) {
+        console.log('a');
+        window.scrollTo({
+          top: streamingBox[index].offsetTop - streamingBar.offsetHeight,
+          behavior: 'smooth',
+        });
+      } else {
+        window.scrollTo({
+          top: streamingBox[index].offsetTop - streamingBar.offsetHeight * 2,
+          behavior: 'smooth',
+        });
+      }
     });
   });
 
@@ -2412,6 +2418,16 @@
       check = false;
       streamingBar.classList.remove('fixed');
     }
+
+    streamingBox.forEach((item, index) => {
+      if (windowScroll >= item.offsetTop - streamingBar.offsetHeight) {
+        bar.forEach((v, i) => {
+          v.classList.remove('active');
+        });
+        bar[index].classList.add('active');
+        swiperBar.slideTo(index, 500, false);
+      }
+    });
   };
   window.addEventListener('scroll', scrollTarget);
 </script>
