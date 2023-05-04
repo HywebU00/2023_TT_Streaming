@@ -58,6 +58,13 @@
   background-color: #fabe0f;
   color: #000;
 }
+.streaming_bar .component_layout .swiper-button-prev,
+.streaming_bar .component_layout .swiper-button-next {
+  display: block;
+}
+.streaming_bar .component_layout .swiper-button-disabled {
+  display: none;
+}
 
 .streaming_carousel_card {
   padding: 24px 10px;
