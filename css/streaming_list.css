@@ -240,9 +240,16 @@
 .streaming_bar .swiper-button-next.sm,
 .streaming_carousel_card .swiper-button-prev.sm,
 .streaming_carousel_card .swiper-button-next.sm {
-  top: calc(50% - 16px);
   display: block;
   background-size: 6px;
+}
+@media screen and (max-width: 767.9px) {
+  .streaming_bar .swiper-button-prev.sm,
+  .streaming_bar .swiper-button-next.sm,
+  .streaming_carousel_card .swiper-button-prev.sm,
+  .streaming_carousel_card .swiper-button-next.sm {
+    top: calc(50% - 16px);
+  }
 }
 .streaming_bar .swiper-button-prev,
 .streaming_carousel_card .swiper-button-prev {
