@@ -1,17 +1,13 @@
 @import '_variable';
 /*banner*/
-.category_with_kv {
+
+.streaming_banner {
+  position: absolute;
+  inset: 0;
   .streaming_box {
     position: absolute;
     inset: 0;
-    @media screen and (max-width: 1200px) {
-      .streaming_channel {
-        display: none;
-      }
-    }
   }
-}
-.streaming_box {
   .streaming_infoBox {
     background: rgb(0 0 0 /30%);
     padding: 20px;
@@ -30,10 +26,11 @@
     }
   }
 }
+
 /*banner*/
 
 /*EZ*/
-.streaming_outBox {
+.streaming_ez_banner {
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
@@ -52,6 +49,23 @@
       background-size: cover;
       background-position: left center;
       aspect-ratio: 16/9;
+    }
+    .streaming_infoBox {
+      background: rgb(0 0 0 /30%);
+      padding: 20px;
+    }
+    .streaming_title {
+      color: #fff;
+      margin-bottom: 20px;
+      @media screen and (max-width: 1200px) {
+        margin-bottom: 0;
+      }
+    }
+    .streaming_channel {
+      color: #fff;
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
     }
   }
   @media screen and (max-width: 1200px) {
