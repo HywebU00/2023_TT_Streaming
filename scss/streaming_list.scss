@@ -1,80 +1,5 @@
 @import '_variable';
 
-.streaming_bar {
-  top: 0;
-  background: #f8f8f8;
-  margin: auto;
-  max-width: 1472px;
-  z-index: 5;
-  position: relative;
-  z-index: 90;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 8px;
-  @media screen and (min-width: 1520px) {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  @media screen and (max-width: 1472px) {
-    padding-right: 70px;
-    padding-left: 70px;
-  }
-  &.fixed {
-    max-width: none;
-    position: fixed;
-    top: 0;
-    left: 0px;
-    right: 0px;
-  }
-  .component_layout {
-    position: relative;
-    padding: 0;
-    a {
-      color: #3d4c5a;
-      padding: 10px 8px;
-      display: inline-block;
-      border-radius: 8px;
-      min-height: 39px;
-      line-height: 1.5;
-      @media screen and (min-width: 768px) {
-        font-size: 24px;
-        padding: 10px 43px;
-        min-height: 56px;
-      }
-    }
-    .swiper-slide {
-      width: auto;
-      &.active a {
-        background-color: #fabe0f;
-        color: #000;
-      }
-    }
-    .swiper-button-prev,
-    .swiper-button-next {
-      display: block;
-    }
-    @media screen and (max-width: 768px) {
-      .swiper-button-prev {
-        left: -60px;
-      }
-      .swiper-button-next {
-        right: -60px;
-      }
-    }
-    .swiper-button-disabled {
-      display: none;
-    }
-  }
-}
-.streaming_listContent {
-  display: none;
-  &.active {
-    display: block;
-  }
-}
-
 .streaming_carousel_card {
   padding: 24px 10px;
   @media screen and (min-width: 768px) {
@@ -112,16 +37,6 @@
       &#{$i} {
         .streaming_item {
           width: calc((100% - ($gap * ($i - 1))) / $i);
-        }
-      }
-    }
-    @for $i from 4 to 6 {
-      &#{$i} {
-        .streaming_avatar {
-          width: 40px;
-          span {
-            font-size: 30px;
-          }
         }
       }
     }
@@ -215,7 +130,7 @@
   }
 }
 
-.streaming_bar,
+.tabBar,
 .streaming_carousel_card {
   .swiper-wrapper {
     height: auto;

@@ -14,7 +14,7 @@
 
 <div style="height: 200px"></div>
 
-<div class="streaming_bar">
+<div class="tabBar">
   <div class="component_layout">
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
@@ -33,7 +33,7 @@
   </div>
 </div>
 
-<div class="streaming_listContent">
+<div class="tabListContent">
   <div class="component_layout">
     <div class="component_tit">typeA</div>
     <div class="streaming_listBoxOuter">
@@ -613,7 +613,7 @@
   </div>
 </div>
 
-<div class="streaming_listContent">
+<div class="tabListContent">
   <div class="component_layout">
     <div class="component_tit">typeB</div>
     <div class="streaming_listBoxOuter">
@@ -1079,7 +1079,7 @@
   </div>
 </div>
 
-<div class="streaming_listContent">
+<div class="tabListContent">
   <div class="component_layout">
     <div class="component_tit">typeC</div>
     <div class="swiper_custom_layout">
@@ -1652,7 +1652,7 @@
   </div>
 </div>
 
-<div class="streaming_listContent">
+<div class="tabListContent">
   <div class="component_layout">
     <div class="component_tit">typeD</div>
     <div class="swiper_custom_layout">
@@ -2275,22 +2275,22 @@
   </div>
 </div>
 
-<div class="streaming_listContent">
+<div class="tabListContent">
   <div class="component_layout">
     <div style="height: 200px">E</div>
   </div>
 </div>
-<div class="streaming_listContent">
+<div class="tabListContent">
   <div class="component_layout">
     <div style="height: 200px">F</div>
   </div>
 </div>
-<div class="streaming_listContent">
+<div class="tabListContent">
   <div class="component_layout">
     <div style="height: 200px">G</div>
   </div>
 </div>
-<div class="streaming_listContent">
+<div class="tabListContent">
   <div class="component_layout">
     <div style="height: 200px">H</div>
   </div>
@@ -2358,19 +2358,19 @@
     },
   });
 
-  var swiperBar = new Swiper('.streaming_bar .swiper-container', {
+  var swiperBar = new Swiper('.tabBar .swiper-container', {
     slidesPerView: 'auto',
     spaceBetween: 20,
     navigation: {
-      nextEl: '.streaming_bar .swiper-button-next',
-      prevEl: '.streaming_bar .swiper-button-prev',
+      nextEl: '.tabBar .swiper-button-next',
+      prevEl: '.tabBar .swiper-button-prev',
     },
     slideToClickedSlide: true,
   });
 
-  let streamingBox = document.querySelectorAll('.streaming_listContent');
-  let bar = document.querySelectorAll('.streaming_bar .swiper-slide');
-  let streamingBar = document.querySelector('.streaming_bar');
+  let streamingBox = document.querySelectorAll('.tabListContent');
+  let bar = document.querySelectorAll('.tabBar .swiper-slide');
+  let streamingBar = document.querySelector('.tabBar');
   let streamingTop = [];
   let streamingBarTop;
 
