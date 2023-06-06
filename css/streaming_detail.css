@@ -191,7 +191,7 @@
 }
 .player .player-ui .streaming_share {
   position: relative;
-  z-index: 40;
+  z-index: 9;
 }
 @media screen and (max-width: 1000px) {
   .player .player-ui .streaming_share {
