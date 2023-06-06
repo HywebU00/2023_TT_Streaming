@@ -50,8 +50,26 @@
                         <i><img src="img/streaming/icon/icon_volume.svg" alt="" /></i>
                       </button>
                       <button class="streaming_btn icon">
-                        <i><img src="img/streaming/icon/icon_translate.svg" alt="" /></i>
+                        <i><img src="img/streaming/icon/icon_translate_non.svg" alt="" /></i>
                       </button>
+                      <div class="translate">
+                        <button class="streaming_btn icon">
+                          <i><img src="img/streaming/icon/icon_translate.svg" alt="" /></i>
+                        </button>
+                        <div class="translateBox">
+                          <ul>
+                            <li>
+                              <button class="active"><i></i>語系</button>
+                            </li>
+                            <li>
+                              <button><i></i>語系</button>
+                            </li>
+                            <li>
+                              <button><i></i>語系</button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                       <button class="streaming_btn icon">
                         <i><img src="img/streaming/icon/icon_fullscreen.svg" alt="" /></i>
                       </button>
@@ -65,10 +83,16 @@
                         <button class="streaming_btn">
                           <i><img src="img/streaming/icon/icon_chat.svg" alt="" /></i>Live Chat
                         </button>
+                        <button class="streaming_btn">
+                          <i><img src="img/streaming/icon/icon_chat_non.svg" alt="" /></i>Live Chat
+                        </button>
                       </div>
                     </div>
                     <div class="top">
-                      <div class="streaming_videoPic"><img src="img/streaming/qrcode.png" alt="" /></div>
+                      <div class="streaming_videoPic">
+                        <button class="qrCode"><img src="img/streaming/qrcode.png" alt="" /></button>
+                        <div class="qrCodeBig"><img src="img/streaming/qrcode.png" width="100%" alt="" /></div>
+                      </div>
                       <!-- 全螢幕時顯示logo -->
                       <div class="streaming_videoPic"><img src="img/streaming/TT_logo.png" alt="" /></div>
                       <div class="streaming_share">
@@ -175,6 +199,15 @@
                       </ul>
                     </div>
                     <div id="send-chat">
+                      <!-- 直撥狀態顯示在聊天室 -->
+                      <!--
+                      <div class="chat_streaming_state">
+                        <button id="send-message">Sign in to Chat</button>
+                        <div class="info">Join the live chat while live streaming start.</div>
+                        <div class="info">Live has ended.</div>
+                      </div>
+                      -->
+                      <!-- 直撥狀態顯示在聊天室 -->
                       <span><input type="text" placeholder="enter your message" id="message-input" /></span>
                       <button id="send-message">Send</button>
                       <button id="change-userName">Change User</button>
@@ -206,7 +239,7 @@
                 </div>
 
                 <!-- 直播準備 start -->
-                <div class="upcomingBox">
+                <div class="upcomingBox" style="background-image: url('./img/streaming/banner.jpg'); background-repeat: no-repeat; background-size: cover; background-position: left center">
                   <div class="streaming_stateBox upcoming">
                     <div class="streaming_state">Upcoming</div>
                     <div class="streaming_view">2023/3/6 17:00 UTC+8</div>
@@ -237,12 +270,20 @@
                       </li>
                     </ul>
                   </div>
+                  <div class="countDown">直撥倒數：<span>05:00</span></div>
                 </div>
                 <!-- 直播準備 end -->
               </div>
             </div>
 
             <div class="tabSet">
+              <div class="streaming_videoInfo">
+                <div class="streaming_channel">
+                  <div class="streaming_avatar"><img src="img/streaming/logo.png" alt="" /></div>
+                  <div class="streaming_name">HYWEB TECHNOLOGY CO., LTD. 凌網科技<a href="#" class="streaming_btn">Visit Company Site</a></div>
+                </div>
+              </div>
+
               <div class="tabItems">
                 <!-- 該頁籤點選時增加 active -->
                 <button type="button" class="active">streamer</button>
@@ -521,6 +562,15 @@
                       </ul>
                     </div>
                     <div id="send-chat">
+                      <!-- 直撥狀態顯示在聊天室 -->
+                      <!--
+                      <div class="chat_streaming_state">
+                        <button id="send-message">Sign in to Chat</button>
+                        <div class="info">Join the live chat while live streaming start.</div>
+                        <div class="info">Live has ended.</div>
+                      </div>
+                      -->
+                      <!-- 直撥狀態顯示在聊天室 -->
                       <span><input type="text" placeholder="enter your message" id="message-input" /></span>
                       <button id="send-message">Send</button>
                       <button id="change-userName">Change User</button>
@@ -533,10 +583,6 @@
                 <div class="tabContent" style="display: none">
                   <div class="infoBox">
                     <div class="streaming_videoInfo">
-                      <div class="streaming_channel">
-                        <div class="streaming_avatar"><img src="img/streaming/logo.png" alt="" /></div>
-                        <div class="streaming_name">HYWEB TECHNOLOGY CO., LTD. 凌網科技<a href="#" class="streaming_btn">Visit Company Site</a></div>
-                      </div>
                       <h1 class="streaming_title">Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty</h1>
                       <div class="streaming_description">
                         Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Products. Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Products. Beauty Online: Sephora: Makeup, Skincare, Fragrance, Hair & Beauty Products. Beauty Online: Sephora: Makeup, Skincare,
@@ -550,8 +596,8 @@
             </div>
           </section>
 
-          <div class="component_tit">Live Streaming Setting (直播主畫面)</div>
           <div class="streaming_streamerBox">
+            <div class="component_tit">Live Streaming Setting (直播主畫面)</div>
             <form action="">
               <ul>
                 <li>

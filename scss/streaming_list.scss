@@ -13,6 +13,9 @@
   &.typeD {
     padding: 0;
     margin: 0 50px;
+    @media screen and (max-width: 767.9px) {
+      margin: 0 10px;
+    }
   }
 }
 
@@ -154,9 +157,15 @@
   }
   .swiper-button-prev,
   .swiper-button-next {
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
     &.sm {
       display: block;
       background-size: 6px;
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
       @media screen and (max-width: 767.9px) {
         top: calc(50% - 16px);
       }
@@ -184,7 +193,7 @@
     transform: translateX(-50%);
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     .swiper-pagination {
       top: -36px;
       bottom: auto;
@@ -195,7 +204,7 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     :lang(ar) .swiper-pagination {
       left: 0;
       right: auto;

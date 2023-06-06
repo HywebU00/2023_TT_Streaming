@@ -138,6 +138,12 @@
       &:hover {
         background: $primaryColor;
       }
+      & + div {
+        margin: 0 0 0 5px;
+        & + .streaming_btn {
+          margin: 0 0 0 5px;
+        }
+      }
     }
     .top {
       position: absolute;
@@ -150,19 +156,50 @@
       line-height: 0;
       order: 9;
       margin: 0 0 0 10px;
+      position: relative;
+      z-index: 50;
       @media screen and (max-width: 1000px) {
         &:nth-child(1) {
           display: none;
         }
       }
-      img {
+      button img,
+      & > img {
         width: auto;
         max-height: 40px;
+      }
+      button {
+        padding: 0;
+        background: none;
+        border: none;
+        &:hover ~ .qrCodeBig {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    .qrCodeBig {
+      position: absolute;
+      border-radius: 10px;
+      background: #fff;
+      right: calc(100% + 10px);
+      top: 0;
+      width: 200px;
+      aspect-ratio: 1;
+      line-height: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      visibility: hidden;
+      overflow: hidden;
+      img {
+        width: 200px;
+        height: 200px;
       }
     }
     .streaming_share {
       position: relative;
-      z-index: 99;
+      z-index: 40;
       @media screen and (max-width: 1000px) {
         display: none;
       }
@@ -202,6 +239,9 @@
     position: absolute;
     left: 0px;
     bottom: 0px;
+    button {
+      margin: 0;
+    }
   }
 }
 
@@ -220,7 +260,7 @@
   }
   .tabItems {
     display: flex;
-    &:last-child {
+    button:last-child {
       display: none;
       @media screen and (max-width: 1000px) {
         display: block;
@@ -328,7 +368,7 @@
     }
     li {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       padding: 10px 10px 10px 0;
       & + li {
         border-top: $bgColor 1px solid;
@@ -383,6 +423,19 @@
           }
         }
       }
+    }
+  }
+
+  .streaming_videoInfo {
+    @media screen and (max-width: 1000px) {
+      display: block;
+    }
+  }
+  & > .streaming_videoInfo {
+    display: none;
+    @media screen and (max-width: 1000px) {
+      display: block;
+      margin: 0 0 20px;
     }
   }
 }
@@ -525,6 +578,7 @@
   right: 10px;
   left: 1px;
   display: flex;
+  position: relative;
   > span {
     margin: 0;
     flex-grow: 1;
@@ -551,6 +605,31 @@
     }
     &:hover {
       background: $primaryColor2;
+    }
+  }
+
+  .chat_streaming_state {
+    position: absolute;
+    inset: 0;
+    z-index: 9;
+    background: rgba(92, 92, 92, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a,
+    button {
+      display: block;
+      border-radius: 5px;
+      padding: 3px 10px;
+      background: $primaryColor;
+      border: none;
+      color: #000;
+      &:hover {
+        background: $primaryColor2;
+      }
+    }
+    .info {
+      color: #fff;
     }
   }
 }
@@ -662,17 +741,18 @@ body.fullscreen {
 /*介紹區塊*/
 .streaming_videoInfo {
   margin-bottom: 30px;
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
   .streaming_title {
     font-size: 26px;
     color: $textColor2;
     font-weight: bold;
+    margin: 0;
     margin-bottom: 15px;
     overflow: unset;
     display: block;
     -webkit-line-clamp: unset;
-    @media screen and (max-width: 1000px) {
-      display: none;
-    }
   }
   .streaming_channel {
     margin: 0 0 15px 0;
@@ -698,9 +778,6 @@ body.fullscreen {
   .streaming_description {
     color: $textColor2;
     font-size: 18px;
-    @media screen and (max-width: 1000px) {
-      display: none;
-    }
   }
 }
 /* chat */
@@ -721,9 +798,19 @@ body.fullscreen {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgb(0 0 0 / 50%);
   color: #fff;
   z-index: 9;
+  isolation: isolate;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    inset: 0;
+    background: rgb(0 0 0 / 50%);
+  }
+  & > * {
+    z-index: 9;
+  }
   .streaming_stateBox {
     position: absolute;
     left: 10px;
@@ -736,6 +823,17 @@ body.fullscreen {
     font-weight: bold;
     font-size: 36px;
     margin-bottom: 15px;
+  }
+  .countDown {
+    color: #fff;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    span {
+      color: $redColor;
+      font-weight: bold;
+      font-size: 30px;
+    }
   }
 }
 
@@ -965,6 +1063,40 @@ body.fullscreen {
     &:disabled {
       background: $lineColor !important;
       cursor: not-allowed;
+    }
+  }
+}
+
+.translateBox {
+  position: absolute;
+  padding: 10px 15px 10px 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  bottom: calc(100% + 10px);
+  display: block;
+  li + li {
+    margin-top: 5px;
+  }
+  button {
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    background: none;
+    border: none;
+    padding: 0;
+    i {
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin: 0 5px 0 0;
+      mask: url('../img/streaming/icon/icon_done.svg') no-repeat;
+      background: #fff;
+      opacity: 0;
+    }
+    &.active {
+      i {
+        opacity: 1;
+      }
     }
   }
 }

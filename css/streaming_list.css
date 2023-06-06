@@ -16,6 +16,11 @@
   padding: 0;
   margin: 0 50px;
 }
+@media screen and (max-width: 767.9px) {
+  .streaming_carousel_card.typeD {
+    margin: 0 10px;
+  }
+}
 
 .streaming_listBoxOuter {
   padding: 24px;
@@ -164,12 +169,28 @@
   background-size: 12px;
   z-index: 9;
 }
+@media screen and (max-width: 1024px) {
+  .tabBar .swiper-button-prev,
+  .tabBar .swiper-button-next,
+  .streaming_carousel_card .swiper-button-prev,
+  .streaming_carousel_card .swiper-button-next {
+    display: none;
+  }
+}
 .tabBar .swiper-button-prev.sm,
 .tabBar .swiper-button-next.sm,
 .streaming_carousel_card .swiper-button-prev.sm,
 .streaming_carousel_card .swiper-button-next.sm {
   display: block;
   background-size: 6px;
+}
+@media screen and (max-width: 1024px) {
+  .tabBar .swiper-button-prev.sm,
+  .tabBar .swiper-button-next.sm,
+  .streaming_carousel_card .swiper-button-prev.sm,
+  .streaming_carousel_card .swiper-button-next.sm {
+    display: none;
+  }
 }
 @media screen and (max-width: 767.9px) {
   .tabBar .swiper-button-prev.sm,
@@ -204,7 +225,7 @@
   height: 19px;
   transform: translateX(-50%);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .tabBar .swiper-pagination,
   .streaming_carousel_card .swiper-pagination {
     top: -36px;
@@ -214,7 +235,7 @@
     transform: translateX(0);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .tabBar :lang(ar) .swiper-pagination,
   .streaming_carousel_card :lang(ar) .swiper-pagination {
     left: 0;
