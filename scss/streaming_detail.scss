@@ -145,6 +145,9 @@
         }
       }
     }
+    .translate {
+      position: relative;
+    }
     .top {
       position: absolute;
       right: 10px;
@@ -1074,6 +1077,9 @@ body.fullscreen {
   border-radius: 10px;
   bottom: calc(100% + 10px);
   display: block;
+  margin: 0 !important;
+  left: 50%;
+  transform: translateX(-50%);
   li + li {
     margin-top: 5px;
   }
@@ -1084,6 +1090,7 @@ body.fullscreen {
     background: none;
     border: none;
     padding: 0;
+    white-space: nowrap;
     i {
       display: block;
       width: 20px;

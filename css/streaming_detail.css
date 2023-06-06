@@ -135,6 +135,9 @@
 .player .player-ui .streaming_btn + div + .streaming_btn {
   margin: 0 0 0 5px;
 }
+.player .player-ui .translate {
+  position: relative;
+}
 .player .player-ui .top {
   position: absolute;
   right: 10px;
@@ -1069,6 +1072,9 @@ body.fullscreen .streaming_content {
   border-radius: 10px;
   bottom: calc(100% + 10px);
   display: block;
+  margin: 0 !important;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .translateBox li + li {
   margin-top: 5px;
@@ -1080,6 +1086,7 @@ body.fullscreen .streaming_content {
   background: none;
   border: none;
   padding: 0;
+  white-space: nowrap;
 }
 .translateBox button i {
   display: block;
