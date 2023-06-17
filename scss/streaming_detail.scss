@@ -130,24 +130,22 @@
       right: 10px;
       bottom: 10px;
       left: 10px;
-    }
-
-    .streaming_btn {
-      background: rgb(255 255 255 / 30%);
-      &.active,
-      &:hover {
-        background: $primaryColor;
-      }
-      & + div {
+      .streaming_btn {
+        background: rgb(255 255 255 / 30%);
+        &.active,
+        &:hover {
+          background: $primaryColor;
+        }
         margin: 0 0 0 5px;
-        & + .streaming_btn {
+        & + div {
           margin: 0 0 0 5px;
+          & + .streaming_btn {
+            margin: 0 0 0 5px;
+          }
         }
       }
     }
-    .translate {
-      position: relative;
-    }
+
     .top {
       position: absolute;
       right: 10px;
@@ -676,7 +674,7 @@ body.fullscreen {
   .streaming_chatBtn {
     position: relative;
     order: -1;
-    margin-right: 15px;
+    margin-right: 5px !important;
   }
   .streaming_content {
     padding: 0;
@@ -1070,6 +1068,9 @@ body.fullscreen {
   }
 }
 
+.translate {
+  position: relative;
+}
 .translateBox {
   position: absolute;
   padding: 10px 15px 10px 10px;
@@ -1105,5 +1106,24 @@ body.fullscreen {
         opacity: 1;
       }
     }
+  }
+}
+
+.volume {
+  position: relative;
+}
+.volumeBox {
+  position: absolute;
+  padding: 10px 15px 10px 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  bottom: calc(100% + 10px);
+  display: block;
+  margin: 0 !important;
+  left: 0%;
+  transform: rotate(-90deg) translateY(-50%) translateX(20px);
+  input {
+    width: 50px;
+    appearance: auto;
   }
 }

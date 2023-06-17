@@ -123,20 +123,18 @@
   bottom: 10px;
   left: 10px;
 }
-.player .player-ui .streaming_btn {
+.player .player-ui .player-ui-controls .streaming_btn {
   background: rgba(255, 255, 255, 0.3);
+  margin: 0 0 0 5px;
 }
-.player .player-ui .streaming_btn.active, .player .player-ui .streaming_btn:hover {
+.player .player-ui .player-ui-controls .streaming_btn.active, .player .player-ui .player-ui-controls .streaming_btn:hover {
   background: #fabe0f;
 }
-.player .player-ui .streaming_btn + div {
+.player .player-ui .player-ui-controls .streaming_btn + div {
   margin: 0 0 0 5px;
 }
-.player .player-ui .streaming_btn + div + .streaming_btn {
+.player .player-ui .player-ui-controls .streaming_btn + div + .streaming_btn {
   margin: 0 0 0 5px;
-}
-.player .player-ui .translate {
-  position: relative;
 }
 .player .player-ui .top {
   position: absolute;
@@ -657,7 +655,7 @@ body.fullscreen .player-ui .streaming_share ul {
 body.fullscreen .streaming_chatBtn {
   position: relative;
   order: -1;
-  margin-right: 15px;
+  margin-right: 5px !important;
 }
 body.fullscreen .streaming_content {
   padding: 0;
@@ -1065,6 +1063,10 @@ body.fullscreen .streaming_content {
   cursor: not-allowed;
 }
 
+.translate {
+  position: relative;
+}
+
 .translateBox {
   position: absolute;
   padding: 10px 15px 10px 10px;
@@ -1100,4 +1102,26 @@ body.fullscreen .streaming_content {
 }
 .translateBox button.active i {
   opacity: 1;
+}
+
+.volume {
+  position: relative;
+}
+
+.volumeBox {
+  position: absolute;
+  padding: 10px 15px 10px 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  bottom: calc(100% + 10px);
+  display: block;
+  margin: 0 !important;
+  left: 0%;
+  transform: rotate(-90deg) translateY(-50%) translateX(20px);
+}
+.volumeBox input {
+  width: 50px;
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
 }/*# sourceMappingURL=streaming_detail.css.map */
