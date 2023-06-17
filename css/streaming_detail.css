@@ -662,6 +662,9 @@ body.fullscreen .streaming_content {
   left: 10px;
   top: 10px;
 }
+body.fullscreen .streaming_stateBox {
+  padding: 0;
+}
 
 .streaming_boxFull {
   display: none;
