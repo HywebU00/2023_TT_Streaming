@@ -453,137 +453,137 @@
   isolation: isolate;
 }
 
-#chatroom-container {
+.chatroom-container {
   overflow: hidden;
   flex-shrink: 0;
 }
-#chatroom-container #connection-name {
+.chatroom-container .connection-name {
   display: flex;
   flex-direction: column-reverse;
 }
-#chatroom-container #connection-name li {
+.chatroom-container .connection-name li {
   padding: 8px 15px;
 }
-#chatroom-container #connection-name li span {
+.chatroom-container .connection-name li span {
   word-wrap: break-word;
   color: #fff;
   font-size: 14px;
   font-weight: 600;
   word-break: break-all;
 }
-#chatroom-container #connection-name li:not(:last-child) {
+.chatroom-container .connection-name li:not(:last-child) {
   display: none;
 }
-#chatroom-container #connection-name .orchid {
+.chatroom-container .connection-name .orchid {
   background-color: orchid;
 }
-#chatroom-container #connection-name .coral {
+.chatroom-container .connection-name .coral {
   background-color: coral;
 }
-#chatroom-container #connection-name .orangered {
+.chatroom-container .connection-name .orangered {
   background-color: #ff4500;
 }
-#chatroom-container #connection-name .cornflowerblue {
+.chatroom-container .connection-name .cornflowerblue {
   background-color: #6495ed;
 }
-#chatroom-container #connection-name .skyblue {
+.chatroom-container .connection-name .skyblue {
   background-color: skyblue;
 }
-#chatroom-container #connection-name .limegreen {
+.chatroom-container .connection-name .limegreen {
   background-color: #32cd32;
 }
 
-#chat-content {
+.chat-content {
   flex-grow: 1;
   overflow-y: auto;
   scrollbar-color: #fabe0f rgba(0, 0, 0, 0.2);
   scrollbar-width: thin;
   margin-bottom: 5px;
 }
-#chat-content::-webkit-scrollbar {
+.chat-content::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
-#chat-content::-webkit-scrollbar-thumb {
+.chat-content::-webkit-scrollbar-thumb {
   border-radius: 100px;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   background: #fabe0f;
 }
-#chat-content::-webkit-scrollbar-track {
+.chat-content::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 0;
   background: rgba(0, 0, 0, 0.1);
 }
-#chat-content #chat-list {
+.chat-content .chat-list {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 10px;
 }
-#chat-content #chat-list li {
+.chat-content .chat-list li {
   display: flex;
   flex-wrap: wrap;
   margin-top: -1px;
 }
-#chat-content #chat-list li .info {
+.chat-content .chat-list li .info {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-#chat-content #chat-list li time {
+.chat-content .chat-list li time {
   display: block;
   font-size: 12px;
   transform: scale(0.9);
   color: #9ea1a5;
 }
-#chat-content #chat-list li .info {
+.chat-content .chat-list li .info {
   margin-bottom: 2px;
 }
-#chat-content #chat-list li .info span {
+.chat-content .chat-list li .info span {
   color: #8a96a6;
   font-size: 14px;
   margin: 0 10px 0 0;
 }
-#chat-content #chat-list li .textContent {
+.chat-content .chat-list li .textContent {
   width: 100%;
   line-height: 1.2;
 }
-#chat-content #chat-list li.streamer {
+.chat-content .chat-list li.streamer {
   color: #eb9d00;
 }
-#chat-content #chat-list li.streamer span {
+.chat-content .chat-list li.streamer span {
   font-weight: bold;
   color: #eb9d00;
 }
-#chat-content #chat-list li.streamer .textContent {
+.chat-content .chat-list li.streamer .textContent {
   color: #2b2b2b;
   background: #fff0c7;
   padding: 6px 8px;
   border-radius: 4px;
 }
-#chat-content #chat-list li.self-chat .textContent {
+.chat-content .chat-list li.self-chat .textContent {
   color: #2b2b2b;
   background-color: #f3f3f3;
   padding: 4px 8px;
   border-radius: 4px;
 }
-#chat-content #chat-list li + li {
+.chat-content .chat-list li + li {
   margin-top: 10px;
 }
 
-#send-chat {
+.send-chat {
   flex-shrink: 0;
   right: 10px;
   left: 1px;
   display: flex;
   position: relative;
 }
-#send-chat > span {
+.send-chat > span {
   margin: 0;
   flex-grow: 1;
 }
-#send-chat span input {
+.send-chat span input {
   width: 100%;
   height: 40px;
   outline: none;
@@ -591,7 +591,7 @@
   border-width: 1px 1px 0 0;
   padding: 5px 15px;
 }
-#send-chat button {
+.send-chat button {
   background: #fabe0f;
   border: none;
   color: #000;
@@ -599,13 +599,13 @@
   padding: 0 10px;
   margin: 0 0 0 5px;
 }
-#send-chat button:last-child {
+.send-chat button:last-child {
   border-radius: 4px 0 0 0;
 }
-#send-chat button:hover {
+.send-chat button:hover {
   background: #eb9d00;
 }
-#send-chat .chat_streaming_state {
+.send-chat .chat_streaming_state {
   position: absolute;
   inset: 0;
   z-index: 9;
@@ -614,8 +614,8 @@
   align-items: center;
   justify-content: center;
 }
-#send-chat .chat_streaming_state a,
-#send-chat .chat_streaming_state button {
+.send-chat .chat_streaming_state a,
+.send-chat .chat_streaming_state button {
   display: block;
   border-radius: 5px;
   padding: 3px 10px;
@@ -623,11 +623,11 @@
   border: none;
   color: #000;
 }
-#send-chat .chat_streaming_state a:hover,
-#send-chat .chat_streaming_state button:hover {
+.send-chat .chat_streaming_state a:hover,
+.send-chat .chat_streaming_state button:hover {
   background: #eb9d00;
 }
-#send-chat .chat_streaming_state .info {
+.send-chat .chat_streaming_state .info {
   color: #fff;
 }
 
@@ -761,23 +761,23 @@
 .streaming_boxFull #send-chat span input {
   border: 1px solid #e3e3e3;
 }
-.streaming_boxFull #chat-content #chat-list {
+.streaming_boxFull .chat-content .chat-list {
   padding: 10px 10px 10px 0;
 }
-.streaming_boxFull #chat-content #chat-list li {
+.streaming_boxFull .chat-content .chat-list li {
   padding: 10px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 }
-.streaming_boxFull #chat-content #chat-list li .textContent {
+.streaming_boxFull .chat-content .chat-list li .textContent {
   padding: 0;
   background: none;
 }
-.streaming_boxFull #chat-content #chat-list li.self-chat {
+.streaming_boxFull .chat-content .chat-list li.self-chat {
   color: #2b2b2b;
   background-color: rgba(0, 0, 0, 0.1);
 }
-.streaming_boxFull #chat-content #chat-list li.streamer {
+.streaming_boxFull .chat-content .chat-list li.streamer {
   background: rgba(250, 190, 15, 0.3);
 }
 
