@@ -100,15 +100,27 @@
 
 .player {
   position: relative;
-  border-radius: 10px;
   overflow: hidden;
-  border-top: #e3e3e3 1px solid;
 }
 @media screen and (max-width: 1000px) {
   .player {
     border-radius: 0;
     border: none;
   }
+}
+.player:-webkit-full-screen {
+  --bs-gutter-x: 0;
+}
+.player:fullscreen {
+  --bs-gutter-x: 0;
+}
+.player:-webkit-full-screen video {
+  height: 100vh;
+  width: 100vw;
+}
+.player:fullscreen video {
+  height: 100vh;
+  width: 100vw;
 }
 .player .video-el {
   width: 100%;
@@ -122,6 +134,7 @@
   right: 10px;
   bottom: 10px;
   left: 10px;
+  z-index: 10;
 }
 .player .player-ui .player-ui-controls .streaming_btn {
   background: rgba(255, 255, 255, 0.3);
@@ -619,13 +632,19 @@
 }
 
 /* 全螢幕 */
-body.fullscreen {
+.player:-webkit-full-screen {
   overflow: hidden;
 }
-body.fullscreen .streaming_boxFull {
+.player:fullscreen {
+  overflow: hidden;
+}
+.player:-webkit-full-screen .streaming_boxFull {
   display: flex;
 }
-body.fullscreen .player {
+.player:fullscreen .streaming_boxFull {
+  display: flex;
+}
+.player:-webkit-full-screen .player {
   position: fixed;
   inset: 0;
   border-radius: 0;
@@ -636,33 +655,72 @@ body.fullscreen .player {
   justify-content: center;
   background: #000;
 }
-body.fullscreen .streaming_videoBox,
-body.fullscreen .aspect-16x9 {
+.player:fullscreen .player {
+  position: fixed;
+  inset: 0;
+  border-radius: 0;
+  border: none;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+.player:-webkit-full-screen .streaming_videoBox, .player:-webkit-full-screen .aspect-16x9 {
   margin: 0;
   position: fixed;
   inset: 0;
   z-index: 9;
 }
-body.fullscreen .player-ui .streaming_btn {
+.player:fullscreen .streaming_videoBox,
+.player:fullscreen .aspect-16x9 {
+  margin: 0;
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+}
+.player:-webkit-full-screen .player-ui .streaming_btn {
   background: rgba(255, 255, 255, 0.5);
 }
-body.fullscreen .player-ui .streaming_btn.active, body.fullscreen .player-ui .streaming_btn:hover {
+.player:fullscreen .player-ui .streaming_btn {
+  background: rgba(255, 255, 255, 0.5);
+}
+.player:-webkit-full-screen .player-ui .streaming_btn.active, .player:-webkit-full-screen .player-ui .streaming_btn:hover {
   background: #fabe0f;
 }
-body.fullscreen .player-ui .streaming_share ul {
+.player:fullscreen .player-ui .streaming_btn.active, .player:fullscreen .player-ui .streaming_btn:hover {
+  background: #fabe0f;
+}
+.player:-webkit-full-screen .player-ui .streaming_share ul {
   background: rgba(255, 255, 255, 0.5);
 }
-body.fullscreen .streaming_chatBtn {
+.player:fullscreen .player-ui .streaming_share ul {
+  background: rgba(255, 255, 255, 0.5);
+}
+.player:-webkit-full-screen .streaming_chatBtn {
   position: relative;
   order: -1;
   margin-right: 5px !important;
 }
-body.fullscreen .streaming_content {
+.player:fullscreen .streaming_chatBtn {
+  position: relative;
+  order: -1;
+  margin-right: 5px !important;
+}
+.player:-webkit-full-screen .streaming_content {
   padding: 0;
   left: 10px;
   top: 10px;
 }
-body.fullscreen .streaming_stateBox {
+.player:fullscreen .streaming_content {
+  padding: 0;
+  left: 10px;
+  top: 10px;
+}
+.player:-webkit-full-screen .streaming_stateBox {
+  padding: 0;
+}
+.player:fullscreen .streaming_stateBox {
   padding: 0;
 }
 
