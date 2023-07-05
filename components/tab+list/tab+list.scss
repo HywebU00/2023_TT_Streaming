@@ -1,12 +1,155 @@
-@import '_variable';
+@import '../../scss/_variable';
 
-//共用
-.swiper_custom_layout,
-.streaming_listBoxOuter {
-  .streaming_swiperListBox,
-  .streaming_listBox {
-    .streaming_item {
+.streaming_tab {
+  .tabBar {
+    top: 0;
+    background: #f8f8f8;
+    margin: auto;
+    max-width: 1472px;
+    z-index: 5;
+    position: relative;
+    z-index: 90;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 8px;
+    @media screen and (min-width: 1520px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    @media screen and (max-width: 1472px) {
+      padding-right: 70px;
+      padding-left: 70px;
+    }
+    &.fixed {
+      max-width: none;
+      position: fixed;
+      top: 0;
+      left: 0px;
+      right: 0px;
+    }
+    .swiper-wrapper {
+      height: auto;
+    }
+    .swiper-button-disabled {
+      display: none;
+    }
+    .swiper-button-prev:not(.sm),
+    .swiper-button-next:not(.sm) {
+      background-color: #fff;
+      color: #000;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      margin-top: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
+      background-size: 12px;
+      z-index: 9;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      &.sm {
+        display: block;
+        background-size: 6px;
+        @media screen and (max-width: 767.9px) {
+          top: calc(50% - 16px);
+        }
+      }
+    }
+    .swiper-button-prev {
+      background-image: url('../../img/streaming/carousel_arrow_lt.png');
+      left: -28px;
+      &.sm {
+        left: 10px;
+      }
+    }
+    .swiper-button-next {
+      background-image: url('../../img/streaming/carousel_arrow_rt.png');
+      right: -28px;
+      &.sm {
+        right: 10px;
+      }
+    }
+    .swiper-pagination {
+      bottom: 0;
+      left: 50%;
+      height: 19px;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+
+    @media screen and (min-width: 768px) {
+      .swiper-pagination {
+        top: -36px;
+        bottom: auto;
+        right: 0;
+        left: auto;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      :lang(ar) .swiper-pagination {
+        left: 0;
+        right: auto;
+      }
+    }
+    .component_layout {
       position: relative;
+      padding: 0;
+      a {
+        color: #3d4c5a;
+        padding: 10px 8px;
+        display: inline-block;
+        border-radius: 8px;
+        min-height: 39px;
+        line-height: 1.5;
+        @media screen and (min-width: 768px) {
+          font-size: 24px;
+          padding: 10px 43px;
+          min-height: 56px;
+        }
+      }
+      .swiper-slide {
+        width: auto;
+        height: auto;
+        &.active a {
+          background-color: #fabe0f;
+          color: #000;
+        }
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: block;
+      }
+      @media screen and (max-width: 768px) {
+        .swiper-button-prev {
+          left: -60px;
+        }
+        .swiper-button-next {
+          right: -60px;
+        }
+      }
+      .swiper-button-disabled {
+        display: none;
+      }
+    }
+  }
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  .tabListContent {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  .streaming_swiperListBox {
+    .streaming_item {
       .streaming_box {
         border-radius: 16px;
       }
@@ -55,28 +198,10 @@
       }
     }
   }
-}
 
-.swiper_custom_layout,
-.streaming_listBoxOuter {
-  .tabBar,
-  .streaming_carousel_card {
-    padding: 24px 10px;
-    @media screen and (min-width: 768px) {
-      padding: 24px 24px;
-    }
-    &.typeC {
-      background-color: #fff;
-      border-radius: 16px;
-      box-shadow: 0 5px 12px 0px rgba(0, 0, 0, 0.1);
-    }
-    &.typeD {
-      padding: 0;
-      margin: 0 50px;
-      @media screen and (max-width: 767.9px) {
-        margin: 0 10px;
-      }
-    }
+  .streaming_card {
+    position: relative;
+    margin: 20px 0 0;
     .swiper-wrapper {
       height: auto;
     }
@@ -114,14 +239,14 @@
       }
     }
     .swiper-button-prev {
-      background-image: url('../img/streaming/carousel_arrow_lt.png');
+      background-image: url('../../img/streaming/carousel_arrow_lt.png');
       left: -28px;
       &.sm {
         left: 10px;
       }
     }
     .swiper-button-next {
-      background-image: url('../img/streaming/carousel_arrow_rt.png');
+      background-image: url('../../img/streaming/carousel_arrow_rt.png');
       right: -28px;
       &.sm {
         right: 10px;
@@ -153,10 +278,6 @@
       }
     }
   }
-}
-
-.swiper_custom_layout,
-.streaming_listBoxOuter {
   /*實況狀態*/
   .streaming_stateBox {
     display: flex;
@@ -390,6 +511,8 @@
 
   /*共用結構*/
   .streaming_box {
+    font-family: 'Noto Sans TC', 'Microsoft JhengHei', PingFang, STHeiti, sans-serif, serif;
+    position: relative;
     // transition: all 0.5s ease;
     overflow: hidden;
     @media screen and (max-width: 767.9px) {
@@ -469,67 +592,5 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    border-radius: 16px;
-    overflow: hidden;
-  }
-}
-// list
-.streaming_listBoxOuter {
-  padding: 24px;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  @media screen and (max-width: 767.9px) {
-    padding: 16px 8px;
-    border-radius: 0px;
-  }
-  .streaming_listBox {
-    $gap: 24px;
-    gap: $gap;
-    display: flex;
-    flex-wrap: wrap;
-    &.col- {
-      @for $i from 2 to 6 {
-        &#{$i} {
-          .streaming_item {
-            width: calc((100% - ($gap * ($i - 1))) / $i);
-          }
-        }
-      }
-    }
-    &.col-5 {
-      .streaming_item {
-        @media screen and (max-width: 1200px) {
-          width: calc((100% - ($gap * 3)) / 4) !important;
-          &:nth-child(5) {
-            display: none;
-          }
-        }
-        @media screen and (max-width: 767px) {
-          width: calc((100% - ($gap * 2)) / 3) !important;
-          &:nth-child(5) {
-            display: none;
-          }
-        }
-        @media screen and (max-width: 500px) {
-          width: 100% !important;
-          &:nth-child(5) {
-            display: block;
-          }
-        }
-      }
-    }
-
-    &.col-4,
-    &.col-5 {
-      .streaming_item {
-        @media screen and (max-width: 1000px) {
-          width: calc((100% - ($gap)) / 2) !important;
-        }
-        @media screen and (max-width: 500px) {
-          width: 100% !important;
-        }
-      }
-    }
   }
 }

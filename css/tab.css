@@ -1,149 +1,151 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
-.tabBar {
-  top: 0;
-  background: #f8f8f8;
-  margin: auto;
-  max-width: 1472px;
-  z-index: 5;
-  position: relative;
-  z-index: 90;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 8px;
-}
-@media screen and (min-width: 1520px) {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+.tab {
   .tabBar {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 16px;
-    padding-right: 16px;
+    top: 0;
+    background: #f8f8f8;
+    margin: auto;
+    max-width: 1472px;
+    z-index: 5;
+    position: relative;
+    z-index: 90;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 8px;
   }
-}
-@media screen and (max-width: 1472px) {
-  .tabBar {
-    padding-right: 70px;
-    padding-left: 70px;
+  @media screen and (min-width: 1520px) {
+    .tabBar {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
   }
-}
-.tabBar.fixed {
-  max-width: none;
-  position: fixed;
-  top: 0;
-  left: 0px;
-  right: 0px;
-}
-.tabBar .swiper-wrapper {
-  height: auto;
-}
-.tabBar .swiper-button-disabled {
-  display: none;
-}
-.tabBar .swiper-button-prev:not(.sm),
-.tabBar .swiper-button-next:not(.sm) {
-  background-color: #fff;
-  color: #000;
-  border-radius: 50%;
-  width: 56px;
-  height: 56px;
-  margin-top: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
-  background-size: 12px;
-  z-index: 9;
-}
-.tabBar .swiper-button-prev.sm,
-.tabBar .swiper-button-next.sm {
-  display: block;
-  background-size: 6px;
-}
-@media screen and (max-width: 767.9px) {
+  @media screen and (max-width: 1472px) {
+    .tabBar {
+      padding-right: 70px;
+      padding-left: 70px;
+    }
+  }
+  .tabBar.fixed {
+    max-width: none;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    right: 0px;
+  }
+  .tabBar .swiper-wrapper {
+    height: auto;
+  }
+  .tabBar .swiper-button-disabled {
+    display: none;
+  }
+  .tabBar .swiper-button-prev:not(.sm),
+  .tabBar .swiper-button-next:not(.sm) {
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    margin-top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
+    background-size: 12px;
+    z-index: 9;
+  }
   .tabBar .swiper-button-prev.sm,
   .tabBar .swiper-button-next.sm {
-    top: calc(50% - 16px);
+    display: block;
+    background-size: 6px;
   }
-}
-.tabBar .swiper-button-prev {
-  background-image: url("../img/streaming/carousel_arrow_lt.png");
-  left: -28px;
-}
-.tabBar .swiper-button-prev.sm {
-  left: 10px;
-}
-.tabBar .swiper-button-next {
-  background-image: url("../img/streaming/carousel_arrow_rt.png");
-  right: -28px;
-}
-.tabBar .swiper-button-next.sm {
-  right: 10px;
-}
-.tabBar .swiper-pagination {
-  bottom: 0;
-  left: 50%;
-  height: 19px;
-  transform: translateX(-50%);
-}
-@media screen and (min-width: 768px) {
+  @media screen and (max-width: 767.9px) {
+    .tabBar .swiper-button-prev.sm,
+    .tabBar .swiper-button-next.sm {
+      top: calc(50% - 16px);
+    }
+  }
+  .tabBar .swiper-button-prev {
+    background-image: url('../img/streaming/carousel_arrow_lt.png');
+    left: -28px;
+  }
+  .tabBar .swiper-button-prev.sm {
+    left: 10px;
+  }
+  .tabBar .swiper-button-next {
+    background-image: url('../img/streaming/carousel_arrow_rt.png');
+    right: -28px;
+  }
+  .tabBar .swiper-button-next.sm {
+    right: 10px;
+  }
   .tabBar .swiper-pagination {
-    top: -36px;
-    bottom: auto;
-    right: 0;
-    left: auto;
-    transform: translateX(0);
+    bottom: 0;
+    left: 50%;
+    height: 19px;
+    transform: translateX(-50%);
   }
-}
-@media screen and (min-width: 768px) {
-  .tabBar :lang(ar) .swiper-pagination {
-    left: 0;
-    right: auto;
+  @media screen and (min-width: 768px) {
+    .tabBar .swiper-pagination {
+      top: -36px;
+      bottom: auto;
+      right: 0;
+      left: auto;
+      transform: translateX(0);
+    }
   }
-}
-.tabBar .component_layout {
-  position: relative;
-  padding: 0;
-}
-.tabBar .component_layout a {
-  color: #3d4c5a;
-  padding: 10px 8px;
-  display: inline-block;
-  border-radius: 8px;
-  min-height: 39px;
-  line-height: 1.5;
-}
-@media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
+    .tabBar :lang(ar) .swiper-pagination {
+      left: 0;
+      right: auto;
+    }
+  }
+  .tabBar .component_layout {
+    position: relative;
+    padding: 0;
+  }
   .tabBar .component_layout a {
-    font-size: 24px;
-    padding: 10px 43px;
-    min-height: 56px;
+    color: #3d4c5a;
+    padding: 10px 8px;
+    display: inline-block;
+    border-radius: 8px;
+    min-height: 39px;
+    line-height: 1.5;
   }
-}
-.tabBar .component_layout .swiper-slide {
-  width: auto;
-  height: auto;
-}
-.tabBar .component_layout .swiper-slide.active a {
-  background-color: #fabe0f;
-  color: #000;
-}
-.tabBar .component_layout .swiper-button-prev,
-.tabBar .component_layout .swiper-button-next {
-  display: block;
-}
-@media screen and (max-width: 768px) {
-  .tabBar .component_layout .swiper-button-prev {
-    left: -60px;
+  @media screen and (min-width: 768px) {
+    .tabBar .component_layout a {
+      font-size: 24px;
+      padding: 10px 43px;
+      min-height: 56px;
+    }
   }
+  .tabBar .component_layout .swiper-slide {
+    width: auto;
+    height: auto;
+  }
+  .tabBar .component_layout .swiper-slide.active a {
+    background-color: #fabe0f;
+    color: #000;
+  }
+  .tabBar .component_layout .swiper-button-prev,
   .tabBar .component_layout .swiper-button-next {
-    right: -60px;
+    display: block;
   }
-}
-.tabBar .component_layout .swiper-button-disabled {
-  display: none;
-}
+  @media screen and (max-width: 768px) {
+    .tabBar .component_layout .swiper-button-prev {
+      left: -60px;
+    }
+    .tabBar .component_layout .swiper-button-next {
+      right: -60px;
+    }
+  }
+  .tabBar .component_layout .swiper-button-disabled {
+    display: none;
+  }
 
-.tabListContent {
-  display: none;
-}
-.tabListContent.active {
-  display: block;
-}/*# sourceMappingURL=tab.css.map */
+  .tabListContent {
+    display: none;
+  }
+  .tabListContent.active {
+    display: block;
+  }
+} /*# sourceMappingURL=tab.css.map */

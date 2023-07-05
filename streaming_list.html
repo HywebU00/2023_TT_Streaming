@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/base_all.css" />
     <link rel="stylesheet" href="css/index.css" />
     <!-- 新增 start -->
-    <link rel="stylesheet" href="css/streaming.css" />
     <link rel="stylesheet" href="css/streaming_list.css" />
     <!-- 新增 end -->
   </head>
@@ -2252,71 +2251,73 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
-      var swiperC = new Swiper('.streaming_carousel_card.typeC .swiper-container', {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        pagination: {
-          clickable: true,
-          el: '.streaming_carousel_card.typeC .swiper-pagination',
-        },
-        navigation: {
-          nextEl: '.streaming_carousel_card.typeC .swiper-button-next',
-          prevEl: '.streaming_carousel_card.typeC .swiper-button-prev',
-        },
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 0,
+      (function () {
+        var swiperC = new Swiper('.swiper_custom_layout .streaming_carousel_card.typeC .swiper-container', {
+          slidesPerView: 4,
+          spaceBetween: 30,
+          pagination: {
+            clickable: true,
+            el: '.swiper_custom_layout .streaming_carousel_card.typeC .swiper-pagination',
           },
-          400: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+          navigation: {
+            nextEl: '.swiper_custom_layout .streaming_carousel_card.typeC .swiper-button-next',
+            prevEl: '.swiper_custom_layout .streaming_carousel_card.typeC .swiper-button-prev',
           },
-          767: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+            400: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            767: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
           },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-        },
-      });
+        });
 
-      var swiperD = new Swiper('.streaming_carousel_card.typeD .swiper-container', {
-        slidesPerView: 5,
-        spaceBetween: 20,
-        pagination: {
-          clickable: true,
-          el: '.streaming_carousel_card.typeD .swiper-pagination',
-        },
-        navigation: {
-          nextEl: '.streaming_carousel_card.typeD .swiper-button-next.sm',
-          prevEl: '.streaming_carousel_card.typeD .swiper-button-prev.sm',
-        },
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 0,
+        var swiperD = new Swiper('.swiper_custom_layout .streaming_carousel_card.typeD .swiper-container', {
+          slidesPerView: 5,
+          spaceBetween: 20,
+          pagination: {
+            clickable: true,
+            el: '.swiper_custom_layout .streaming_carousel_card.typeD .swiper-pagination',
           },
-          400: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+          navigation: {
+            nextEl: '.swiper_custom_layout .streaming_carousel_card.typeD .swiper-button-next.sm',
+            prevEl: '.swiper_custom_layout .streaming_carousel_card.typeD .swiper-button-prev.sm',
           },
-          767: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+            400: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            767: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            1200: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
           },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-          1200: {
-            slidesPerView: 5,
-            spaceBetween: 20,
-          },
-        },
-      });
+        });
+      })();
     </script>
   </body>
 </html>

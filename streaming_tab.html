@@ -22,14 +22,11 @@
           <div class="swiper-button-next"></div>
           <div class="swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide active"><a>typeA</a></div>
-              <div class="swiper-slide"><a>typeB</a></div>
-              <div class="swiper-slide"><a>typeC</a></div>
-              <div class="swiper-slide"><a>typeD</a></div>
-              <div class="swiper-slide"><a>EEEEEEEEEEEEEE</a></div>
-              <div class="swiper-slide"><a>FFFFFFFFFFFFFF</a></div>
-              <div class="swiper-slide"><a>GGGGGGGGGGGGGG</a></div>
-              <div class="swiper-slide"><a>HHHHHHHHHHHHHH</a></div>
+              <div class="swiper-slide active"><a class="item">INTELLECTUAL PROPERTY</a></div>
+              <div class="swiper-slide"><a class="item">LICENSED MERCHANDISE</a></div>
+              <div class="swiper-slide"><a class="item">ANIMATION</a></div>
+              <div class="swiper-slide"><a class="item">LICENSED MERCHANDISE</a></div>
+              <div class="swiper-slide"><a class="item">LICENSED MERCHANDISE</a></div>
             </div>
           </div>
         </div>
@@ -205,17 +202,17 @@
         tab?.forEach((tabItem, index) => {
           tabItem.classList.add(`tab${index}`);
 
-          let swiperBar = new Swiper(`.tab${index} .swiper-container`, {
+          let swiperBar = new Swiper(`.tab${index} .tabBar .swiper-container`, {
             slidesPerView: 'auto',
             spaceBetween: 20,
             navigation: {
-              nextEl: `.tab${index} .swiper-button-next`,
-              prevEl: `.tab${index} .swiper-button-prev`,
+              nextEl: `.tab${index} .tabBar .swiper-button-next`,
+              prevEl: `.tab${index} .tabBar .swiper-button-prev`,
             },
             slideToClickedSlide: true,
           });
 
-          let bar = document.querySelectorAll(`.tab${index} .swiper-slide`);
+          let bar = document.querySelectorAll(`.tab${index} .tabBar .swiper-slide`);
           let tabBox = document.querySelectorAll(`.tab${index} .tabListContent`);
           let tabContentBox = document.querySelector(`.tab${index} .tabListContentBox`);
 
