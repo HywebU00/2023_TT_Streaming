@@ -598,4 +598,14 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+}
+.streaming_tab .streaming_qrcode {
+  max-width: 122px;
+  max-height: 122px;
+}
+.streaming_tab .streaming_qrcode img {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=tab+list.css.map */

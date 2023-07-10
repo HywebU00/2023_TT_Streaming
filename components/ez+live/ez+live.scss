@@ -476,6 +476,16 @@
     }
   }
 
+  .streaming_qrcode {
+    max-width: 122px;
+    max-height: 122px;
+    img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+    }
+  }
+
   .streaming_hoverContent {
     padding: 20px;
     opacity: 0;

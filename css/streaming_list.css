@@ -81,6 +81,18 @@
 .streaming_listBoxOuter .streaming_listBox .streaming_channel .streaming_avatar {
   margin: 0 10px 0 0;
 }
+.swiper_custom_layout .streaming_qrcode,
+.streaming_listBoxOuter .streaming_qrcode {
+  max-width: 122px;
+  max-height: 122px;
+}
+.swiper_custom_layout .streaming_qrcode img,
+.streaming_listBoxOuter .streaming_qrcode img {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .swiper_custom_layout .tabBar,
 .swiper_custom_layout .streaming_carousel_card,

@@ -593,4 +593,13 @@
     justify-content: center;
     transition: all 0.3s ease;
   }
+  .streaming_qrcode {
+    max-width: 122px;
+    max-height: 122px;
+    img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+    }
+  }
 }

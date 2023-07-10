@@ -489,6 +489,16 @@
     font-size: 18px;
   }
 }
+.streaming_ez_banner .streaming_qrcode {
+  max-width: 122px;
+  max-height: 122px;
+}
+.streaming_ez_banner .streaming_qrcode img {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .streaming_ez_banner .streaming_hoverContent {
   padding: 20px;
   opacity: 0;

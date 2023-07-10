@@ -154,6 +154,16 @@
     font-size: 15px;
   }
 }
+.streaming_banner .streaming_qrcode {
+  max-width: 122px;
+  max-height: 122px;
+}
+.streaming_banner .streaming_qrcode img {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .streaming_banner .streaming_community {
   margin: 10px 0 0;
 }
