@@ -1390,37 +1390,58 @@
 
 .streaming_information {
   .streaming_channel_list {
-    padding: 30px;
-    border-radius: 16px;
     background: $primaryColor4;
     li {
       display: flex;
       align-items: flex-start;
       color: #7b7b7b;
-      padding: 0 0 30px 0;
+      padding: 0 30px;
       position: relative;
       isolation: isolate;
       &::before {
         content: '';
         position: absolute;
         width: 1px;
-        top: 0;
+        top: 0px;
         bottom: 0;
-        left: 30px;
+        left: 60px;
         display: block;
         background: $ogColor;
       }
 
       .streaming_info {
-        border-bottom: 1px solid $bgColor;
-        padding-bottom: 30px;
         flex-grow: 1;
+        padding: 30px 0;
+        border-bottom: 1px solid #e3e3e3;
+      }
+      &:first-child {
+        &::before {
+          top: 30px;
+        }
       }
       &:last-child {
-        padding: 0;
         &::before {
-          display: none;
+          height: 30px;
+          bottom: auto;
         }
+      }
+
+      &.end {
+        background: #e8e8e8;
+        .streaming_info time,
+        .streaming_title,
+        .streaming_name {
+          filter: grayscale(1);
+          opacity: 0.3;
+        }
+        .streaming_avatar {
+          filter: grayscale(1);
+        }
+        // .streaming_info,
+        // .streaming_btn,
+        // .streaming_avatar {
+        //   opacity: 1;
+        // }
       }
     }
     .streaming_avatar {
@@ -1429,7 +1450,7 @@
       border-radius: 100%;
       aspect-ratio: 1;
       flex-shrink: 0;
-      margin: 0 15px 0 0;
+      margin: 30px 15px 0 0;
       border: $bgColor 1px solid;
       z-index: 9;
       img {
@@ -1482,10 +1503,10 @@
         background: $primaryColor;
       }
     }
-    .streaming_next {
+    .streaming_onAir {
       position: absolute;
-      right: 0;
-      top: 0;
+      right: 30px;
+      top: 30px;
       background: $redColor2;
       color: #fff;
       padding: 5px 10px;
@@ -1494,6 +1515,45 @@
       align-items: center;
       font-weight: bold;
       @media screen and (max-width: 767px) {
+        span {
+          display: none;
+        }
+      }
+      &::before {
+        content: '';
+        width: 25px;
+        height: 20px;
+        display: block;
+        margin: 0 5px 0 0;
+        mask: url('../img/streaming/icon/icon_prediction.svg') center no-repeat;
+        mask-size: 100%;
+        background: #fff;
+        @media screen and (max-width: 767px) {
+          margin: 0;
+        }
+      }
+
+      & + .streaming_info {
+        padding-right: 150px;
+        @media screen and (max-width: 767px) {
+          padding-right: 60px;
+        }
+      }
+    }
+    .streaming_next {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      background: $blueColor;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      @media screen and (max-width: 767px) {
+        width: 45px;
+        justify-content: center;
         span {
           display: none;
         }

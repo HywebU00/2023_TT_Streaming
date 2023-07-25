@@ -1405,15 +1405,13 @@
 }
 
 .streaming_information .streaming_channel_list {
-  padding: 30px;
-  border-radius: 16px;
   background: #fffaec;
 }
 .streaming_information .streaming_channel_list li {
   display: flex;
   align-items: flex-start;
   color: #7b7b7b;
-  padding: 0 0 30px 0;
+  padding: 0 30px;
   position: relative;
   isolation: isolate;
 }
@@ -1421,22 +1419,35 @@
   content: "";
   position: absolute;
   width: 1px;
-  top: 0;
+  top: 0px;
   bottom: 0;
-  left: 30px;
+  left: 60px;
   display: block;
   background: #fa7d0f;
 }
 .streaming_information .streaming_channel_list li .streaming_info {
-  border-bottom: 1px solid #e3e3e3;
-  padding-bottom: 30px;
   flex-grow: 1;
+  padding: 30px 0;
+  border-bottom: 1px solid #e3e3e3;
 }
-.streaming_information .streaming_channel_list li:last-child {
-  padding: 0;
+.streaming_information .streaming_channel_list li:first-child::before {
+  top: 30px;
 }
 .streaming_information .streaming_channel_list li:last-child::before {
-  display: none;
+  height: 30px;
+  bottom: auto;
+}
+.streaming_information .streaming_channel_list li.end {
+  background: #e8e8e8;
+}
+.streaming_information .streaming_channel_list li.end .streaming_info time,
+.streaming_information .streaming_channel_list li.end .streaming_title,
+.streaming_information .streaming_channel_list li.end .streaming_name {
+  filter: grayscale(1);
+  opacity: 0.3;
+}
+.streaming_information .streaming_channel_list li.end .streaming_avatar {
+  filter: grayscale(1);
 }
 .streaming_information .streaming_channel_list .streaming_avatar {
   max-width: 60px;
@@ -1444,7 +1455,7 @@
   border-radius: 100%;
   aspect-ratio: 1;
   flex-shrink: 0;
-  margin: 0 15px 0 0;
+  margin: 30px 15px 0 0;
   border: #e3e3e3 1px solid;
   z-index: 9;
 }
@@ -1503,10 +1514,10 @@
 .streaming_information .streaming_channel_list .streaming_btn:hover {
   background: #fabe0f;
 }
-.streaming_information .streaming_channel_list .streaming_next {
+.streaming_information .streaming_channel_list .streaming_onAir {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 30px;
+  top: 30px;
   background: #df2800;
   color: #fff;
   padding: 5px 10px;
@@ -1516,6 +1527,52 @@
   font-weight: bold;
 }
 @media screen and (max-width: 767px) {
+  .streaming_information .streaming_channel_list .streaming_onAir span {
+    display: none;
+  }
+}
+.streaming_information .streaming_channel_list .streaming_onAir::before {
+  content: "";
+  width: 25px;
+  height: 20px;
+  display: block;
+  margin: 0 5px 0 0;
+  -webkit-mask: url("../img/streaming/icon/icon_prediction.svg") center no-repeat;
+          mask: url("../img/streaming/icon/icon_prediction.svg") center no-repeat;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  background: #fff;
+}
+@media screen and (max-width: 767px) {
+  .streaming_information .streaming_channel_list .streaming_onAir::before {
+    margin: 0;
+  }
+}
+.streaming_information .streaming_channel_list .streaming_onAir + .streaming_info {
+  padding-right: 150px;
+}
+@media screen and (max-width: 767px) {
+  .streaming_information .streaming_channel_list .streaming_onAir + .streaming_info {
+    padding-right: 60px;
+  }
+}
+.streaming_information .streaming_channel_list .streaming_next {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  background: #2f9bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .streaming_information .streaming_channel_list .streaming_next {
+    width: 45px;
+    justify-content: center;
+  }
   .streaming_information .streaming_channel_list .streaming_next span {
     display: none;
   }
