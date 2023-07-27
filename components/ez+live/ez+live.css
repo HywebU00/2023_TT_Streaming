@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
 /*EZ*/
 .streaming_ez_banner {
   max-width: 1440px;
@@ -97,7 +97,8 @@
   border-radius: 0;
   background: rgba(0, 0, 0, 0.1);
 }
-.streaming_ez_banner .streaming_nav li.active a, .streaming_ez_banner .streaming_nav li:hover a {
+.streaming_ez_banner .streaming_nav li.active a,
+.streaming_ez_banner .streaming_nav li:hover a {
   background: #e3e3e3;
 }
 .streaming_ez_banner .streaming_nav li a {
@@ -124,7 +125,7 @@
   height: 100%;
   aspect-ratio: 1/1;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .streaming_ez_banner .streaming_nav li .streaming_info {
   flex-basis: 70%;
@@ -228,7 +229,7 @@
   height: 100%;
   width: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   position: absolute;
   left: -26px;
   filter: drop-shadow(26px 0 #fff);
@@ -268,7 +269,7 @@
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   display: block;
 }
 .streaming_ez_banner .streaming_channel .streaming_name {
@@ -309,7 +310,7 @@
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   position: absolute;
   left: -50px;
   top: 0;
@@ -369,7 +370,7 @@
   height: 30px;
   padding: 0 15px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   overflow: hidden;
 }
 .streaming_ez_banner .streaming_btn i {
@@ -394,14 +395,15 @@
 .streaming_ez_banner .streaming_btn.icon i {
   margin: 0;
 }
-.streaming_ez_banner .streaming_btn.active, .streaming_ez_banner .streaming_btn:hover {
+.streaming_ez_banner .streaming_btn.active,
+.streaming_ez_banner .streaming_btn:hover {
   background: #fabe0f;
 }
 .streaming_ez_banner .streaming_btn + .streaming_btn {
   margin: 0 0 0 5px;
 }
 .streaming_ez_banner .streaming_box {
-  font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti, sans-serif, serif;
+  font-family: 'Noto Sans TC', 'Microsoft JhengHei', PingFang, STHeiti, sans-serif, serif;
   position: relative;
   overflow: hidden;
 }
@@ -497,7 +499,7 @@
   width: 100% !important;
   height: 100% !important;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .streaming_ez_banner .streaming_hoverContent {
   padding: 20px;
@@ -510,5 +512,8 @@
   justify-content: center;
   transition: all 0.3s ease;
 }
-
-/*EZ*//*# sourceMappingURL=ez+live.css.map */
+.addtoany {
+  display: flex;
+  justify-content: center;
+}
+/*EZ*/ /*# sourceMappingURL=ez+live.css.map */

@@ -511,4 +511,9 @@
   transition: all 0.3s ease;
 }
 
+.addtoany {
+  display: flex;
+  justify-content: center;
+}
+
 /*EZ*//*# sourceMappingURL=ez+live.css.map */

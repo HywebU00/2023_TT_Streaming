@@ -11,6 +11,13 @@
   /*社群*/
   /*共用結構*/
 }
+.streaming_tab.fixed .tabBar {
+  max-width: none;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  right: 0px;
+}
 .streaming_tab .tabBar {
   top: 0;
   background: #f8f8f8;
@@ -36,13 +43,6 @@
     padding-right: 70px;
     padding-left: 70px;
   }
-}
-.streaming_tab .tabBar.fixed {
-  max-width: none;
-  position: fixed;
-  top: 0;
-  left: 0px;
-  right: 0px;
 }
 .streaming_tab .tabBar .swiper-wrapper {
   height: auto;
@@ -608,4 +608,9 @@
   height: 100% !important;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.addtoany {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=tab+list.css.map */

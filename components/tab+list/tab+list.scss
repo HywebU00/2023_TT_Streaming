@@ -1,6 +1,13 @@
 @import '../../scss/_variable';
 
 .streaming_tab {
+  &.fixed .tabBar {
+    max-width: none;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    right: 0px;
+  }
   .tabBar {
     top: 0;
     background: #f8f8f8;
@@ -21,13 +28,6 @@
     @media screen and (max-width: 1472px) {
       padding-right: 70px;
       padding-left: 70px;
-    }
-    &.fixed {
-      max-width: none;
-      position: fixed;
-      top: 0;
-      left: 0px;
-      right: 0px;
     }
     .swiper-wrapper {
       height: auto;
@@ -602,4 +602,9 @@
       object-fit: cover;
     }
   }
+}
+
+.addtoany {
+  display: flex;
+  justify-content: center;
 }
