@@ -1,11 +1,11 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 .streaming_banner {
   position: absolute;
   inset: 0;
   overflow: hidden;
   border-radius: 0 15px 15px 0;
-  font-family: 'Noto Sans TC', 'Microsoft JhengHei', PingFang, STHeiti, sans-serif, serif;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", PingFang, STHeiti, sans-serif, serif;
   /*實況狀態*/
   /*實況狀態*/
   /*圖示*/
@@ -43,12 +43,13 @@
 }
 .streaming_banner .streaming_stateBox {
   display: flex;
-  margin: 0 10px 0 0;
-  padding: 20px 20px 0;
+  margin: 20px 10px 0 20px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1000px) {
   .streaming_banner .streaming_stateBox {
-    padding: 10px 10px 0;
+    margin: 10px 10px 0;
   }
 }
 .streaming_banner .streaming_stateBox .streaming_state,
@@ -63,11 +64,9 @@
   color: #fff;
 }
 .streaming_banner .streaming_stateBox .streaming_state {
-  border-radius: 15px 0 0 15px;
   background: #df2800;
 }
 .streaming_banner .streaming_stateBox .streaming_view {
-  border-radius: 0 15px 15px 0;
   background: #9ea1a5;
 }
 .streaming_banner .streaming_stateBox.replay .streaming_state {
@@ -99,7 +98,7 @@
   height: 100%;
   width: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   position: absolute;
   left: -26px;
   filter: drop-shadow(26px 0 #fff);
@@ -139,7 +138,7 @@
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   display: block;
 }
 .streaming_banner .streaming_channel .streaming_name {
@@ -162,7 +161,7 @@
   width: 100% !important;
   height: 100% !important;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .streaming_banner .streaming_community {
   margin: 10px 0 0;
@@ -190,7 +189,7 @@
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   position: absolute;
   left: -50px;
   top: 0;
@@ -250,7 +249,7 @@
   height: 30px;
   padding: 0 15px;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   overflow: hidden;
 }
 .streaming_banner .streaming_btn i {
@@ -275,8 +274,7 @@
 .streaming_banner .streaming_btn.icon i {
   margin: 0;
 }
-.streaming_banner .streaming_btn.active,
-.streaming_banner .streaming_btn:hover {
+.streaming_banner .streaming_btn.active, .streaming_banner .streaming_btn:hover {
   background: #fabe0f;
 }
 .streaming_banner .streaming_btn + .streaming_btn {
@@ -338,6 +336,7 @@
   transition: all 0.5s ease;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   position: absolute;
   inset: 0;
 }
@@ -376,7 +375,8 @@
   justify-content: center;
   transition: all 0.3s ease;
 }
+
 .addtoany {
   display: flex;
   justify-content: center;
-} /*# sourceMappingURL=kv+live.css.map */
+}/*# sourceMappingURL=kv+live.css.map */

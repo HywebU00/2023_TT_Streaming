@@ -130,8 +130,12 @@
   flex-basis: 70%;
   padding-left: 5%;
   color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .streaming_ez_banner .streaming_nav li .streaming_listTitle {
+  width: 100%;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -146,7 +150,7 @@
 }
 .streaming_ez_banner .streaming_nav li .streaming_stateBox {
   padding: 0;
-  margin-bottom: 5px;
+  margin: 0 0 5px;
 }
 .streaming_ez_banner .streaming_nav li .streaming_stateBox .streaming_state .streaming_icon {
   margin: 0;
@@ -172,12 +176,13 @@
 }
 .streaming_ez_banner .streaming_stateBox {
   display: flex;
-  margin: 0 10px 0 0;
-  padding: 20px 20px 0;
+  margin: 20px 10px 0 20px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1000px) {
   .streaming_ez_banner .streaming_stateBox {
-    padding: 10px 10px 0;
+    margin: 10px 10px 0;
   }
 }
 .streaming_ez_banner .streaming_stateBox .streaming_state,
@@ -192,11 +197,9 @@
   color: #fff;
 }
 .streaming_ez_banner .streaming_stateBox .streaming_state {
-  border-radius: 15px 0 0 15px;
   background: #df2800;
 }
 .streaming_ez_banner .streaming_stateBox .streaming_view {
-  border-radius: 0 15px 15px 0;
   background: #9ea1a5;
 }
 .streaming_ez_banner .streaming_stateBox.replay .streaming_state {
@@ -461,6 +464,7 @@
   transition: all 0.5s ease;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   position: absolute;
   inset: 0;
 }

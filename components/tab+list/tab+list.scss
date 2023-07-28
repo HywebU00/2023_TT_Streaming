@@ -177,8 +177,8 @@
       transition-delay: 0s !important;
     }
     .streaming_stateBox {
-      top: 10px;
-      left: 10px;
+      top: 15px;
+      left: 15px;
       padding: 0;
       position: absolute;
     }
@@ -281,11 +281,8 @@
   /*實況狀態*/
   .streaming_stateBox {
     display: flex;
-    margin: 0 10px 0 0;
-    padding: 20px 20px 0;
-    @media screen and (max-width: 1000px) {
-      padding: 10px 10px 0;
-    }
+    border-radius: 15px;
+    overflow: hidden;
     .streaming_state,
     .streaming_view {
       min-height: 28px;
@@ -298,11 +295,9 @@
       color: #fff;
     }
     .streaming_state {
-      border-radius: 15px 0 0 15px;
       background: $redColor2;
     }
     .streaming_view {
-      border-radius: 0 15px 15px 0;
       background: $lineColor2;
       // white-space: nowrap;
     }
@@ -316,7 +311,6 @@
       background: $blueColor;
     }
     @media screen and (max-width: 767px) {
-      padding: 10px 0 0 10px;
       + .streaming_stateBox {
         display: none;
       }
@@ -570,7 +564,7 @@
     transition: all 0.5s ease;
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
+    align-items: flex-start;
     position: absolute;
     // padding: 30px;
     inset: 0;

@@ -90,12 +90,13 @@
 }
 .stream-wrapper .streaming_stateBox {
   display: flex;
-  margin: 0 10px 0 0;
-  padding: 20px 20px 0;
+  margin: 20px 10px 0 20px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1000px) {
   .stream-wrapper .streaming_stateBox {
-    padding: 10px 10px 0;
+    margin: 10px 10px 0;
   }
 }
 .stream-wrapper .streaming_stateBox .streaming_state,

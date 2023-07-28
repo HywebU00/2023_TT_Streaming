@@ -282,13 +282,14 @@
 .swiper_custom_layout .streaming_stateBox,
 .streaming_listBoxOuter .streaming_stateBox {
   display: flex;
-  margin: 0 10px 0 0;
-  padding: 20px 20px 0;
+  margin: 20px 10px 0 20px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1000px) {
   .swiper_custom_layout .streaming_stateBox,
   .streaming_listBoxOuter .streaming_stateBox {
-    padding: 10px 10px 0;
+    margin: 10px 10px 0;
   }
 }
 .swiper_custom_layout .streaming_stateBox .streaming_state,
@@ -306,12 +307,10 @@
 }
 .swiper_custom_layout .streaming_stateBox .streaming_state,
 .streaming_listBoxOuter .streaming_stateBox .streaming_state {
-  border-radius: 15px 0 0 15px;
   background: #df2800;
 }
 .swiper_custom_layout .streaming_stateBox .streaming_view,
 .streaming_listBoxOuter .streaming_stateBox .streaming_view {
-  border-radius: 0 15px 15px 0;
   background: #9ea1a5;
 }
 .swiper_custom_layout .streaming_stateBox.replay .streaming_state,

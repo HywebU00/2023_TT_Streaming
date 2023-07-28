@@ -43,12 +43,13 @@
 }
 .streaming_banner .streaming_stateBox {
   display: flex;
-  margin: 0 10px 0 0;
-  padding: 20px 20px 0;
+  margin: 20px 10px 0 20px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1000px) {
   .streaming_banner .streaming_stateBox {
-    padding: 10px 10px 0;
+    margin: 10px 10px 0;
   }
 }
 .streaming_banner .streaming_stateBox .streaming_state,
@@ -63,11 +64,9 @@
   color: #fff;
 }
 .streaming_banner .streaming_stateBox .streaming_state {
-  border-radius: 15px 0 0 15px;
   background: #df2800;
 }
 .streaming_banner .streaming_stateBox .streaming_view {
-  border-radius: 0 15px 15px 0;
   background: #9ea1a5;
 }
 .streaming_banner .streaming_stateBox.replay .streaming_state {
@@ -337,6 +336,7 @@
   transition: all 0.5s ease;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   position: absolute;
   inset: 0;
 }
