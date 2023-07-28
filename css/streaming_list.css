@@ -282,7 +282,6 @@
 .swiper_custom_layout .streaming_stateBox,
 .streaming_listBoxOuter .streaming_stateBox {
   display: flex;
-  margin: 20px 10px 0 20px;
   border-radius: 15px;
   overflow: hidden;
 }
