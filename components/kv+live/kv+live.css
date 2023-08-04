@@ -345,6 +345,7 @@
 }
 .streaming_banner .streaming_content .streaming_infoBox {
   margin: auto 0 0;
+  width: 100%;
 }
 .streaming_banner .streaming_content .streaming_title {
   font-size: 24px;

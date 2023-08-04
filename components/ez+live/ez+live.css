@@ -473,6 +473,7 @@
 }
 .streaming_ez_banner .streaming_content .streaming_infoBox {
   margin: auto 0 0;
+  width: 100%;
 }
 .streaming_ez_banner .streaming_content .streaming_title {
   margin: auto 0 0px;
