@@ -1149,11 +1149,13 @@
         }
       }
       .button_area {
+        display: flex;
         flex-wrap: wrap;
         gap: 10px;
         button {
           margin: 0;
-          width: calc(50% - 10px);
+          // width: calc(50% - 10px);
+          flex: 1 1 calc(50% - 10px);
         }
       }
     }
@@ -1302,6 +1304,49 @@
   }
 }
 
+.streaming_stateInfoBox {
+  display: flex;
+  align-items: center;
+  .countDown {
+    margin: 0 20px 0 0;
+    span {
+      color: #f65248;
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
+  .streaming_stateBox {
+    position: relative;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0;
+    flex-shrink: 0;
+
+    .streaming_state {
+      min-height: 28px;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 20px;
+      padding: 8px 18px 10px;
+      line-height: 1;
+      color: #fff;
+      border-radius: 30px;
+      white-space: nowrap;
+      background: $redColor2;
+    }
+    &.replay .streaming_state {
+      background: $primaryColor;
+    }
+    &.premiere .streaming_state {
+      background: $ogColor;
+    }
+    &.upcoming .streaming_state {
+      background: $blueColor;
+    }
+  }
+}
 //////////////////////////////////////////////////////////////////
 /*介紹區塊*/
 .streaming_videoInfo {

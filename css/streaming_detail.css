@@ -1162,12 +1162,13 @@
   border-color: #e3e3e3;
 }
 .stream-wrapper .inTab li .button_area {
+  display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 .stream-wrapper .inTab li .button_area button {
   margin: 0;
-  width: calc(50% - 10px);
+  flex: 1 1 calc(50% - 10px);
 }
 .stream-wrapper .translate {
   position: relative;
@@ -1310,6 +1311,49 @@
 .streaming_streamerBox button:disabled {
   background: #f3f3f3 !important;
   cursor: not-allowed;
+}
+
+.streaming_stateInfoBox {
+  display: flex;
+  align-items: center;
+}
+.streaming_stateInfoBox .countDown {
+  margin: 0 20px 0 0;
+}
+.streaming_stateInfoBox .countDown span {
+  color: #f65248;
+  font-weight: bold;
+  font-size: 30px;
+}
+.streaming_stateInfoBox .streaming_stateBox {
+  position: relative;
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0;
+  flex-shrink: 0;
+}
+.streaming_stateInfoBox .streaming_stateBox .streaming_state {
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 8px 18px 10px;
+  line-height: 1;
+  color: #fff;
+  border-radius: 30px;
+  white-space: nowrap;
+  background: #df2800;
+}
+.streaming_stateInfoBox .streaming_stateBox.replay .streaming_state {
+  background: #fabe0f;
+}
+.streaming_stateInfoBox .streaming_stateBox.premiere .streaming_state {
+  background: #fa7d0f;
+}
+.streaming_stateInfoBox .streaming_stateBox.upcoming .streaming_state {
+  background: #2f9bff;
 }
 
 /*介紹區塊*/
