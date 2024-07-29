@@ -510,6 +510,16 @@
                     </div>
 
                     <div class="chat-content">
+                      <div class="FBtnFn">
+                        <div class="float"></div>
+                        <div class="box">
+                          <button class="type1"></button>
+                          <button class="type2"></button>
+                          <button class="type3"></button>
+                          <button class="type4"></button>
+                          <button class="type5"></button>
+                        </div>
+                      </div>
                       <ul class="chat-list">
                         <!-- 自己的留言 li 增加 self-chat ，直播主 li 增加 streamer -->
                         <li>
@@ -975,5 +985,37 @@
         </div>
       </div>
     </div>
+    <script>
+      (function () {
+        'use strict';
+        const FBtnFnSwitch = document.querySelector('.FBtnFn .switch');
+        const FBtnFn = document.querySelector('.FBtnFn .box');
+        const FBtn = document.querySelectorAll('.FBtnFn .box button');
+        const FBtnFloat = document.querySelector('.FBtnFn .float');
+
+        FBtnFn.addEventListener('mouseenter', function () {
+          FBtnFn.classList.add('active');
+        });
+
+        FBtnFn.addEventListener('mouseleave', function () {
+          setTimeout(() => {
+            FBtnFn.classList.remove('active');
+          }, 400);
+        });
+
+        FBtn.forEach((item) => {
+          item.addEventListener('click', function () {
+            const thisClass = this.getAttribute('class');
+            const FItem = document.createElement('div');
+            FItem.classList.add(thisClass);
+            FItem.classList.add('emoji');
+            FBtnFloat.appendChild(FItem);
+            setTimeout(() => {
+              FItem.remove();
+            }, 2000);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

@@ -68,7 +68,46 @@
                             <li>
                               <button><i></i>語系</button>
                             </li>
+                            <li>
+                              <button><i></i>語系</button>
+                            </li>
+                            <li>
+                              <button><i></i>語系</button>
+                            </li>
+                            <li>
+                              <button><i></i>語系</button>
+                            </li>
+                            <li>
+                              <button><i></i>語系</button>
+                            </li>
+                            <li>
+                              <button><i></i>語系</button>
+                            </li>
+                            <li>
+                              <button><i></i>語系</button>
+                            </li>
+                            <li>
+                              <button><i></i>語系</button>
+                            </li>
+                            <li>
+                              <button><i></i>語系</button>
+                            </li>
+                            <li>
+                              <button><i></i>語系</button>
+                            </li>
+                            <li>
+                              <button><i></i>語系</button>
+                            </li>
+                            <li>
+                              <button><i></i>語系</button>
+                            </li>
+                            <li>
+                              <button><i></i>語系</button>
+                            </li>
                           </ul>
+                          <!-- 20231013 新增 -->
+                          <button class="more">More</button>
+                          <!-- 20231013 新增 -->
                         </div>
                       </div>
                       <button class="streaming_btn icon">
@@ -970,5 +1009,24 @@
         </div>
       </div>
     </div>
+
+    <!-- 20231013 新增 -->
+    <script>
+      (function () {
+        const itemLength = 5;
+        const translateBox = document.querySelector('.translateBox');
+        const translateBtn = document.querySelectorAll('.translateBox li');
+        const translateBtnMore = document.querySelector('.translate .more');
+        translateBtn.length > itemLength ? translateBtnMore.classList.add('active') : translateBtnMore.classList.remove('active');
+        translateBtn.forEach((e, i) => (i > itemLength - 1 ? (e.style.display = 'none') : ''));
+
+        translateBtnMore.addEventListener('click', (e) => {
+          e.target.innerText = e.target.innerText === 'More' ? 'Less' : 'More';
+          translateBox.classList.toggle('moreItem');
+          translateBox.classList.contains('moreItem') ? translateBtn.forEach((e) => (e.style.display = 'block')) : translateBtn.forEach((e, i) => (i > itemLength - 1 ? (e.style.display = 'none') : ''));
+        });
+      })();
+    </script>
+    <!-- 20231013 新增 -->
   </body>
 </html>

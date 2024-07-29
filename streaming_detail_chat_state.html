@@ -15,6 +15,13 @@
     <!--原網站 css 無修改 -->
     <!-- 新增 start -->
     <link rel="stylesheet" href="css/streaming_detail.css" />
+    <link rel="stylesheet" href="css/live-stream-guest.component.css" />
+    <style>
+      .stream-wrapper {
+        flex-wrap: wrap;
+        gap: 50px 0px;
+      }
+    </style>
   </head>
   <body class="">
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -345,9 +352,263 @@
                 <!-- tab Live Chat end -->
               </div>
             </div>
+
+            <div class="tabSet">
+              <div class="tabItems">
+                <!-- 該頁籤點選時增加 active -->
+                <button type="button">streamer</button>
+                <button type="button">Products</button>
+                <button type="button" class="active">Live Chat</button>
+                <button type="button">Live Info</button>
+              </div>
+
+              <div class="tabContentGroup">
+                <!-- tab Live Chat start -->
+                <div class="tabContent">
+                  <div class="streaming_box">
+                    <div class="chatroom-container">
+                      <div class="connection-list">
+                        <ul class="connection-name">
+                          <li class="cornflowerblue"><span>test</span><span> 離開房間了</span></li>
+                          <li class="coral"><span>test</span><span> 加入房間了</span></li>
+                          <li class="orchid"><span>chris</span><span> 離開房間了</span></li>
+                          <li class="coral"><span>chris</span><span> 加入房間了</span></li>
+                          <li class="limegreen"><span>test</span><span> 離開房間了</span></li>
+                          <li class="skyblue"><span>test</span><span> 加入房間了</span></li>
+                          <li class="cornflowerblue"><span>veela</span><span> 加入房間了</span></li>
+                          <li class="orchid"><span></span><span>您已成功加入房間了</span></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="chat-content-notice">To participate in the chat and leave messages, please sign in to your account first.</div>
+
+                    <div class="chat-content">
+                      <ul class="chat-list">
+                        <!-- 自己的留言 li 增加 self-chat ，直播主 li 增加 streamer -->
+                        <li>
+                          <div class="info"><span>A</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="self-chat">
+                          <div class="info"><span>B</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li>
+                          <div class="info"><span>A</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="streamer">
+                          <div class="info"><span>C</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="streamer">
+                          <div class="info"><span>C</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li>
+                          <div class="info"><span>A</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="self-chat">
+                          <div class="info"><span>B</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li>
+                          <div class="info"><span>A</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="streamer">
+                          <div class="info"><span>C</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="self-chat">
+                          <div class="info"><span>B</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li>
+                          <div class="info"><span>A</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="streamer">
+                          <div class="info"><span>C</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="streamer">
+                          <div class="info"><span>C</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="send-chat">
+                      <!-- 直撥狀態顯示在聊天室 -->
+                      <!--
+                      <div class="chat_streaming_state">
+                        <button class="send-message">Sign in to Chat</button>
+                        <div class="info">Join the live chat while live streaming start.</div>
+                        <div class="info">Live has ended.</div>
+                      </div>
+                      -->
+                      <!-- 直撥狀態顯示在聊天室 -->
+                      <span><input type="text" placeholder="enter your message" class="message-input" /></span>
+                      <button class="send-message">Send</button>
+                      <button class="change-userName">Change User</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- tab Live Chat end -->
+              </div>
+            </div>
+
+            <div class="tabSet">
+              <div class="tabItems">
+                <!-- 該頁籤點選時增加 active -->
+                <button type="button">streamer</button>
+                <button type="button">Products</button>
+                <button type="button" class="active">Live Chat</button>
+                <button type="button">Live Info</button>
+              </div>
+
+              <div class="tabContentGroup">
+                <!-- tab Live Chat start -->
+                <div class="tabContent">
+                  <div class="streaming_box">
+                    <div class="chatroom-container">
+                      <div class="connection-list">
+                        <ul class="connection-name">
+                          <li class="cornflowerblue"><span>test</span><span> 離開房間了</span></li>
+                          <li class="coral"><span>test</span><span> 加入房間了</span></li>
+                          <li class="orchid"><span>chris</span><span> 離開房間了</span></li>
+                          <li class="coral"><span>chris</span><span> 加入房間了</span></li>
+                          <li class="limegreen"><span>test</span><span> 離開房間了</span></li>
+                          <li class="skyblue"><span>test</span><span> 加入房間了</span></li>
+                          <li class="cornflowerblue"><span>veela</span><span> 加入房間了</span></li>
+                          <li class="orchid"><span></span><span>您已成功加入房間了</span></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="chat-content">
+                      <div class="FBtnFn">
+                        <div class="float"></div>
+                        <div class="box">
+                          <button class="type1"></button>
+                          <button class="type2"></button>
+                          <button class="type3"></button>
+                          <button class="type4"></button>
+                          <button class="type5"></button>
+                        </div>
+                      </div>
+                      <ul class="chat-list">
+                        <!-- 自己的留言 li 增加 self-chat ，直播主 li 增加 streamer -->
+                        <li>
+                          <div class="info"><span>A</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="self-chat">
+                          <div class="info"><span>B</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li>
+                          <div class="info"><span>A</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="streamer">
+                          <div class="info"><span>C</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="streamer">
+                          <div class="info"><span>C</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li>
+                          <div class="info"><span>A</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="self-chat">
+                          <div class="info"><span>B</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li>
+                          <div class="info"><span>A</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="streamer">
+                          <div class="info"><span>C</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="self-chat">
+                          <div class="info"><span>B</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li>
+                          <div class="info"><span>A</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="streamer">
+                          <div class="info"><span>C</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                        <li class="streamer">
+                          <div class="info"><span>C</span><time>14:30</time></div>
+                          <div class="textContent">testtest</div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="send-chat">
+                      <!-- 直撥狀態顯示在聊天室 -->
+                      <!--
+                      <div class="chat_streaming_state">
+                        <button class="send-message">Sign in to Chat</button>
+                        <div class="info">Join the live chat while live streaming start.</div>
+                        <div class="info">Live has ended.</div>
+                      </div>
+                      -->
+                      <!-- 直撥狀態顯示在聊天室 -->
+                      <span><input type="text" placeholder="enter your message" class="message-input" /></span>
+                      <button class="send-message">Send</button>
+                      <button class="change-userName">Change User</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- tab Live Chat end -->
+              </div>
+            </div>
           </section>
         </div>
       </div>
     </div>
+    <script>
+      (function () {
+        'use strict';
+        const FBtnFnSwitch = document.querySelector('.FBtnFn .switch');
+        const FBtnFn = document.querySelector('.FBtnFn .box');
+        const FBtn = document.querySelectorAll('.FBtnFn .box button');
+        const FBtnFloat = document.querySelector('.FBtnFn .float');
+
+        FBtnFn.addEventListener('mouseenter', function () {
+          FBtnFn.classList.add('active');
+        });
+
+        FBtnFn.addEventListener('mouseleave', function () {
+          setTimeout(() => {
+            FBtnFn.classList.remove('active');
+          }, 400);
+        });
+
+        FBtn.forEach((item) => {
+          item.addEventListener('click', function () {
+            const thisClass = this.getAttribute('class');
+            const FItem = document.createElement('div');
+            FItem.classList.add(thisClass);
+            FItem.classList.add('emoji');
+            FBtnFloat.appendChild(FItem);
+            setTimeout(() => {
+              FItem.remove();
+            }, 2000);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

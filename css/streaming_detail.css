@@ -2073,4 +2073,119 @@
   border-style: solid;
   border-width: 10px 0 10px 16px;
   border-color: transparent transparent transparent #000;
+}
+
+.stream-wrapper .chat-content {
+  position: relative;
+}
+
+.FBtnFn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.FBtnFn .float:not(.active):not(.float),
+.FBtnFn .box:not(.active):not(.float) {
+  height: 34px;
+}
+.FBtnFn .float:not(.active):not(.float) button,
+.FBtnFn .box:not(.active):not(.float) button {
+  pointer-events: none;
+}
+.FBtnFn .float:not(.active):not(.float) button:not(:first-child),
+.FBtnFn .box:not(.active):not(.float) button:not(:first-child) {
+  display: none;
+}
+.FBtnFn .float .emoji,
+.FBtnFn .float button,
+.FBtnFn .box .emoji,
+.FBtnFn .box button {
+  width: 20px;
+  aspect-ratio: 1;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.FBtnFn .float .emoji.type1,
+.FBtnFn .float button.type1,
+.FBtnFn .box .emoji.type1,
+.FBtnFn .box button.type1 {
+  background-image: url("../img/streaming/icon/icon_type1.svg");
+}
+.FBtnFn .float .emoji.type2,
+.FBtnFn .float button.type2,
+.FBtnFn .box .emoji.type2,
+.FBtnFn .box button.type2 {
+  background-image: url("../img/streaming/icon/icon_type2.svg");
+}
+.FBtnFn .float .emoji.type3,
+.FBtnFn .float button.type3,
+.FBtnFn .box .emoji.type3,
+.FBtnFn .box button.type3 {
+  background-image: url("../img/streaming/icon/icon_type3.svg");
+}
+.FBtnFn .float .emoji.type4,
+.FBtnFn .float button.type4,
+.FBtnFn .box .emoji.type4,
+.FBtnFn .box button.type4 {
+  background-image: url("../img/streaming/icon/icon_type4.svg");
+}
+.FBtnFn .float .emoji.type5,
+.FBtnFn .float button.type5,
+.FBtnFn .box .emoji.type5,
+.FBtnFn .box button.type5 {
+  background-image: url("../img/streaming/icon/icon_type5.svg");
+}
+.FBtnFn .box {
+  display: flex;
+  flex-direction: column;
+  border: #ddd 1px solid;
+  border-radius: 50px;
+  padding: 6px;
+  height: 130px;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.5);
+  position: relative;
+  box-sizing: border-box;
+  z-index: 8;
+  transition: all 0.2s linear;
+}
+.FBtnFn .float {
+  width: 100%;
+  position: absolute;
+  right: 0px;
+  bottom: 100%;
+  height: 80px;
+  z-index: 7;
+}
+.FBtnFn .float .emoji {
+  animation: animateBubble 2s linear forwards, sideWays 0.6s ease-in-out infinite alternate;
+  position: absolute;
+}
+@keyframes animateBubble {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 40%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 80%;
+    opacity: 0;
+  }
+}
+@keyframes sideWays {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: 10px;
+  }
 }/*# sourceMappingURL=streaming_detail.css.map */

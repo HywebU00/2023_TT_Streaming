@@ -1,24 +1,29 @@
 @import '_variable';
+
 @-webkit-keyframes rotate {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+
   to {
     -webkit-transform: rotate(1turn);
     transform: rotate(1turn);
   }
 }
+
 @keyframes rotate {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+
   to {
     -webkit-transform: rotate(1turn);
     transform: rotate(1turn);
   }
 }
+
 .stream-wrapper {
   display: flex;
   justify-content: space-between;
@@ -26,10 +31,12 @@
   position: relative;
   z-index: 9;
   margin-bottom: 30px;
+
   @media screen and (max-width: 1000px) {
     flex-direction: column;
     height: 99vh;
   }
+
   .placeholder {
     align-items: center;
     bottom: 0;
@@ -96,9 +103,11 @@
     margin: 20px 10px 0 20px;
     border-radius: 15px;
     overflow: hidden;
+
     @media screen and (max-width: 1000px) {
       margin: 10px 10px 0;
     }
+
     .streaming_state,
     .streaming_view {
       min-height: 28px;
@@ -110,31 +119,39 @@
       line-height: 1;
       color: #fff;
     }
+
     .streaming_state {
       border-radius: 15px 0 0 15px;
       background: $redColor2;
     }
+
     .streaming_view {
       border-radius: 0 15px 15px 0;
       background: $lineColor2;
       // white-space: nowrap;
     }
+
     &.replay .streaming_state {
       background: $primaryColor;
     }
+
     &.premiere .streaming_state {
       background: $ogColor;
     }
+
     &.upcoming .streaming_state {
       background: $blueColor;
     }
+
     @media screen and (max-width: 767px) {
       padding: 10px 0 0 10px;
+
       + .streaming_stateBox {
         display: none;
       }
     }
   }
+
   /*實況狀態*/
 
   /*圖示*/
@@ -145,6 +162,7 @@
     position: relative;
     overflow: hidden;
     margin-right: 5px;
+
     img {
       height: 100%;
       width: 100%;
@@ -154,6 +172,7 @@
       filter: drop-shadow(26px 0 #fff);
     }
   }
+
   /*圖示*/
 
   /*頻道*/
@@ -161,9 +180,11 @@
     display: flex;
     align-items: center;
     font-weight: 500;
+
     @media screen and (max-width: 767px) {
       display: none;
     }
+
     .streaming_avatar {
       width: 50px;
       border-radius: 100%;
@@ -173,6 +194,7 @@
       background: #fff;
       position: relative;
       overflow: hidden;
+
       span {
         color: #fff;
         position: absolute;
@@ -184,6 +206,7 @@
         background: $primaryColor;
         padding: 0 0 4px;
       }
+
       img {
         width: 100%;
         height: 100%;
@@ -191,27 +214,33 @@
         display: block;
       }
     }
+
     .streaming_name {
       font-size: 16px;
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
+
       @media screen and (max-width: 767px) {
         font-size: 15px;
       }
     }
   }
+
   /*頻道*/
 
   /*社群*/
   .streaming_community {
     margin: 10px 0 0;
+
     ul {
       display: flex;
       justify-content: center;
+
       li {
         margin: 0 5px;
+
         button,
         a {
           display: block;
@@ -222,6 +251,7 @@
           border: none;
           position: relative;
           overflow: hidden;
+
           img {
             width: 100%;
             height: 100%;
@@ -231,6 +261,7 @@
             top: 0;
             filter: drop-shadow(50px 0 0 #fff);
           }
+
           &:hover {
             img {
               filter: drop-shadow(50px 0 0 $primaryColor);
@@ -240,6 +271,7 @@
       }
     }
   }
+
   .streaming_emailInput {
     $btnWidth: 38px;
     width: 100%;
@@ -248,10 +280,12 @@
     align-items: center;
     margin: 10px auto 0;
     position: relative;
+
     input,
     button {
       height: 30px;
     }
+
     input {
       flex-shrink: 1;
       border-radius: 15px 0 0 15px;
@@ -260,10 +294,12 @@
       padding: 0 10px;
       width: calc(100% - $btnWidth);
       box-sizing: border-box;
+
       &::placeholder {
         color: #959595;
       }
     }
+
     button {
       width: $btnWidth;
       cursor: pointer;
@@ -274,6 +310,7 @@
       background: $ogColor;
     }
   }
+
   /*社群*/
 
   .streaming_btn {
@@ -291,6 +328,7 @@
     padding: 0 15px;
     object-fit: contain;
     overflow: hidden;
+
     i {
       margin: 0 5px 0 0;
       width: 20px;
@@ -302,22 +340,27 @@
       line-height: 0;
       overflow: hidden;
     }
+
     img {
       aspect-ratio: 1;
       // position: absolute;
       // left: -26px;
       // filter: drop-shadow(26px 0 #fff);
     }
+
     &.icon {
       padding: 0 5px;
+
       i {
         margin: 0;
       }
     }
+
     &.active,
     &:hover {
       background: $primaryColor;
     }
+
     & + .streaming_btn {
       margin: 0 0 0 5px;
     }
@@ -327,6 +370,7 @@
   .streaming_box {
     // transition: all 0.5s ease;
     overflow: hidden;
+
     @media screen and (max-width: 767.9px) {
       border-radius: 0px;
     }
@@ -334,25 +378,31 @@
     * {
       box-sizing: border-box;
     }
+
     img {
       position: relative;
       height: auto;
     }
+
     .streaming_icon {
       margin-right: 5px;
     }
+
     &:hover {
       z-index: 10;
+
       .streaming_content {
         transform: scaleX(-1);
         opacity: 0;
       }
+
       .streaming_hoverContent {
         background: rgb(0 0 0 /60%);
         opacity: 1;
         transition-delay: 0.3s;
       }
     }
+
     .streaming_addBtn,
     .streaming_more {
       width: 100%;
@@ -369,15 +419,18 @@
       text-decoration: none;
       display: block;
       transition: all 0.3s ease;
+
       &:hover {
         color: #000;
         background: $primaryColor;
       }
     }
+
     .addthis_inline_share_toolbox_49zg {
       text-align: center;
     }
   }
+
   .streaming_content {
     transition: all 0.5s ease;
     display: flex;
@@ -386,9 +439,11 @@
     position: absolute;
     // padding: 30px;
     inset: 0;
+
     img {
       opacity: 1 !important;
     }
+
     .streaming_infoBox {
       margin: auto 0 0;
     }
@@ -412,11 +467,13 @@
     position: relative;
     isolation: isolate;
     z-index: 9;
+
     @media screen and (max-width: 1000px) {
       padding: 0;
       margin: 0 0 10px;
       width: 100%;
     }
+
     .aspect-16x9 {
       width: 100%;
       position: relative;
@@ -427,13 +484,16 @@
     position: relative;
     // border-radius: 10px;
     overflow: hidden;
+
     // border-top: $bgColor 1px solid;
     @media screen and (max-width: 1000px) {
       border-radius: 0;
       border: none;
     }
+
     &:fullscreen {
       --bs-gutter-x: 0;
+
       video {
         height: 100vh;
         width: 100vw;
@@ -449,6 +509,7 @@
       aspect-ratio: 16/9;
       background: gray;
     }
+
     .player-ui {
       .player-ui-controls {
         display: flex;
@@ -458,16 +519,21 @@
         bottom: 10px;
         left: 10px;
         z-index: 10;
+
         .streaming_btn {
           background: rgb(255 255 255 / 30%);
           color: #000;
+
           &.active,
           &:hover {
             background: $primaryColor;
           }
+
           margin: 0 0 0 5px;
+
           & + div {
             margin: 0 0 0 5px;
+
             & + .streaming_btn {
               margin: 0 0 0 5px;
             }
@@ -482,39 +548,46 @@
         display: flex;
         justify-content: flex-end;
       }
+
       .streaming_videoPic {
         line-height: 0;
         order: 9;
         margin: 0 0 0 10px;
         position: relative;
         z-index: 50;
+
         @media screen and (max-width: 1000px) {
           &:nth-child(1) {
             display: none;
           }
         }
+
         button img,
         & > img {
           width: auto;
           max-height: 40px;
         }
+
         button {
           padding: 0;
           background: none;
           border: none;
           max-width: 40px;
           height: 40px;
+
           img {
             width: 100%;
             height: 100%;
             object-fit: contain;
           }
+
           &:hover ~ .qrCodeBig {
             opacity: 1;
             visibility: visible;
           }
         }
       }
+
       .qrCodeBig {
         position: absolute;
         border-radius: 10px;
@@ -530,21 +603,26 @@
         transition: opacity 0.3s;
         visibility: hidden;
         overflow: hidden;
+
         img {
           width: 100% !important;
           height: 100% !important;
           object-fit: contain;
         }
       }
+
       .streaming_share {
         position: relative;
         z-index: 9;
+
         @media screen and (max-width: 1000px) {
           display: none;
         }
+
         & > button {
           margin: 0 auto 5px;
         }
+
         ul {
           background: rgb(255 255 255 /30%);
           border-radius: 4px;
@@ -553,6 +631,7 @@
           left: 50%;
           transform: translateX(-50%);
           overflow: hidden;
+
           li {
             button {
               border-radius: 0;
@@ -562,6 +641,7 @@
         }
       }
     }
+
     .streaming_content {
       padding: 10px;
       display: block;
@@ -574,10 +654,12 @@
         }
       }
     }
+
     .streaming_chatBtn {
       position: absolute;
       left: 0px;
       bottom: 0px;
+
       button {
         margin: 0;
       }
@@ -593,18 +675,23 @@
     flex-direction: column;
     color: $textColor9;
     z-index: 0;
+
     @media screen and (max-width: 1000px) {
       padding: 0 10px;
       flex-grow: 1;
     }
+
     .tabItems {
       display: flex;
+
       button:last-child {
         display: none;
+
         @media screen and (max-width: 1000px) {
           display: block;
         }
       }
+
       button {
         margin: 0;
         border: none;
@@ -613,18 +700,22 @@
         font-size: 16px;
         background: $lineColor;
         flex-grow: 1;
+
         @media screen and (max-width: 1000px) {
           padding: 8px 10px;
         }
+
         &.active,
         &:hover {
           background: $primaryColor;
         }
+
         & + button {
           margin-left: 5px;
         }
       }
     }
+
     .tabContentGroup {
       flex-grow: 1;
       border: $bgColor 1px solid;
@@ -634,6 +725,7 @@
       min-height: 300px;
       overflow: hidden;
     }
+
     .tabContent {
       position: absolute;
       inset: 0px;
@@ -642,22 +734,27 @@
       scrollbar-color: $primaryColor rgba(0, 0, 0, 0.2);
       scrollbar-width: thin;
       background: #fff;
+
       &::-webkit-scrollbar {
         width: 5px;
         height: 5px;
       }
+
       &::-webkit-scrollbar-thumb {
         border-radius: 100px;
         box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
         background: $primaryColor;
       }
+
       &::-webkit-scrollbar-track {
         box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
         border-radius: 0;
         background: rgba(0, 0, 0, 0.1);
       }
+
       .streaming_videoInfo {
         padding: 20px;
+
         .streaming_title {
           font-size: 18px;
         }
@@ -672,9 +769,11 @@
       height: 100%;
       display: flex;
       flex-direction: column;
+
       .productsMore {
         padding: 10px 10px 0;
         background: #fff;
+
         .streaming_btn {
           border-radius: 4px;
           padding: 10px 20px;
@@ -684,6 +783,7 @@
         }
       }
     }
+
     #product-list {
       height: 100%;
       overflow-y: auto;
@@ -691,28 +791,34 @@
       scrollbar-width: thin;
       background: #fff;
       flex-grow: 1;
+
       &::-webkit-scrollbar {
         width: 5px;
         height: 5px;
       }
+
       &::-webkit-scrollbar-thumb {
         border-radius: 100px;
         box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
         background: $primaryColor;
       }
+
       &::-webkit-scrollbar-track {
         box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
         border-radius: 0;
         background: rgba(0, 0, 0, 0.1);
       }
+
       li {
         display: flex;
         align-items: flex-start;
         padding: 10px 10px 10px 0;
+
         & + li {
           border-top: $bgColor 1px solid;
         }
       }
+
       img {
         width: 85px;
         aspect-ratio: 1;
@@ -721,24 +827,29 @@
         border: $bgColor 1px solid;
         border-radius: 8px;
       }
+
       .name {
         font-size: 16px;
         margin-bottom: 3px;
       }
+
       .price {
         font-size: 16px;
         margin-bottom: 3px;
         color: $redColor;
         font-weight: bold;
+
         span {
           color: $textColor4;
           font-size: 12px;
           font-weight: normal;
         }
       }
+
       .btnBox {
         display: flex;
         margin: 0 0 0 auto;
+
         button {
           margin: 0 5px 0 0;
           white-space: nowrap;
@@ -749,13 +860,16 @@
           font-size: 14px;
           background: none;
           border: 1px solid #000;
+
           &:hover {
             background: $lineColor;
             border: 1px solid $lineColor;
           }
+
           &:nth-child(2) {
             border: 1px solid $primaryColor;
             background: $primaryColor;
+
             &:hover {
               background: $primaryColor2;
               border: 1px solid $primaryColor2;
@@ -770,14 +884,17 @@
         display: block;
       }
     }
+
     & > .streaming_videoInfo {
       display: none;
+
       @media screen and (max-width: 1000px) {
         display: block;
         margin: 0 0 20px;
       }
     }
   }
+
   /* products */
 
   /* chat */
@@ -787,14 +904,18 @@
     height: 100%;
     isolation: isolate;
   }
+
   .chatroom-container {
     overflow: hidden;
     flex-shrink: 0;
+
     .connection-name {
       display: flex;
       flex-direction: column-reverse;
+
       li {
         padding: 8px 15px;
+
         span {
           word-wrap: break-word;
           color: #fff;
@@ -802,6 +923,7 @@
           font-weight: 600;
           word-break: break-all;
         }
+
         &:not(:last-child) {
           display: none;
         }
@@ -832,65 +954,79 @@
       }
     }
   }
+
   .chat-content {
     flex-grow: 1;
     overflow-y: auto;
     scrollbar-color: $primaryColor rgba(0, 0, 0, 0.2);
     scrollbar-width: thin;
     margin-bottom: 5px;
+
     &::-webkit-scrollbar {
       width: 5px;
       height: 5px;
     }
+
     &::-webkit-scrollbar-thumb {
       border-radius: 100px;
       box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
       background: $primaryColor;
     }
+
     &::-webkit-scrollbar-track {
       box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
       border-radius: 0;
       background: rgba(0, 0, 0, 0.1);
     }
+
     .chat-list {
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       padding: 10px;
+
       li {
         display: flex;
         flex-wrap: wrap;
         margin-top: -1px;
+
         .info {
           display: flex;
           align-items: center;
           flex-wrap: wrap;
         }
+
         time {
           display: block;
           font-size: 12px;
           transform: scale(0.9);
           color: $lineColor2;
         }
+
         .info {
           margin-bottom: 2px;
+
           span {
             color: $textColor4;
             font-size: 14px;
             margin: 0 10px 0 0;
           }
         }
+
         .textContent {
           width: 100%;
           line-height: 1.2;
         }
+
         &.streamer {
           color: $primaryColor2;
+
           span {
             font-weight: bold;
             color: $primaryColor2;
           }
+
           .textContent {
             color: $textColor9;
             background: $primaryColor3;
@@ -898,6 +1034,7 @@
             border-radius: 4px;
           }
         }
+
         &.self-chat {
           .textContent {
             color: $textColor9;
@@ -906,18 +1043,21 @@
             border-radius: 4px;
           }
         }
+
         & + li {
           margin-top: 10px;
         }
       }
     }
   }
+
   .send-chat {
     flex-shrink: 0;
     right: 10px;
     left: 1px;
     display: flex;
     position: relative;
+
     > span {
       margin: 0;
       flex-grow: 1;
@@ -939,9 +1079,11 @@
       border-radius: 4px 4px 0 0;
       padding: 0 10px;
       margin: 0 0 0 5px;
+
       &:last-child {
         border-radius: 4px 0 0 0;
       }
+
       &:hover {
         background: $primaryColor2;
       }
@@ -955,6 +1097,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
       a,
       button {
         display: block;
@@ -963,10 +1106,12 @@
         background: $primaryColor;
         border: none;
         color: #000;
+
         &:hover {
           background: $primaryColor2;
         }
       }
+
       .info {
         color: #fff;
       }
@@ -976,9 +1121,11 @@
   /* 全螢幕 */
   .player:fullscreen {
     overflow: hidden;
+
     .streaming_boxFull {
       display: flex;
     }
+
     .player {
       position: fixed;
       inset: 0;
@@ -990,6 +1137,7 @@
       justify-content: center;
       background: #000;
     }
+
     .streaming_videoBox,
     .aspect-16x9 {
       margin: 0;
@@ -997,28 +1145,34 @@
       inset: 0;
       z-index: 9;
     }
+
     .player-ui {
       .streaming_btn {
         background: rgb(255 255 255 / 50%);
+
         &.active,
         &:hover {
           background: $primaryColor;
         }
       }
+
       .streaming_share ul {
         background: rgb(255 255 255 / 50%);
       }
     }
+
     .streaming_chatBtn {
       position: relative;
       order: -1;
       margin-right: 5px !important;
     }
+
     .streaming_content {
       padding: 0;
       left: 10px;
       top: 10px;
     }
+
     .streaming_stateBox {
       padding: 0;
     }
@@ -1034,6 +1188,7 @@
     z-index: 99;
     max-width: 350px;
     width: 100%;
+
     @media screen and (max-width: 1000px) {
       top: auto;
       max-height: 50vh;
@@ -1050,28 +1205,35 @@
       left: 10px;
       max-width: 350px;
       background: rgb(255 255 255 / 30%);
+
       @media screen and (max-width: 1000px) {
         max-width: 300px;
       }
     }
+
     #send-chat span input {
       border: 1px solid #e3e3e3;
     }
+
     .chat-content {
       .chat-list {
         padding: 10px 10px 10px 0;
+
         li {
           padding: 10px;
           background: rgb(255 255 255 / 30%);
           border-radius: 4px;
+
           .textContent {
             padding: 0;
             background: none;
           }
+
           &.self-chat {
             color: $textColor9;
             background-color: rgb(0 0 0 / 10%);
           }
+
           &.streamer {
             background: rgb(250 190 15 / 30%);
           }
@@ -1092,6 +1254,7 @@
     color: #fff;
     z-index: 9;
     isolation: isolate;
+
     &::before {
       content: '';
       position: absolute;
@@ -1099,27 +1262,33 @@
       inset: 0;
       background: rgb(0 0 0 / 50%);
     }
+
     & > * {
       z-index: 9;
     }
+
     .streaming_stateBox {
       position: absolute;
       left: 10px;
       top: 10px;
     }
+
     .streaming_channel {
       color: #fff;
     }
+
     .stateTitle {
       font-weight: bold;
       font-size: 36px;
       margin-bottom: 15px;
     }
+
     .countDown {
       color: #fff;
       position: absolute;
       right: 20px;
       bottom: 40px;
+
       span {
         color: $redColor;
         font-weight: bold;
@@ -1127,6 +1296,7 @@
       }
     }
   }
+
   /*直播主區塊*/
   .aspect-16x9 + .component_tit {
     margin-top: 20px;
@@ -1135,23 +1305,29 @@
   .inTab {
     li {
       flex-direction: column;
+
       .streaming_inputList {
         flex-direction: column;
         align-items: flex-start;
+
         &:first-child {
           width: auto;
         }
+
         .input_field {
           width: 100%;
         }
+
         &.notice {
           border-color: $bgColor;
         }
       }
+
       .button_area {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
+
         button {
           margin: 0;
           // width: calc(50% - 10px);
@@ -1160,9 +1336,11 @@
       }
     }
   }
+
   .translate {
     position: relative;
   }
+
   .translateBox {
     position: absolute;
     padding: 10px 15px 10px 10px;
@@ -1175,9 +1353,11 @@
     transform: translateX(-50%);
     max-height: 100px;
     overflow-y: auto;
+
     li + li {
       margin-top: 5px;
     }
+
     button {
       color: #fff;
       font-size: 14px;
@@ -1186,6 +1366,7 @@
       border: none;
       padding: 0;
       white-space: nowrap;
+
       i {
         display: block;
         width: 20px;
@@ -1194,6 +1375,7 @@
         background: url('../img/streaming/icon/icon_done.svg') no-repeat;
         opacity: 0;
       }
+
       &.active {
         i {
           opacity: 1;
@@ -1205,6 +1387,7 @@
   .volume {
     position: relative;
   }
+
   .volumeBox {
     position: absolute;
     padding: 10px 15px 10px 10px;
@@ -1215,6 +1398,7 @@
     margin: 0 !important;
     left: 0%;
     transform: rotate(-90deg) translateY(-50%) translateX(20px);
+
     input {
       width: 50px;
       appearance: auto;
@@ -1230,57 +1414,71 @@
     border-radius: 16px;
     padding: 20px 15px;
     margin-bottom: 30px;
+
     @media screen and (max-width: 1000px) {
       display: none;
     }
   }
+
   li {
     display: flex;
     justify-content: flex-start;
+
     @media screen and (max-width: 1100px) {
       flex-direction: column;
     }
+
     li {
       counter-increment: num;
       position: relative;
       padding-left: 15px;
+
       &::before {
         content: counter(num) '.';
         position: absolute;
         right: calc(100% - 10px);
       }
+
       & + li {
         margin-top: 10px;
       }
     }
   }
+
   .streaming_inputList {
     padding: 10px 15px;
     display: flex;
     align-items: center;
+
     &:first-child {
       width: calc(100% - 300px);
+
       @media screen and (max-width: 1100px) {
         width: 100%;
       }
+
       input[type='text'] {
         flex-grow: 1;
       }
     }
+
     .input_field {
       flex-grow: 1;
     }
+
     &.notice,
     &.top {
       width: auto;
       align-items: flex-start;
     }
+
     &.notice {
       flex-grow: 1;
       border-top: #fff 1px solid;
       padding-top: 20px;
     }
   }
+
   .label,
   label {
     flex-shrink: 0;
@@ -1288,15 +1486,19 @@
     margin-right: 10px;
     white-space: nowrap;
   }
+
   .advanced_action_area {
     padding: 0;
   }
+
   button {
     border: none;
     margin-right: 0 !important;
+
     & + button {
       margin-left: 8px;
     }
+
     &:disabled {
       background: $lineColor !important;
       cursor: not-allowed;
@@ -1307,14 +1509,17 @@
 .streaming_stateInfoBox {
   display: flex;
   align-items: center;
+
   .countDown {
     margin: 0 20px 0 0;
+
     span {
       color: #f65248;
       font-weight: bold;
       font-size: 30px;
     }
   }
+
   .streaming_stateBox {
     position: relative;
     display: flex;
@@ -1336,23 +1541,28 @@
       white-space: nowrap;
       background: $redColor2;
     }
+
     &.replay .streaming_state {
       background: $primaryColor;
     }
+
     &.premiere .streaming_state {
       background: $ogColor;
     }
+
     &.upcoming .streaming_state {
       background: $blueColor;
     }
   }
 }
+
 //////////////////////////////////////////////////////////////////
 /*介紹區塊*/
 .streaming_videoInfo {
   @media screen and (max-width: 1000px) {
     display: none;
   }
+
   .streaming_title {
     font-size: 26px;
     color: $textColor2;
@@ -1363,15 +1573,18 @@
     display: block;
     -webkit-line-clamp: unset;
   }
+
   /*頻道*/
   .streaming_channel {
     align-items: center;
     font-weight: 500;
     margin: 0 0 15px 0;
     display: flex;
+
     @media screen and (max-width: 1000px) {
       margin: 0;
     }
+
     .streaming_avatar {
       width: 50px;
       border-radius: 100%;
@@ -1381,6 +1594,7 @@
       background: #fff;
       position: relative;
       overflow: hidden;
+
       span {
         color: #fff;
         position: absolute;
@@ -1392,6 +1606,7 @@
         background: $primaryColor;
         padding: 0 0 4px;
       }
+
       img {
         width: 100%;
         height: 100%;
@@ -1399,6 +1614,7 @@
         display: block;
       }
     }
+
     .streaming_name {
       font-size: 16px;
       color: $textColor2;
@@ -1407,6 +1623,7 @@
       flex-direction: column;
     }
   }
+
   /*頻道*/
   .streaming_btn {
     max-width: 200px;
@@ -1426,10 +1643,12 @@
     padding: 0 15px;
     object-fit: contain;
     overflow: hidden;
+
     &:hover {
       background: $primaryColor;
     }
   }
+
   .streaming_description {
     color: $textColor2;
     font-size: 18px;
@@ -1441,6 +1660,7 @@
 .streaming_information {
   .streaming_channel_list {
     background: $primaryColor4;
+
     li {
       display: flex;
       align-items: flex-start;
@@ -1448,6 +1668,7 @@
       padding: 0 30px;
       position: relative;
       isolation: isolate;
+
       &::before {
         content: '';
         position: absolute;
@@ -1464,11 +1685,13 @@
         padding: 30px 0;
         border-bottom: 1px solid #e3e3e3;
       }
+
       &:first-child {
         &::before {
           top: 30px;
         }
       }
+
       &:last-child {
         &::before {
           height: 30px;
@@ -1478,15 +1701,18 @@
 
       &.end {
         background: #e8e8e8;
+
         .streaming_info time,
         .streaming_title,
         .streaming_name {
           filter: grayscale(1);
           opacity: 0.3;
         }
+
         .streaming_avatar {
           filter: grayscale(1);
         }
+
         // .streaming_info,
         // .streaming_btn,
         // .streaming_avatar {
@@ -1494,6 +1720,7 @@
         // }
       }
     }
+
     .streaming_avatar {
       max-width: 60px;
       background: #fff;
@@ -1503,34 +1730,41 @@
       margin: 30px 15px 0 0;
       border: $bgColor 1px solid;
       z-index: 9;
+
       img {
         width: 100%;
         height: 100%;
         object-fit: contain;
       }
     }
+
     .streaming_title {
       font-weight: bold;
       font-size: 24px;
       color: #000;
       margin-bottom: 10px;
+
       @media screen and (max-width: 767px) {
         font-size: 18px;
       }
     }
+
     .streaming_name {
       font-size: 16px;
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
+
       @media screen and (max-width: 767px) {
         font-size: 15px;
       }
+
       & + .streaming_btn {
         margin-top: 10px;
       }
     }
+
     .streaming_btn {
       max-width: 200px;
       background: $lineColor2;
@@ -1549,10 +1783,12 @@
       padding: 0 15px;
       object-fit: contain;
       overflow: hidden;
+
       &:hover {
         background: $primaryColor;
       }
     }
+
     .streaming_onAir {
       position: absolute;
       right: 30px;
@@ -1564,11 +1800,13 @@
       display: flex;
       align-items: center;
       font-weight: bold;
+
       @media screen and (max-width: 767px) {
         span {
           display: none;
         }
       }
+
       &::before {
         content: '';
         width: 25px;
@@ -1578,6 +1816,7 @@
         mask: url('../img/streaming/icon/icon_prediction.svg') center no-repeat;
         mask-size: 100%;
         background: #fff;
+
         @media screen and (max-width: 767px) {
           margin: 0;
         }
@@ -1585,11 +1824,13 @@
 
       & + .streaming_info {
         padding-right: 150px;
+
         @media screen and (max-width: 767px) {
           padding-right: 60px;
         }
       }
     }
+
     .streaming_next {
       position: absolute;
       right: 30px;
@@ -1601,13 +1842,16 @@
       display: flex;
       align-items: center;
       font-weight: bold;
+
       @media screen and (max-width: 767px) {
         width: 45px;
         justify-content: center;
+
         span {
           display: none;
         }
       }
+
       &::before {
         content: '';
         width: 0;
@@ -1617,6 +1861,7 @@
         border-width: 8px 0 8px 8px;
         margin: 0 5px 0 0;
         border-color: transparent transparent transparent #fff;
+
         @media screen and (max-width: 767px) {
           margin: 0;
         }
@@ -1624,6 +1869,7 @@
 
       & + .streaming_info {
         padding-right: 150px;
+
         @media screen and (max-width: 767px) {
           padding-right: 50px;
         }
@@ -1640,20 +1886,25 @@
     gap: $gap;
     display: flex;
     flex-wrap: wrap;
+
     .streaming_item {
       position: relative;
       width: calc((100% - ($gap * 3)) / 4);
+
       @media screen and (max-width: 1000px) {
         width: calc((100% - ($gap * 2)) / 3);
       }
+
       @media screen and (max-width: 767px) {
         width: calc((100% - ($gap)) / 2);
       }
+
       @media screen and (max-width: 500px) {
         width: 100%;
       }
     }
   }
+
   .streaming_pic {
     background-repeat: no-repeat;
     background-size: cover;
@@ -1663,27 +1914,32 @@
     aspect-ratio: 16/9;
     flex-basis: 50%;
   }
+
   .streaming_content {
     flex-basis: 50%;
     position: unset;
     padding: 15px 0px;
     transform: scaleX(1) !important;
     opacity: 1 !important;
+
     @media screen and (min-width: 1000px) {
       justify-content: center;
     }
   }
+
   .streaming_hoverContent {
     transition-delay: 0s !important;
     border-radius: 16px;
     overflow: hidden;
   }
+
   .streaming_stateBox {
     top: 10px;
     left: 10px;
     padding: 0;
     position: absolute;
   }
+
   .streaming_title {
     order: 3;
     font-size: 18px;
@@ -1691,21 +1947,26 @@
     padding: 0;
     margin-top: 10px;
   }
+
   .streaming_channel {
     @media screen and (max-width: 767.9px) {
       display: flex;
     }
+
     .streaming_avatar {
       margin: 0 10px 0 0;
     }
   }
+
   /*實況狀態*/
   .streaming_stateBox {
     display: flex;
     margin: 0 10px 0 0;
+
     @media screen and (max-width: 1000px) {
       padding: 10px 10px 0;
     }
+
     .streaming_state,
     .streaming_view {
       min-height: 28px;
@@ -1717,31 +1978,39 @@
       line-height: 1;
       color: #fff;
     }
+
     .streaming_state {
       border-radius: 15px 0 0 15px;
       background: $redColor2;
     }
+
     .streaming_view {
       border-radius: 0 15px 15px 0;
       background: $lineColor2;
       // white-space: nowrap;
     }
+
     &.replay .streaming_state {
       background: $primaryColor;
     }
+
     &.premiere .streaming_state {
       background: $ogColor;
     }
+
     &.upcoming .streaming_state {
       background: $blueColor;
     }
+
     @media screen and (max-width: 767px) {
       padding: 10px 0 0 10px;
+
       + .streaming_stateBox {
         display: none;
       }
     }
   }
+
   /*實況狀態*/
 
   /*圖示*/
@@ -1752,6 +2021,7 @@
     position: relative;
     overflow: hidden;
     margin-right: 5px;
+
     img {
       height: 100%;
       width: 100%;
@@ -1761,6 +2031,7 @@
       filter: drop-shadow(26px 0 #fff);
     }
   }
+
   /*圖示*/
 
   /*頻道*/
@@ -1768,9 +2039,11 @@
     display: flex;
     align-items: center;
     font-weight: 500;
+
     @media screen and (max-width: 767px) {
       display: none;
     }
+
     .streaming_avatar {
       width: 50px;
       border-radius: 100%;
@@ -1780,6 +2053,7 @@
       background: #fff;
       position: relative;
       overflow: hidden;
+
       span {
         color: #fff;
         position: absolute;
@@ -1791,6 +2065,7 @@
         background: $primaryColor;
         padding: 0 0 4px;
       }
+
       img {
         width: 100%;
         height: 100%;
@@ -1798,27 +2073,33 @@
         display: block;
       }
     }
+
     .streaming_name {
       font-size: 16px;
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
+
       @media screen and (max-width: 767px) {
         font-size: 15px;
       }
     }
   }
+
   /*頻道*/
 
   /*社群*/
   .streaming_community {
     margin: 10px 0 0;
+
     ul {
       display: flex;
       justify-content: center;
+
       li {
         margin: 0 5px;
+
         button,
         a {
           display: block;
@@ -1829,6 +2110,7 @@
           border: none;
           position: relative;
           overflow: hidden;
+
           img {
             width: 100%;
             height: 100%;
@@ -1838,6 +2120,7 @@
             top: 0;
             filter: drop-shadow(50px 0 0 #fff);
           }
+
           &:hover {
             img {
               filter: drop-shadow(50px 0 0 $primaryColor);
@@ -1847,6 +2130,7 @@
       }
     }
   }
+
   .streaming_emailInput {
     $btnWidth: 38px;
     width: 100%;
@@ -1855,10 +2139,12 @@
     align-items: center;
     margin: 10px auto 0;
     position: relative;
+
     input,
     button {
       height: 30px;
     }
+
     input {
       flex-shrink: 1;
       border-radius: 15px 0 0 15px;
@@ -1867,10 +2153,12 @@
       padding: 0 10px;
       width: calc(100% - $btnWidth);
       box-sizing: border-box;
+
       &::placeholder {
         color: #959595;
       }
     }
+
     button {
       width: $btnWidth;
       cursor: pointer;
@@ -1881,6 +2169,7 @@
       background: $ogColor;
     }
   }
+
   /*社群*/
 
   .streaming_btn {
@@ -1898,6 +2187,7 @@
     padding: 0 15px;
     object-fit: contain;
     overflow: hidden;
+
     i {
       margin: 0 5px 0 0;
       width: 20px;
@@ -1908,22 +2198,27 @@
       align-items: center;
       line-height: 0;
     }
+
     img {
       aspect-ratio: 1;
       // position: absolute;
       // left: -50px;
       // filter: drop-shadow(50px 0 0 #000);
     }
+
     &.icon {
       padding: 0 5px;
+
       i {
         margin: 0;
       }
     }
+
     &.active,
     &:hover {
       background: $primaryColor;
     }
+
     & + .streaming_btn {
       margin: 0 0 0 5px;
     }
@@ -1933,6 +2228,7 @@
   .streaming_box {
     // transition: all 0.5s ease;
     overflow: hidden;
+
     @media screen and (max-width: 767.9px) {
       border-radius: 0px;
     }
@@ -1940,25 +2236,31 @@
     * {
       box-sizing: border-box;
     }
+
     img {
       position: relative;
       height: auto;
     }
+
     .streaming_icon {
       margin-right: 5px;
     }
+
     &:hover {
       z-index: 10;
+
       .streaming_content {
         transform: scaleX(-1);
         opacity: 0;
       }
+
       .streaming_hoverContent {
         background: rgb(0 0 0 /60%);
         opacity: 1;
         transition-delay: 0.3s;
       }
     }
+
     .streaming_addBtn,
     .streaming_more {
       width: 100%;
@@ -1975,23 +2277,28 @@
       text-decoration: none;
       display: block;
       transition: all 0.3s ease;
+
       &:hover {
         color: #000;
         background: $primaryColor;
       }
     }
+
     .addthis_inline_share_toolbox_49zg {
       text-align: center;
     }
   }
+
   .streaming_content {
     transition: all 0.5s ease;
     // justify-content: space-between;
     // padding: 30px;
     inset: 0;
+
     img {
       opacity: 1 !important;
     }
+
     .streaming_infoBox {
       margin: auto 0 0;
     }
@@ -2016,6 +2323,7 @@
 .streaming_videoInfo,
 .streaming_information {
   margin-top: 50px;
+
   @media screen and (max-width: 1000px) {
     padding: 0 10px;
   }
@@ -2040,6 +2348,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   &::before {
     content: '';
     width: 0;
@@ -2048,5 +2357,167 @@
     border-style: solid;
     border-width: 10px 0 10px 16px;
     border-color: transparent transparent transparent #000;
+  }
+}
+
+.stream-wrapper .chat-content {
+  position: relative;
+}
+
+.FBtnFn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+
+  // .switch {
+  //   width: 30px;
+  //   aspect-ratio: 1;
+  //   z-index: 9;
+  //   padding: 0;
+  //   margin: 0;
+  //   border: none;
+  //   background: none;
+  //   background: url('../img/streaming/icon/icon_type1.svg') center no-repeat;
+  //   background-size: 20px;
+  //   border: #ddd 1px solid;
+  //   border-radius: 50px;
+  //   position: relative;
+
+  //   &.active {
+  //     display: none;
+  //   }
+  // }
+  .float,
+  .box {
+
+    &:not(.active):not(.float) {
+      height: 34px;
+      // display: none;
+
+      button {
+        pointer-events: none;
+
+        &:not(:first-child) {
+          display: none;
+        }
+      }
+    }
+
+    .emoji,
+    button {
+      width: 20px;
+      aspect-ratio: 1;
+      padding: 0;
+      margin: 0;
+      background: none;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      background-size: 20px;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &.type1 {
+        background-image: url('../img/streaming/icon/icon_type1.svg');
+      }
+
+      &.type2 {
+        background-image: url('../img/streaming/icon/icon_type2.svg');
+      }
+
+      &.type3 {
+        background-image: url('../img/streaming/icon/icon_type3.svg');
+      }
+
+      &.type4 {
+        background-image: url('../img/streaming/icon/icon_type4.svg');
+      }
+
+      &.type5 {
+        background-image: url('../img/streaming/icon/icon_type5.svg');
+      }
+    }
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    border: #ddd 1px solid;
+    border-radius: 50px;
+    padding: 6px;
+    height: 130px;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    position: relative;
+    box-sizing: border-box;
+    z-index: 8;
+    transition: all 0.2s linear;
+  }
+
+  .float {
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    bottom: 100%;
+    height: 80px;
+    z-index: 7;
+
+    .emoji {
+      // width: 20px;
+      // aspect-ratio: 1;
+      // padding: 0;
+      // margin: 0;
+      // background: none;
+      // border: none;
+      // border-radius: 0;
+      animation: animateBubble 2s linear forwards, sideWays 0.6s ease-in-out infinite alternate;
+      position: absolute;
+
+      // &.type1 {
+      //   background: url('../img/streaming/icon/icon_type1.svg') center no-repeat;
+      // }
+
+      // &.type2 {
+      //   background: url('../img/streaming/icon/icon_type2.svg') center no-repeat;
+      // }
+
+      // &.type3 {
+      //   background: url('../img/streaming/icon/icon_type3.svg') center no-repeat;
+      // }
+
+      // &.type4 {
+      //   background: url('../img/streaming/icon/icon_type4.svg') center no-repeat;
+      // }
+
+      // &.type5 {
+      //   background: url('../img/streaming/icon/icon_type5.svg') center no-repeat;
+      // }
+    }
+  }
+
+  @keyframes animateBubble {
+    0% {
+      bottom: 0px;
+    }
+
+    50% {
+      bottom: 40%;
+      opacity: 1;
+    }
+
+    100% {
+      bottom: 80%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes sideWays {
+    0% {
+      right: 0px;
+    }
+
+    100% {
+      right: 10px;
+    }
   }
 }
