@@ -1,5 +1,4 @@
 <html lang="en" class="">
-  <script type="text/javascript" src="chrome-extension://ffljdddodmkedhkcjhpmdajhjdbkogke/js/datalayer-checker.js"></script>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -488,22 +487,76 @@
                       </div>
                     </div>
 
-                    <div class="chat-content">
-                      <div class="FBtnFn">
-                        <div class="float"></div>
-                        <div class="box">
-                          <button class="type1"></button>
-                          <button class="type2"></button>
-                          <button class="type3"></button>
-                          <button class="type4"></button>
-                          <button class="type5"></button>
-                        </div>
+                    <div class="FBtnFn">
+                      <div class="float"></div>
+                      <div class="box">
+                        <button class="type1"></button>
+                        <button class="type2"></button>
+                        <button class="type3"></button>
+                        <button class="type4"></button>
+                        <button class="type5"></button>
                       </div>
+                    </div>
+                    <div class="chat-content">
                       <ul class="chat-list">
                         <!-- 自己的留言 li 增加 self-chat ，直播主 li 增加 streamer -->
                         <li>
                           <div class="info"><span>A</span><time>14:30</time></div>
-                          <div class="textContent">testtest</div>
+                          <div class="textContent">
+                            <span>testtesttest testtesttes ttesttest test testtestt esttes ttest testtest</span>
+                            <div class="chatTranslate">
+                              <button type="button" class="chatTranslateBtn"><img src="img/streaming/icon/icon_translate.svg" alt="" /></button>
+                              <div class="chatTranslateBox">
+                                <ul>
+                                  <li>
+                                    <button class="active">語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
                         </li>
                         <li class="self-chat">
                           <div class="info"><span>B</span><time>14:30</time></div>
@@ -607,6 +660,14 @@
               FItem.remove();
             }, 2000);
           });
+        });
+      })();
+      (function () {
+        'use strict';
+        const chatTranslateBtn = document.querySelector('.chatTranslateBtn');
+        chatTranslateBtn.addEventListener('click', function () {
+          this.classList.toggle('active');
+          this.nextElementSibling.classList.toggle('active');
         });
       })();
     </script>
