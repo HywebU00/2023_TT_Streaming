@@ -582,7 +582,61 @@
                         </li>
                         <li class="self-chat">
                           <div class="info"><span>B</span><time>14:30</time></div>
-                          <div class="textContent">testtest</div>
+                          <div class="textContent">
+                            <span>testtesttest testtesttes ttesttest test testtestt esttes ttest testtest</span>
+                            <div class="chatTranslate">
+                              <button type="button" class="chatTranslateBtn"><img src="img/streaming/icon/icon_translate.svg" alt="" /></button>
+                              <div class="chatTranslateBox">
+                                <ul>
+                                  <li>
+                                    <button class="active">語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                  <li>
+                                    <button>語系</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
                         </li>
                         <li>
                           <div class="info"><span>A</span><time>14:30</time></div>
@@ -1073,10 +1127,17 @@
 
       (function () {
         'use strict';
-        const chatTranslateBtn = document.querySelector('.chatTranslateBtn');
-        chatTranslateBtn.addEventListener('click', function () {
-          this.classList.toggle('active');
-          this.nextElementSibling.classList.toggle('active');
+        const chatTranslateBtn = document.querySelectorAll('.chatTranslateBtn');
+        chatTranslateBtn.forEach((item, index) => {
+          item.addEventListener('click', function () {
+            this.parentNode.parentNode.parentNode.classList.toggle('active');
+            const siblings = Array.prototype.filter.call(item.parentNode.parentNode.parentNode.parentNode.children, (child) => {
+              return child !== item.parentNode.parentNode.parentNode;
+            });
+            siblings.forEach((value, i) => {
+              value.classList.remove('active');
+            });
+          });
         });
       })();
     </script>

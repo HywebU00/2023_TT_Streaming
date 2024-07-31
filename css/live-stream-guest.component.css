@@ -2425,6 +2425,7 @@ body.fullscreen .streaming_stateBox {
   bottom: 100%;
   height: 80px;
   z-index: 7;
+  pointer-events: none;
 }
 .FBtnFn .float .emoji {
   animation: animateBubble 2s linear forwards, sideWays 0.6s ease-in-out infinite alternate;
@@ -2465,13 +2466,20 @@ body.fullscreen .streaming_stateBox {
   font-size: 15px;
 }
 
+.stream-wrapper .chat-content .chat-list li {
+  position: relative;
+  z-index: 0;
+}
 .stream-wrapper .chat-content .chat-list li .textContent {
   display: flex;
   justify-content: space-between;
+  padding-right: 40px !important;
+  position: relative;
 }
 .stream-wrapper .chat-content .chat-list li .textContent .chatTranslate {
-  position: relative;
-  padding-left: 20px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
 .stream-wrapper .chat-content .chat-list li .textContent .chatTranslate .chatTranslateBtn {
   padding: 0;
@@ -2509,6 +2517,8 @@ body.fullscreen .streaming_stateBox {
   overflow-y: auto;
   scrollbar-color: #fabe0f rgba(0, 0, 0, 0.2);
   scrollbar-width: thin;
+  z-index: 50;
+  position: relative;
 }
 .stream-wrapper .chat-content .chat-list li .textContent .chatTranslate .chatTranslateBox ul::-webkit-scrollbar {
   width: 5px;
@@ -2548,4 +2558,15 @@ body.fullscreen .streaming_stateBox {
 }
 .stream-wrapper .chat-content .chat-list li .textContent .chatTranslate .chatTranslateBox button.active::before {
   opacity: 1;
+}
+.stream-wrapper .chat-content .chat-list li.active {
+  z-index: 9;
+  position: relative;
+}
+.stream-wrapper .chat-content .chat-list li.active .chatTranslate .chatTranslateBtn {
+  background: #fabe0f;
+}
+.stream-wrapper .chat-content .chat-list li.active .chatTranslate .chatTranslateBox {
+  opacity: 1;
+  pointer-events: unset;
 }/*# sourceMappingURL=live-stream-guest.component.css.map */
