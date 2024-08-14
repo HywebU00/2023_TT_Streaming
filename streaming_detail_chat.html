@@ -1242,29 +1242,33 @@
         let windowWidth = window.innerWidth;
         window.addEventListener('resize', function () {
           windowWidth = window.innerWidth;
-          console.log(windowWidth);
         });
 
-        if (windowWidth > 767) {
-          FBtnFn.addEventListener('mouseenter', function () {
+        FBtnFn.addEventListener('mouseenter', function () {
+          if (windowWidth > 767) {
             FBtnFn.classList.add('active');
-          });
-
-          FBtnFn.addEventListener('mouseleave', function () {
+          }
+        });
+        FBtnFn.addEventListener('mouseleave', function () {
+          if (windowWidth > 767) {
             setTimeout(() => {
               FBtnFn.classList.remove('active');
             }, 400);
-          });
-        } else {
-          FBtnFn.addEventListener('click', function () {
+          }
+        });
+
+        FBtnFn.addEventListener('click', function () {
+          if (windowWidth <= 767) {
             FBtnFn.classList.add('active');
             FMobileBtn.style.display = 'block';
-          });
-          FMobileBtn.addEventListener('click', function () {
+          }
+        });
+        FMobileBtn.addEventListener('click', function () {
+          if (windowWidth <= 767) {
             FBtnFn.classList.remove('active');
             FMobileBtn.style.display = 'none';
-          });
-        }
+          }
+        });
 
         FBtn.forEach((item) => {
           item.addEventListener('click', function () {
